@@ -17,6 +17,7 @@ const Sidebar = props => {
         </div>
         <div class="sidebar-content px-4 py-6 -my-8">
           <h1 class="text-center text-white font-mono">Kenneth Suarez</h1>
+          <span class="text-center text-white font-mono">Web UI Developer</span>
           <ul class="flex flex-col w-full">
             <ButtonCreator
               nombre="Proyectos"

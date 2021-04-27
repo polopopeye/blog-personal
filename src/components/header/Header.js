@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => {
               Kenneth Suarez
             </span>
             <span class="truncate w-20 text-gray-500 text-xs leading-none mt-1">
-              Programador
+              Web UI Developer
             </span>
           </span>
         </a>
