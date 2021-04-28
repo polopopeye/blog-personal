@@ -82,3 +82,5 @@ build/
 # Gatsby config (Security reasons...)
 gatsby-config.js
   
+*.cache
+.firebase/hosting.cHVibGlj.cache
