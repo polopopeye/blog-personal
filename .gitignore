@@ -73,7 +73,7 @@ build/
 
 # Firebase Cache auth
 *.cache
-.firebase/*
+.firebase/* 
 ./.firebase/*
 *cache
 .*cache
@@ -81,3 +81,4 @@ build/
 
 # Gatsby config (Security reasons...)
 gatsby-config.js
+  
