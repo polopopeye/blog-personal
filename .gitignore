@@ -75,3 +75,9 @@ build/
 *.cache
 .firebase/*
 ./.firebase/*
+*cache
+.*cache
+
+
+# Gatsby config (Security reasons...)
+gatsby-config.js
