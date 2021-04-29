@@ -1,10 +1,14 @@
 import React from "react"
+import { Link } from "react-router-dom"
+
 import FotoPerfil from "../../images/profile.jpg"
 import ButtonCreator from "./components/BottonCreator"
 import Lfirebase from "../../images/buildWith/firebase.png"
 import Lgatsby from "../../images/buildWith/gatsby.png"
 import Lreact from "../../images/buildWith/react.png"
 import Ltailwind from "../../images/buildWith/tailwind.png"
+
+import firebase from "gatsby-plugin-firebase"
 
 import {
   faGithub,
@@ -38,7 +42,23 @@ const IconsRowSocial = () => {
   )
 }
 
-const Sidebar = props => {
+const Sidebar = () => {
+  setTimeout(() => {
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (document.getElementById("crearAdm")) {
+        if (user) {
+          if (user.email == "kenneth7e7a@gmail.com") {
+            document.getElementById("crearAdm").style.display = "block"
+          } else {
+            document.getElementById("crearAdm").style.display = "none"
+          }
+        } else {
+          document.getElementById("crearAdm").style.display = "none"
+        }
+      }
+    })
+  }, 0)
+
   return (
     <>
       <aside
@@ -91,6 +111,25 @@ const Sidebar = props => {
               classNActive="flex flex-row items-center h-10 px-3 rounded-lg text-gray-700 bg-gray-100"
               iconD="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
+
+            <ButtonCreator
+              idH="conectarAdm"
+              nombre="Dashboard"
+              link="/conectar/"
+              classN="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
+              classNActive="flex flex-row items-center h-10 px-3 rounded-lg text-gray-700 bg-gray-100"
+              iconD="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+            />
+
+            <ButtonCreator
+              idH="crearAdm"
+              nombre="Crear"
+              link="/crear/"
+              classN="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
+              classNActive="flex flex-row items-center h-10 px-3 rounded-lg text-gray-700 bg-gray-100"
+              iconD="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+            />
+
             <IconsRowSocial></IconsRowSocial>
           </ul>
 
@@ -98,16 +137,24 @@ const Sidebar = props => {
             <p>Build 💖 with:</p>
             <div class="   grid grid-flow-col grid-cols-4  ">
               <div class="p-2">
-                <img width="32" src={Lfirebase}></img>
+                <a href="https://firebase.google.com/use-cases" target="_blank">
+                  <img alt="Firebase" width="32" src={Lfirebase}></img>
+                </a>
               </div>
               <div class="p-2">
-                <img width="32" src={Lgatsby}></img>
+                <a href="https://www.gatsbyjs.com/why-gatsby/" target="_blank">
+                  <img alt="Gatsby" width="32" src={Lgatsby}></img>
+                </a>
               </div>
               <div class="p-2">
-                <img width="32" src={Lreact}></img>
+                <a href="https://es.reactjs.org/" target="_blank">
+                  <img alt="React" width="32" src={Lreact}></img>
+                </a>
               </div>
               <div class="p-2">
-                <img width="32" src={Ltailwind}></img>
+                <a href="https://tailwindcss.com/" target="_blank">
+                  <img alt="Tailwind" width="32" src={Ltailwind}></img>
+                </a>
               </div>
             </div>
           </div>

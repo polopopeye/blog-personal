@@ -7,20 +7,18 @@ import {
 // import firebase from "gatsby-plugin-firebase"
 
 const LoginRegisterBtn = () => {
-  let cnt = 0
-  function checkDisplay() {
-    if (cnt > 3) {
-      console.log("EJECUTADO VARIAS COMPROBACIONES")
-    } else {
-      setTimeout(() => {
-        console.log(cnt)
-        checkIsLogedIn()
-        checkDisplay()
-        cnt++
-      }, 1000)
-    }
-  }
-  checkDisplay()
+  // let cnt = 0
+  // function checkDisplay() {
+  //   if (cnt > 3) {
+  //     console.log("EJECUTADO VARIAS COMPROBACIONES")
+  //   } else {
+
+  //   }
+  // }
+  // checkDisplay()
+  setTimeout(() => {
+    checkIsLogedIn()
+  }, 0)
 
   return (
     <div>
@@ -34,13 +32,14 @@ const LoginRegisterBtn = () => {
       >
         Entrar / REGISTRARSE
       </button>
-      <button
+      {/* <button
+        href="/crear/"
         id="crear"
         style={{ display: "none" }}
         class="bg-gray-900 text-white p-4"
       >
         CREAR POST
-      </button>
+      </button> */}
 
       <button
         style={{ display: "none" }}

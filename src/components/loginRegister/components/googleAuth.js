@@ -3,24 +3,27 @@ import firebase from "gatsby-plugin-firebase"
 
 export function checkIsLogedIn() {
   firebase.auth().onAuthStateChanged(function (user) {
-    if (user) {
-      console.log(user)
-      console.log("YA ESTAS CONECTADO/REGISTRADO")
-      document.getElementById("Conectar").style.display = "none"
-      document.getElementById("crear").style.display = "block"
-      document.getElementById("Logout").style.display = "block"
+    if (
+      document.getElementById("Conectar") &&
+      document.getElementById("Logout")
+    ) {
+      if (user) {
+        console.log(user)
+        console.log("YA ESTAS CONECTADO/REGISTRADO")
+        document.getElementById("Conectar").style.display = "none"
+        document.getElementById("Logout").style.display = "block"
 
-      document.getElementById("tittleWelcome").innerHTML = `
-      Bienvenido ${user.displayName}
-      `
-    } else {
-      console.log("NO ESTAS CONECTADO")
-      document.getElementById("Conectar").style.display = "block"
-      document.getElementById("crear").style.display = "none"
-      document.getElementById("Logout").style.display = "none"
-      document.getElementById("tittleWelcome").innerHTML = `
-      Bienvenido, conectate o registrate...
-      `
+        document.getElementById("tittleWelcome").innerHTML = `
+        Bienvenido ${user.displayName}
+        `
+      } else {
+        console.log("NO ESTAS CONECTADO")
+        document.getElementById("Conectar").style.display = "block"
+        document.getElementById("Logout").style.display = "none"
+        document.getElementById("tittleWelcome").innerHTML = `
+        Bienvenido, conectate o registrate...
+        `
+      }
     }
   })
 }
