@@ -1,0 +1,6 @@
+.tox-editor-header {
+  display: grid;
+}
+.tox-notifications-container {
+  display: none !important;
+}

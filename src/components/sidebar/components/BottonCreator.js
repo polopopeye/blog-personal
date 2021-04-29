@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 const BottonCreator = props => {
   return (
     <>
-      <li class="my-px">
+      <li id={props.idH} class="my-px">
         <Link
           to={props.link}
           class={props.classN}
