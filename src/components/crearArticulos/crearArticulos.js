@@ -9,6 +9,7 @@ import firebase from "gatsby-plugin-firebase"
 const CrearArticulos = () => {
   const editorRef = useRef(null)
   let docID
+
   setTimeout(() => {
     const urlParams = new URLSearchParams(window.location.search)
     docID = urlParams.get("id")
@@ -23,6 +24,8 @@ const CrearArticulos = () => {
             document.getElementById("tituloPost").value = doc.data().name
             document.getElementById("imgPost").value = doc.data().imgPost
             document.getElementById("descPost").value = doc.data().desc
+            document.getElementById("orderPost").value = doc.data().order
+
             editorRef.current.setContent(doc.data().postinHTML)
           } else {
             console.log("No such document!")
@@ -32,7 +35,7 @@ const CrearArticulos = () => {
           console.log("Error getting document:", error)
         })
     }
-  }, 0)
+  }, 100)
 
   const crearPost = () => {
     if (editorRef.current && document.getElementById("tituloPost")) {
@@ -45,11 +48,12 @@ const CrearArticulos = () => {
         let tittle = document.getElementById("tituloPost").value
         let imgPost = document.getElementById("imgPost").value
         let descPost = document.getElementById("descPost").value
+        let orderPost = document.getElementById("orderPost").value
         let content = editorRef.current.getContent()
         if (docID != undefined && docID.length > 5) {
-          createArticle(tittle, content, imgPost, descPost, docID)
+          createArticle(tittle, content, imgPost, descPost, orderPost, docID)
         } else {
-          createArticle(tittle, content, imgPost, descPost)
+          createArticle(tittle, content, imgPost, descPost, orderPost)
         }
       } else {
         console.log("TITULO O Articulo MUY PEQUEÑO")
@@ -64,7 +68,7 @@ const CrearArticulos = () => {
       setTimeout(() => {
         isConected()
         loopIsConnected()
-      }, 500)
+      }, 100)
     }
     cnt++
   }
@@ -96,6 +100,12 @@ const CrearArticulos = () => {
           type="text"
           class="p-4 text-xl w-full"
         ></input>
+        <input
+          placeholder="Orden"
+          id="orderPost"
+          type="number"
+          class="p-4 text-xl w-full"
+        ></input>
         <Editor
           onInit={(evt, editor) => (editorRef.current = editor)}
           initialValue=""
@@ -103,7 +113,7 @@ const CrearArticulos = () => {
             height: 500,
             menubar: false,
             plugins: [
-              "advlist autolink lists link image charmap print preview anchor",
+              " imagetools advlist autolink lists link image charmap print preview anchor",
               "searchreplace visualblocks code fullscreen",
               "insertdatetime media table paste code help wordcount",
               "a11ychecker   casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker",
@@ -114,7 +124,7 @@ const CrearArticulos = () => {
             tinycomments_author: "Kenneth Suarez",
 
             toolbar:
-              "undo redo | media checklist code | formatpainter pageembed table | formatselect | " +
+              " paste preview | undo redo | media image imagetools | checklist code | formatpainter pageembed table | formatselect | " +
               "bold italic backcolor | alignleft aligncenter " +
               "alignright alignjustify | bullist numlist outdent indent | " +
               "removeformat ",

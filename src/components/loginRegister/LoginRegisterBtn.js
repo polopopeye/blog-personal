@@ -18,7 +18,7 @@ const LoginRegisterBtn = () => {
   // checkDisplay()
   setTimeout(() => {
     checkIsLogedIn()
-  }, 0)
+  }, 100)
 
   return (
     <div>
