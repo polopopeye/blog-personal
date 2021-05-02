@@ -22,7 +22,9 @@ const IndexPage = () => {
               document.getElementById("sectionPost").innerHTML += `
               <div id="${doc.data().name}"
               class="wrapper w-full   rounded-b-md shadow-lg overflow-hidden bg-center bg-cover"
-               style="background:url('${doc.data().imgPost}');">
+              style="background:url('${doc.data().imgPost}');order:${
+                doc.data().order
+              }">
               <div class="p-4 font-mono text-center bg-opacity-60 space-y-3 transition duration-300 hover:bg-gray-800 hover:text-white">
                 <h3 class=" text-xl font-bold   rounded-md  hover:bg-gray-900 hover:text-white">
                 ${doc.data().name}
@@ -46,17 +48,16 @@ const IndexPage = () => {
       .catch(error => {
         console.log("Error getting documents: ", error)
       })
-  }, 0)
+  }, 100)
 
   return (
     <Layout>
       <Seo title="Home" />
       <section
+        style={{ display: "grid" }}
         id="sectionPost"
-        class="w-full flex-start justify-center items-center px-2"
+        class=" w-full flex-start justify-center items-center px-2"
       >
-        {/* INICIO PRUEBA */}
-
         {/* INICIO POST */}
       </section>
     </Layout>

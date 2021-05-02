@@ -57,7 +57,7 @@ const Sidebar = () => {
         }
       }
     })
-  }, 0)
+  }, 100)
 
   return (
     <>

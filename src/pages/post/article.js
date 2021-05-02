@@ -58,7 +58,7 @@ const article = () => {
           console.log("ERROR")
         })
     }
-  }, 0)
+  }, 100)
 
   return (
     <div>

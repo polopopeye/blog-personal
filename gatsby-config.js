@@ -1,4 +1,7 @@
 module.exports = {
+  flags: {
+    THE_FLAGS: false,
+  },
   siteMetadata: {
     title: `Blog Personal`,
     description: `Blog Donde Mostrar Proyectos y CV.`,

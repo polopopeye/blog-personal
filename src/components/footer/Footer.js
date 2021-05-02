@@ -1,20 +1,21 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-const Footer = props => {
-    return (
-        <>
-<footer class="footer px-4 py-6">
+const Footer = () => {
+  return (
+    <>
+      <footer class="footer px-4 py-6">
         <div class="footer-content">
-          <p class="text-sm text-gray-600 text-center">© Brandname 2020. All rights reserved. <a href="https://twitter.com/iaminos">by iAmine</a></p>
+          <p class="text-sm text-gray-600 text-center">
+            kennethsuarez.es - 2021 - Desarrollado en Barcelona con ❤️ por
+            Kenneth Suarez
+          </p>
         </div>
-      </footer>   
-        </>
-    )
+      </footer>
+    </>
+  )
 }
 
-Footer.propTypes = {
-
-}
+Footer.propTypes = {}
 
 export default Footer
