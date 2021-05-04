@@ -85,3 +85,5 @@ gatsby-config.js
 *.cache
 .firebase/hosting.cHVibGlj.cache
 package-lock.json
+.firebase/hosting.cHVibGlj.cache
+*.cache

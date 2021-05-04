@@ -10,7 +10,7 @@ const hola = () => (
   <Layout>
     <Seo title="Curriculum Vitae" />
 
-    <div class="p-16 text-lg max-w-full">
+    <div class="p-16 text-lg max-w-full font-mono bg-gray-200">
       <div class="grid md:flex  md:flex-flow-col md:flex-cols-2 md:flex-row-2  gap-4">
         <div class=" md:w-1/5 md:block hidden">
           <img width="100%" src={img1} />

@@ -8,7 +8,7 @@ import Seo from "../components/seo"
 const cv = () => (
   <Layout>
     <Seo title="Curriculum Vitae" />
-    <div class=" print:hidden bg-gray-900 text-white">
+    <div class="hidden print:hidden bg-gray-900 text-white">
       <button class="  p-4">Español</button>
       <button class="p-4">English</button>
     </div>

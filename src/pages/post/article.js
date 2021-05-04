@@ -65,7 +65,7 @@ const article = () => {
       <Layout>
         <Seo title="Artículo del blog de Kenneth Suarez" />
         <h1
-          class="text-4xl text-center text-gray-100 font-bolder p-8"
+          class="text-4xl text-center text-gray-100 font-bolder p-8 font-mono text-xl"
           style={{
             backgroundColor: "#333333",
             backgroundImage: `url(
@@ -75,7 +75,11 @@ const article = () => {
           id="name"
         ></h1>
         <hr></hr>
-        <p id="post" style={{ overflow: "hidden" }} class="w-full"></p>
+        <p
+          id="post"
+          style={{ overflow: "hidden" }}
+          class="w-full p-4 md:p-8 font-mono"
+        ></p>
         <hr></hr>
         <div id="editionButtons" class="flex  ">
           <a class="p-4" id="edit" href="/editar/?p=">

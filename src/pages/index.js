@@ -1,7 +1,7 @@
 import * as React from "react"
 import "../styles/global.css"
 import firebase from "gatsby-plugin-firebase"
-
+import perroWatonTriste from "../images/perroWatonTriste.jpg"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -21,22 +21,22 @@ const IndexPage = () => {
             } else {
               document.getElementById("sectionPost").innerHTML += `
               <div id="${doc.data().name}"
-              class="wrapper w-full   rounded-b-md shadow-lg overflow-hidden bg-center bg-cover filteredSearch bg-center"
+              class="wrapper w-full rounded-b-md shadow-lg overflow-hidden  bg-cover filteredSearch bg-center"
               style="background:url('${doc.data().imgPost}');order:${
                 doc.data().order
               }">
-              <div class="p-4 font-mono text-center bg-opacity-60 space-y-3 transition duration-300 hover:bg-gray-800 hover:text-white">
-                <h3 class=" text-xl font-bold   rounded-md  hover:bg-gray-900 hover:text-white">
+              <div class="bg-opacity-30 bg-gray-800 p-4 font-mono text-center  space-y-3 transition duration-300 hover:bg-opacity-60 hover:bg-gray-800 text-white">
+                <h3 class="  text-xl font-bold   rounded-md  hover:bg-gray-900 hover:text-white">
                 ${doc.data().name}
                 </h3>
                 <hr />
                 <br />
                 ${doc.data().desc}
-                </p>
+                 
               </div>
               <a href="/post/article?p=${
                 doc.data().name
-              }" class="bg-teal-600 w-full flex justify-center py-4 text-white font-semibold transition duration-300 hover:bg-red-500">
+              }" class="hover:bg-opacity-60 bg-opacity-70 bg-gray-700 w-full flex justify-center py-4 text-white font-semibold transition duration-300 hover:bg-red-500">
                 Mas info
               </a>
             </div>
@@ -54,10 +54,23 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Home" />
       <section
-        style={{ display: "grid" }}
+        // style={{ display: "grid" }}
         id="sectionPost"
         class=" w-full flex-start justify-center items-center px-2"
       >
+        <h1
+          id="noresultsIndex"
+          class="text-2xl text-center p-2 select-none"
+          style={{ display: "none" }}
+        >
+          Sry, no hay resultados...
+          <center>
+            <img
+              src={perroWatonTriste}
+              class="w-full rounded-xl md:w-64 select-none"
+            ></img>
+          </center>
+        </h1>
         {/* INICIO POST */}
       </section>
     </Layout>
