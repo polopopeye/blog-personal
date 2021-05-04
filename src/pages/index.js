@@ -21,7 +21,7 @@ const IndexPage = () => {
             } else {
               document.getElementById("sectionPost").innerHTML += `
               <div id="${doc.data().name}"
-              class="wrapper w-full   rounded-b-md shadow-lg overflow-hidden bg-center bg-cover"
+              class="wrapper w-full   rounded-b-md shadow-lg overflow-hidden bg-center bg-cover filteredSearch bg-center"
               style="background:url('${doc.data().imgPost}');order:${
                 doc.data().order
               }">
