@@ -84,3 +84,4 @@ gatsby-config.js
   
 *.cache
 .firebase/hosting.cHVibGlj.cache
+package-lock.json
