@@ -12,5 +12,13 @@
 asegurate de instalar las dependencias con npm install
 <br>
 asegurarte que esta gatsby instalado : npm install -g gatsby-cli
+<br>
+asegurate de tener el firebase instalado y configurado correctametne CLI : npm install -g firebase-tools
+para poder hacer el deploy correctamente
+<br>
+
+para configurar tienes que asegurarte que tengas la execution activada... Set-ExecutionPolicy Unrestricted despues puesde hacer
+firebase login
+<br>
 
 </p>

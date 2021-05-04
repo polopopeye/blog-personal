@@ -41,11 +41,13 @@ function checkavalPost() {
               document.getElementById(idContainer2).innerHTML += `
               <div id="${
                 doc.data().name
-              }" class="filteredSearch mb-4 rounded-sm bg-center "
+              }" class="filteredSearch mb-2 rounded-sm bg-center bg-cover "
               style="background:url('${doc.data().imgPost}');">
               <div class="bg-opacity-50 bg-gray-800">
               
-              <h1>${doc.data().name}</h1>
+              <h1 class="font-bold text-lg pt-4 bg-gray-900 bg-opacity-60">${
+                doc.data().name
+              }</h1>
               <p>${doc.data().desc}</p>
 <br />
 <a href="/post/article?p=${doc.data().name}" 
@@ -56,7 +58,7 @@ class="bg-gray-600 w-full flex justify-center py-4 md:py-2 text-white font-semib
               </div>
                       
                      </div>
-                     <br />
+                      
                        `
             }
           }
@@ -105,12 +107,26 @@ function filtradorJS() {
     filter = input.value.toUpperCase()
     container = document.getElementById(idContainer)
     element = container.getElementsByClassName(classElement)
+    let noResults = false
+    let counter = 0
     for (i = 0; i < element.length; i++) {
       txtValue = element[i].id || element[i].innerText
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
         element[i].style.display = ""
       } else {
         element[i].style.display = "none"
+        counter++
+      }
+      if (i === element.length - 1) {
+        if (counter - 1 === i) {
+          noResults = true
+          document.getElementById("noresultsIndex").style.display = "block"
+        } else {
+          noResults = false
+          document.getElementById("noresultsIndex").style.display = "none"
+        }
+        console.log(counter)
+        console.log(i)
       }
     }
   } else {
@@ -123,12 +139,27 @@ function filtradorJS() {
       filter = input.value.toUpperCase()
       container = document.getElementById(idContainer2)
       element = container.getElementsByClassName(classElement2)
+      let noResults = false
+      let counter = 0
       for (i = 0; i < element.length; i++) {
         txtValue = element[i].id || element[i].innerText
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
           element[i].style.display = ""
         } else {
           element[i].style.display = "none"
+          counter++
+        }
+
+        if (i === element.length - 1) {
+          if (counter - 1 === i) {
+            noResults = true
+            document.getElementById("noresults").style.display = "block"
+          } else {
+            noResults = false
+            document.getElementById("noresults").style.display = "none"
+          }
+          console.log(counter)
+          console.log(i)
         }
       }
     }
@@ -155,9 +186,16 @@ const SearchInput = () => {
         />
         <div
           id="seccionBuscadorNoIndex"
-          class="absolute rounded-xl w-full text-center bg-gray-800 text-white md:mt-11"
+          class="bg-opacity-90 absolute rounded-xl w-full text-center bg-gray-800 text-white md:mt-11"
           style={{ display: "none" }}
         >
+          <h1
+            id="noresults"
+            class="p-4 text-xl md:text-6xl"
+            style={{ display: "none" }}
+          >
+            NO HAY RESULTADOS 🥺👉👈
+          </h1>
           {/* RESULTADOS */}
         </div>
       </div>
