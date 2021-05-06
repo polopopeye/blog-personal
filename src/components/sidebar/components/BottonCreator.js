@@ -4,13 +4,13 @@ import { Link } from "gatsby"
 const BottonCreator = props => {
   return (
     <>
-      <li id={props.idH} class="my-px">
+      <li id={props.idH} class="my-px ">
         <Link
           to={props.link}
           class={props.classN}
           activeClassName={props.classNActive}
         >
-          <span class="flex items-center justify-center text-lg text-gray-400">
+          <span class="flex items-center justify-center text-lg text-gray-400 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"

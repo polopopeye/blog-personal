@@ -21,12 +21,13 @@ const IndexPage = () => {
             } else {
               document.getElementById("sectionPost").innerHTML += `
               <div id="${doc.data().name}"
-              class="wrapper w-full rounded-b-md shadow-lg overflow-hidden  bg-cover filteredSearch bg-center"
-              style="background:url('${doc.data().imgPost}');order:${
-                doc.data().order
-              }">
+              class="wrapper w-full rounded-b-md shadow-lg overflow-hidden   filteredSearch"
+              style="background:url('${
+                doc.data().imgPost
+              }');background-size: cover;background-position:center;margin-bottom: 0.25em;
+              padding: 1em;order:${doc.data().order}">
               <div class="bg-opacity-30 bg-gray-800 p-4 font-mono text-center  space-y-3 transition duration-300 hover:bg-opacity-60 hover:bg-gray-800 text-white">
-                <h3 class="  text-xl font-bold   rounded-md  hover:bg-gray-900 hover:text-white">
+                <h3 class=" hover:bg-opacity-50 text-xl font-bold   rounded-md  hover:bg-gray-900 hover:text-white">
                 ${doc.data().name}
                 </h3>
                 <hr />
