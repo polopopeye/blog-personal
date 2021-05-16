@@ -1,9 +1,9 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import "../styles/global.css"
+import "../../styles/global.css"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
 const StarIcon = () => {
   return (
     <>
@@ -50,8 +50,8 @@ const cv = () => (
   <Layout>
     <Seo title="Curriculum Vitae" />
     <div class=" print:hidden bg-gray-900 text-white">
-      <Link to="/en/cv/">
-        <button class="p-4">English</button>
+      <Link to="/cv/">
+        <button class="p-4">Español</button>
       </Link>
       {/* <button class="  p-4">Español</button> */}
     </div>
@@ -69,7 +69,7 @@ const cv = () => (
       <section class="mt-4 first:mt-0">
         <div class="break-inside-avoid">
           <h2 class="mb-2 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-            INFORMACIÓN BÁSICA
+            BASIC INFORMATION
           </h2>
           <div class="grid grid-cols-2 gap-4">
             <div>
@@ -88,9 +88,9 @@ const cv = () => (
                     d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
                   />
                 </svg>
-                Contacto
+                Contact details
               </span>
-              Telefono: <b> +34604144510 </b> <br />
+              Phone Number: <b> +34604144510 </b> <br />
               Email: <b> Kenneth7e7a@gmail.com </b> <br />
               Github: <b> @polopopeye </b> <br />
               LinkedIn: <b> /in/kennethsuarez/ </b> <br />
@@ -111,10 +111,10 @@ const cv = () => (
                     d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
                   />
                 </svg>
-                Idiomas
+                Languages
               </span>
-              Español:Nativo <br />
-              English:Alto <br />
+              Español:Native <br />
+              English:High <br />
               Català:Bilingue <br />
             </div>
           </div>
@@ -127,55 +127,56 @@ const cv = () => (
             </h2>
           </header>
           <p class="mt-2.1 text-md text-gray-800 leading-normal">
-            Llevo varios años programando, tanto con tecnologias del backend
-            como del frontend, conozco su integración y comunicación entre ambas
-            partes, asi como desarrollo y comunicacion de APIs.
+            I've been programming for several years, both with backend and
+            frontend technologies, I know their integration and communication
+            between both parts, as well as development and communication of
+            APIs.
             <br></br>
-            Programo usando metodologias ágiles (TDD, GIT, Kanban, Scrum),
-            wireframing y mockups de alta resolución, POP (Programación
-            orientada a propiedades) y POO (Programación orientada a objetos).
-            <hr></hr>
-            Desarrollo y conozco frameworks como:
+            Programming I always use agiles methods and good practices like TDD,
+            GIT, Kanban or Scrum, I know and develop wireframming and mockups of
+            high definitions, normally I use POP (Prototype-based programming)
+            and OOP (Object-oriented programming)
+            <hr></hr>I know and develop with frameworks like:
             <div class=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-1 text-center">
               <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
                 <h6 class="font-bold">React</h6>
                 <span class="text-sm">
-                  <ClockIcon></ClockIcon> (> 4 Años)
+                  <ClockIcon></ClockIcon> (> 4 Years)
                 </span>
               </div>
               <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <h6 class="font-bold">Angular</h6>
                 <span class="text-sm">
-                  <ClockIcon></ClockIcon> (1 Año)
+                  <ClockIcon></ClockIcon> (1 Year)
                 </span>
               </div>
               <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
                 <h6 class="font-bold">Node JS </h6>
                 <span class="text-sm">
-                  <ClockIcon></ClockIcon> (> 4 Años)
+                  <ClockIcon></ClockIcon> (> 4 Years)
                 </span>
               </div>
               <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
                 <h6 class="font-bold">Gatsby </h6>
                 <span class="text-sm">
-                  <ClockIcon></ClockIcon> (1 Años)
+                  <ClockIcon></ClockIcon> (1 Years)
                 </span>
               </div>
               <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
                 <h6 class="font-bold"> Tailwind CSS </h6>
                 <span class="text-sm">
-                  <ClockIcon></ClockIcon> (2 Años)
+                  <ClockIcon></ClockIcon> (2 Years)
                 </span>
               </div>
               <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
                 <h6 class="font-bold"> Bootstrap CSS </h6>
                 <span class="text-sm">
-                  <ClockIcon></ClockIcon> (>4 Años)
+                  <ClockIcon></ClockIcon> (>4 Years)
                 </span>
               </div>
 
@@ -183,7 +184,7 @@ const cv = () => (
                 {/* <StarIcon></StarIcon> */}
                 <h6 class="font-bold">Laravel (PHP)</h6>
                 <span class="text-sm">
-                  <ClockIcon></ClockIcon> (> 3 Años)
+                  <ClockIcon></ClockIcon> (> 3 Years)
                 </span>
               </div>
               <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
@@ -198,41 +199,41 @@ const cv = () => (
                 <StarIcon></StarIcon>
                 <h6 class="font-bold">Jquery </h6>
                 <span class="text-sm">
-                  <ClockIcon></ClockIcon> (> 4 Años)
+                  <ClockIcon></ClockIcon> (> 4 Years)
                 </span>
               </div>
               <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                 {/* <StarIcon></StarIcon> */}
                 <h6 class="font-bold">WebGL</h6>
                 <span class="text-sm">
-                  <ClockIcon></ClockIcon> (2 Años)
+                  <ClockIcon></ClockIcon> (2 Years)
                 </span>
               </div>
               <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
                 <h6 class="font-bold">ThreeJS</h6>
                 <span class="text-sm">
-                  <ClockIcon></ClockIcon> (2 Años)
+                  <ClockIcon></ClockIcon> (2 Years)
                 </span>
               </div>
             </div>
             <br></br>
             <i>
-              Además he trabajado y desarrollado con Otras tecnologias:
+              I have also worked and developed with other technologies:
               <br></br>
               <div class=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-1 text-center">
                 <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                   <StarIcon></StarIcon>
                   <h6 class="font-bold">MySQL</h6>
                   <span class="text-sm">
-                    <ClockIcon></ClockIcon> (> 4 Años)
+                    <ClockIcon></ClockIcon> (> 4 Years)
                   </span>
                 </div>
                 <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                   <StarIcon></StarIcon>
                   <h6 class="font-bold">Firebase</h6>
                   <span class="text-sm">
-                    <ClockIcon></ClockIcon> (2 Años)
+                    <ClockIcon></ClockIcon> (2 Years)
                   </span>
                   <p class="text-xs">
                     Including Auth, FireStore, Hosting Deployment, Machine
@@ -243,33 +244,31 @@ const cv = () => (
                   <StarIcon></StarIcon>
                   <h6 class="font-bold">FireStore</h6>
                   <span class="text-sm">
-                    <ClockIcon></ClockIcon> (2 Años)
+                    <ClockIcon></ClockIcon> (2 Years)
                   </span>
                 </div>
                 <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                   <StarIcon></StarIcon>
                   <h6 class="font-bold">MongoDB</h6>
                   <span class="text-sm">
-                    <ClockIcon></ClockIcon> (3 Años)
+                    <ClockIcon></ClockIcon> (3 Years)
                   </span>
                 </div>
                 <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                   {/* <StarIcon></StarIcon> */}
-                  <h6 class="font-bold">Wordpress Avanzado</h6>
+                  <h6 class="font-bold">Advanced Wordpress</h6>
                   <span class="text-sm">
-                    <ClockIcon></ClockIcon> (> 4 Años)
+                    <ClockIcon></ClockIcon> (> 4 Years)
                   </span>
-                  <p class="text-xs">Desarrollo de plugins y temas</p>
+                  <p class="text-xs">development of plugins and themes</p>
                 </div>
                 <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                   <StarIcon></StarIcon>
                   <h6 class="font-bold">Jest</h6>
                   <span class="text-sm">
-                    <ClockIcon></ClockIcon> (2 Años)
+                    <ClockIcon></ClockIcon> (2 Years)
                   </span>
-                  <p class="text-xs">
-                    Para el testeo automático de código y mockups
-                  </p>
+                  <p class="text-xs">automated testing and mockups</p>
                 </div>
                 <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
                   {/* <StarIcon></StarIcon> */}
@@ -287,7 +286,7 @@ const cv = () => (
       <section class="mt-8 first:mt-0">
         <div class="break-inside-avoid">
           <h2 class="text-center mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-            EXPERIÈNCIA
+            EXPERIENCE
           </h2>
 
           <section class="mb-4.5 break-inside-avoid">
@@ -296,16 +295,16 @@ const cv = () => (
                 Sirastudio SL
               </h3>
               <p class="leading-normal text-md text-gray-650">
-                Enero 2017 - Diciembre 2017
+                January 2017 - December 2017
               </p>
             </header>
             <p class="mt-2.1 text-md text-gray-700 leading-normal">
               <span class="flex px-4  bg-gray-300">
-                Referencia: Marc Torrente Cesteros, CEO +34 616 248 949
+                Reference: Marc Torrente Cesteros, CEO +34 616 248 949
               </span>
-              Creación de wordpress y prestashops personalizados para clientes
-              de SiraStudio &bull; Creación de servidores personalizados,
-              Orientados a wordpress &bull; Desarrollo de Scripts en PHP.
+              Creation of wordpress, prestashops for clients of SiraStudio,
+              creation of custom servers oriented to wordpress sites, and
+              development of Scripts in PHP.
             </p>
           </section>
 
@@ -315,30 +314,32 @@ const cv = () => (
                 Hard Monkey PC Limited
               </h3>
               <p class="leading-normal text-md text-gray-650">
-                Enero 2016 - Enero 2019
+                January 2016 - December 2019
               </p>
             </header>
             <p class="mt-2.1 text-md text-gray-700 leading-normal">
-              Creación de pequeña agencia de programación, Dirección y gestión
-              de proyectos para los clientes, en ese tiempo trabaje realizando.
+              Creation of small agency of programming and direction and
+              managment of projects of the clients. in these years I worked
               <br />
               <ul class="list-disc ml-8">
-                <li>Wordpress Personalizados</li>
-                <li>Plugins Personalizados</li>
+                <li>Custom Wordpress Sites</li>
+                <li>Custom plugins wordpress</li>
                 <li>
-                  Creación de servidores Dedicados a traves del Partner de
-                  LiquidNet
+                  Creation of dedicated servers through LiquidNet partner.
                 </li>
 
                 <li>
-                  Creación de Webs utilizando frameworks, Laravel o CodeIgniter
-                  PHP
+                  development of sites using frameworks like Laravel or
+                  CodeIgniter. (PHP)
                 </li>
-                <li>Creación de Webs utilizando frameworks, React y NodeJS</li>
+                <li>
+                  development of sites using frameworks like React and NodeJS
+                  (JS)
+                </li>
               </ul>
               <span>
-                Tamaño de la empresa alcanzó 6 personas (Marketers, Diseñadores
-                y Programadores)
+                The size of the company reached 6 people (Marketers, Designers,
+                and programmers).
               </span>
             </p>
           </section>
@@ -348,15 +349,16 @@ const cv = () => (
                 Ibermática, S.A
               </h3>
               <p class="leading-normal text-md text-gray-650">
-                Enero 2020 - Marzo 2020
+                January 2020 - March 2020
               </p>
             </header>
             <p class="mt-2.1 text-md text-gray-700 leading-normal">
               <span class="flex px-4  bg-gray-300">
-                Referencia: Juan Miguel Barajas, Project Manager +34 606 428 989
+                Reference: Juan Miguel Barajas, Project Manager +34 606 428 989
               </span>
-              Creación de una pizarra deportiva virtual en 3D para 1d3a S.L con
-              las tecnologias de ThreeJS, WebGL y NodeJS.
+              Creation and development of a virtual blackboard in 3D oriented to
+              sports for 1d3a SL with javascript Techonoliges, like ThreeJS,
+              WebGL and NodeJS.
             </p>
           </section>
 
@@ -366,23 +368,25 @@ const cv = () => (
                 1d3a S.L
               </h3>
               <p class="leading-normal text-md text-gray-650">
-                Abril 2020 - Diciembre 2020
+                Abril 2020 - December 2020
               </p>
             </header>
             <p class="mt-2.1 text-md text-gray-700 leading-normal">
               <span class="flex px-4  bg-gray-300">
-                Referencia: Joan Carbó Laguna, CTO, +34 607 700 297 -
+                Reference: Joan Carbó Laguna, CTO, +34 607 700 297 -
                 juan.carbo@1d3a.com
               </span>
-              Desarrollo Web FrontEnd / BackEnd <br />
-              Desarrollo e Integración de APIs y applicaciones en JS, NodeJS y
-              PHP, para diferentes entornos del core de 1d3a SL.
+              FrontEnd / BackEnd web programming
+              <br />
+              Development and integration of APIs, applications in Javascript,
+              NodeJS and PHP and connect several envoriments of the core of 1d3a
+              SL
             </p>
           </section>
         </div>
         <hr></hr>
         <h1 class="p-4 text-center   bg-gray-300">
-          Proyectos personales en mi Github "polopopeye" o en mi blog,
+          Personal projects on my Github "polopopeye" or on my blog,
           kennethsuarez.es
         </h1>
       </section>
