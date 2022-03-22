@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
 const FormArticleCreation = ({
@@ -7,6 +7,7 @@ const FormArticleCreation = ({
   DescRef,
   OrderRef,
   editorRef,
+  postInHtml,
 }) => {
   return (
     <>
@@ -37,7 +38,7 @@ const FormArticleCreation = ({
       ></input>
       <Editor
         onInit={(evt, editor) => (editorRef.current = editor)}
-        initialValue=""
+        initialValue={postInHtml}
         init={{
           height: 500,
           menubar: false,

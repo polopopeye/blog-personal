@@ -1,25 +1,23 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Footer = () => {
   return (
     <>
       <footer class="footer px-4 py-6 select-none">
-        <div class="footer-content">
+        <div class="footer-content flex-row">
           <p class="text-sm text-gray-600 text-center">
-            <img
-              class="mx-auto"
-              src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"
-            ></img>
-            kennethsuarez.es - 2021 - Desarrollado en Barcelona con ❤️ por
-            Kenneth Suarez
+            Proudly developed by Kenneth Suarez with 🥵🥵🥵 -
+            <a href="https://github.com/polopopeye/blog-personal">
+              look at the code of this site
+            </a>
           </p>
         </div>
       </footer>
     </>
-  )
-}
+  );
+};
 
-Footer.propTypes = {}
+Footer.propTypes = {};
 
-export default Footer
+export default Footer;

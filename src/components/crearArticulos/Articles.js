@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import './components/styleEditor.css';
-import isConnected from './components/isConnected';
-import { createArticle } from './components/send2DB';
+import './modules/styleEditor.css';
+import isConnected from '../isConnected';
+import { createArticle } from './modules/createArticle';
 import { Menu } from '@headlessui/react';
-import firebase from 'gatsby-plugin-firebase';
 import { articles } from './constants';
-import FormArticleCreation from './components/FormArticleCreation';
+import FormArticleCreation from './FormArticleCreation';
+import handleEditArticle from './modules/handleEditArticle';
 
 const Articles = () => {
   const editorRef = useRef(),
@@ -15,53 +15,10 @@ const Articles = () => {
     inputArticleDesc = useRef(),
     inputArticleOrder = useRef();
 
-  const [idArticle, setIdArticle] = useState(undefined);
-  const [isUserConected, setIsUserConected] = useState(false);
+  const [idArticle, setIdArticle] = useState(undefined),
+    [isUserConected, setIsUserConected] = useState(false);
 
-  const handleEditArticle = (idArticle) => {
-    const db = firebase.firestore();
-    db.collection(articles.dbDocName)
-      .doc(idArticle)
-      .get()
-      .then((doc) => {
-        const { name, imgPost, desc, order, postinHTML } = doc.data();
-
-        if (doc.exists) {
-          inputArticleTitle.current.value = name;
-          inputArticleImgURL.current.value = imgPost;
-          inputArticleDesc.current.value = desc;
-          inputArticleOrder.current.value = order;
-          editorRef.current.setContent(postinHTML);
-        } else {
-          return articles.ifaceMesssages.notFoundArticleID;
-        }
-      });
-  };
-
-  const crearPost = ({ tittle, imgPost, descPost, orderPost, postContent }) => {
-    if (
-      inputArticleTitle.current.value.length <=
-        articles.minCharLength.default &&
-      imgPost.length <= articles.minCharLength.default &&
-      descPost.length <= articles.minCharLength.default &&
-      postContent.length <= articles.minCharLength.post
-    ) {
-      return articles.ifaceMesssages.ArticleFieildTooShort;
-    }
-
-    if (idArticle)
-      createArticle(
-        tittle,
-        postContent,
-        imgPost,
-        descPost,
-        orderPost,
-        idArticle
-      );
-    else createArticle(tittle, postContent, imgPost, descPost, orderPost);
-
-    return true;
-  };
+  const [postInHtml, setPostInHtml] = useState(undefined);
 
   useEffect(() => {
     isConnected(setIsUserConected);
@@ -71,7 +28,14 @@ const Articles = () => {
   }, []);
 
   useEffect(() => {
-    if (idArticle) handleEditArticle(idArticle);
+    handleEditArticle(idArticle, {
+      inputArticleTitle,
+      inputArticleImgURL,
+      inputArticleDesc,
+      inputArticleOrder,
+
+      setPostInHtml,
+    });
   }, [idArticle]);
 
   return (
@@ -88,6 +52,7 @@ const Articles = () => {
             DescRef={inputArticleDesc}
             OrderRef={inputArticleOrder}
             editorRef={editorRef}
+            postInHtml={postInHtml}
           />
           <Menu>
             <Menu.Button>
@@ -99,13 +64,16 @@ const Articles = () => {
               <Menu.Item>
                 {() => (
                   <button
-                    onClick={crearPost({
-                      tittle: inputArticleTitle.current.value,
-                      imgPost: inputArticleImgURL.current.value,
-                      descPost: inputArticleDesc.current.value,
-                      orderPost: inputArticleOrder.current.value,
-                      postContent: editorRef.current.getContent(),
-                    })}
+                    onClick={() =>
+                      createArticle({
+                        tittle: inputArticleTitle.current.value,
+                        post: editorRef.current.getContent(),
+                        img: inputArticleImgURL.current.value,
+                        desc: inputArticleDesc.current.value,
+                        order: inputArticleOrder.current.value,
+                        id: idArticle,
+                      })
+                    }
                     class="bg-green-400 text-gray-100 rounded-xl p-4"
                   >
                     {articles.ifaceMesssages.btn.publish}
