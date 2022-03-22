@@ -17,8 +17,10 @@ asegurate de tener el firebase instalado y configurado correctametne CLI : npm i
 para poder hacer el deploy correctamente
 <br>
 
+`Only windows`
 para configurar tienes que asegurarte que tengas la execution activada... Set-ExecutionPolicy Unrestricted despues puesde hacer
 firebase login
+
 <br>
 
 </p>
