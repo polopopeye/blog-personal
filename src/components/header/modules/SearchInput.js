@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import firebase from 'gatsby-plugin-firebase';
+import twFormater from '../../utils/twFormater';
+import { Transition } from '@headlessui/react';
 
 const SearchIcon = () => {
   return (
@@ -21,93 +23,18 @@ const SearchIcon = () => {
   );
 };
 
-function checkavalPost() {
-  let classElement = 'filteredSearch';
-  if (document.getElementsByClassName(classElement)[1]) {
-    console.log('ya se ha obtenido resultados');
-  } else {
-    console.log('No hay resultados todavia buscando...');
-    let db = firebase.firestore();
-    db.collection('posts')
-      .get()
-      .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          // doc.data() is never undefined for query doc snapshots
-          console.log(doc.id, ' => ', doc.data());
-          let idContainer2 = 'seccionBuscadorNoIndex';
-          if (document.getElementById(idContainer2)) {
-            if (document.getElementById(doc.data().name)) {
-            } else {
-              document.getElementById(idContainer2).innerHTML += `
-              <div id="${
-                doc.data().name
-              }" class="filteredSearch mb-2 rounded-sm bg-center bg-cover "
-              style="background:url('${doc.data().imgPost}');">
-              <div class="bg-opacity-50 bg-gray-800">
-              
-              <h1 class="font-bold text-lg pt-4 bg-gray-900 bg-opacity-60">${
-                doc.data().name
-              }</h1>
-              <p>${doc.data().desc}</p>
-<br />
-<a href="/post/article?p=${doc.data().name}" 
-class="bg-gray-600 w-full flex justify-center py-4 md:py-2 text-white font-semibold transition duration-300 hover:bg-red-500  ">
- Mas info
-</a>
-            
-              </div>
-                      
-                     </div>
-                      
-                       `;
-            }
-          }
-        });
-      })
-      .catch((error) => {
-        console.log('Error getting documents: ', error);
-      });
-  }
-}
-
-function displayResults() {
-  let idContainer2 = 'seccionBuscadorNoIndex';
-  if (document.getElementById(idContainer2)) {
-    // checkavalPost()
-    console.log('VIENDO DISEÑO');
-    if (document.getElementById('search').value.length > 1) {
-      document.getElementById(idContainer2).style.display = 'block';
-      console.log('BLOOOCK');
-    } else {
-      document.getElementById(idContainer2).style.display = 'none';
-      console.log('NONEEEE');
-    }
-  }
-  filtradorJS();
-  checkavalPost();
-}
-function hideResults() {
-  setTimeout(() => {
-    let idContainer2 = 'seccionBuscadorNoIndex';
-    if (document.getElementById(idContainer2)) {
-      document.getElementById(idContainer2).style.display = 'none';
-    }
-  }, 250);
-}
-
-function filtradorJS() {
-  console.log('FILTRANDO');
+function displayResults(searchInput) {
   let idContainer = 'sectionPost';
   let classElement = 'filteredSearch';
 
   if (document.getElementById(idContainer)) {
     // ES EL INDICE PARA FILTRAR
-    var input, filter, container, element, i, txtValue;
-    input = document.getElementById('search');
-    filter = input.value.toUpperCase();
+    var filter, container, element, i, txtValue;
+
+    filter = searchInput.value.toUpperCase();
     container = document.getElementById(idContainer);
     element = container.getElementsByClassName(classElement);
-    let noResults = false;
+
     let counter = 0;
     for (i = 0; i < element.length; i++) {
       txtValue = element[i].id || element[i].innerText;
@@ -119,84 +46,39 @@ function filtradorJS() {
       }
       if (i === element.length - 1) {
         if (counter - 1 === i) {
-          noResults = true;
           document.getElementById('noresultsIndex').style.display = 'block';
         } else {
-          noResults = false;
           document.getElementById('noresultsIndex').style.display = 'none';
         }
-        console.log(counter);
-        console.log(i);
       }
     }
-  } else {
-    let idContainer2 = 'seccionBuscadorNoIndex';
-    let classElement2 = 'filteredSearch';
-
-    if (document.getElementById(idContainer2)) {
-      var input, filter, container, element, i, txtValue;
-      input = document.getElementById('search');
-      filter = input.value.toUpperCase();
-      container = document.getElementById(idContainer2);
-      element = container.getElementsByClassName(classElement2);
-      let noResults = false;
-      let counter = 0;
-      for (i = 0; i < element.length; i++) {
-        txtValue = element[i].id || element[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          element[i].style.display = '';
-        } else {
-          element[i].style.display = 'none';
-          counter++;
-        }
-
-        if (i === element.length - 1) {
-          if (counter - 1 === i) {
-            noResults = true;
-            document.getElementById('noresults').style.display = 'block';
-          } else {
-            noResults = false;
-            document.getElementById('noresults').style.display = 'none';
-          }
-          console.log(counter);
-          console.log(i);
-        }
-      }
-    }
-    // NO INDICE; QUERY Y FILTRAR EN BASE AL RESULTADO
-    console.log('NO ES INDICE NO HAGO NADA');
   }
 }
 
 const SearchInput = () => {
+  const searchInputRef = useRef();
+
   return (
-    <div class="w-full md:flex relative pt-3">
+    <div className={twFormater({ base: 'w-full relative pt-3', md: 'flex' })}>
       <SearchIcon />
 
       <input
-        onKeyUp={displayResults}
-        onFocus={displayResults}
-        onBlur={hideResults}
-        id="search"
+        ref={searchInputRef}
+        onKeyUp={() => {
+          displayResults(searchInputRef.current);
+        }}
+        onFocus={() => {
+          displayResults(searchInputRef.current);
+        }}
         type="text"
-        name="search"
-        class="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-300 w-full h-10 focus:outline-none focus:border-indigo-400"
+        className={twFormater({
+          base:
+            'placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-300 w-full h-10 text-sm',
+          sm: 'text-base',
+          focus: 'border-indigo-400 outline-none',
+        })}
         placeholder="Search..."
       />
-      <div
-        id="seccionBuscadorNoIndex"
-        class="bg-opacity-90 absolute rounded-xl w-full text-center bg-gray-800 text-white md:mt-11"
-        style={{ display: 'none' }}
-      >
-        <h1
-          id="noresults"
-          class="p-4 text-xl md:text-6xl"
-          style={{ display: 'none' }}
-        >
-          NO HAY RESULTADOS 🥺👉👈
-        </h1>
-        {/* RESULTADOS */}
-      </div>
     </div>
   );
 };

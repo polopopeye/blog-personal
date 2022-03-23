@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const ButtonCreator = ({ classN, link, classNActive, nombre }) => {
+const MenuButton = ({ classN, link, classNActive, nombre }) => {
   return (
     <>
       <div class="w-full">
@@ -13,4 +13,4 @@ const ButtonCreator = ({ classN, link, classNActive, nombre }) => {
   );
 };
 
-export default ButtonCreator;
+export default MenuButton;

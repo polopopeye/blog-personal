@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonCreator from './ButtonCreator';
+import MenuButton from './MenuButton';
 import {
   faGithub,
   faLinkedin,
@@ -35,25 +35,25 @@ const IconsRowSocial = () => {
 const Menu = () => {
   return (
     <div class="grid grid-flow-col grid-cols-1 grid-rows-5 gap-4 font-mono text-lg text-center ">
-      <ButtonCreator
+      <MenuButton
         nombre="Proyectos"
         link="/"
         classN="w-full p-4"
         classNActive="w-full p-2 text-gray-100 bg-gray-700"
       />
-      <ButtonCreator
+      <MenuButton
         nombre="Curriculum"
         link="/cv/"
         classN="w-full p-4  "
         classNActive="w-full p-2 text-gray-100 bg-gray-700"
       />
-      <ButtonCreator
+      <MenuButton
         nombre="Contactar"
         link="/contactar/"
         classN="w-full p-4  "
         classNActive="w-full p-2 text-gray-100 bg-gray-700"
       />
-      <ButtonCreator
+      <MenuButton
         nombre="Sobre mi"
         link="/hola/"
         classN="w-full p-4   "

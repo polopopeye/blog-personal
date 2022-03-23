@@ -55,7 +55,6 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Home" />
       <section
-        // style={{ display: "grid" }}
         id="sectionPost"
         class=" w-full flex-start justify-center items-center px-2"
       >
