@@ -1,25 +1,25 @@
-import * as React from "react"
-import "../styles/global.css"
-import firebase from "gatsby-plugin-firebase"
-import perroWatonTriste from "../images/perroWatonTriste.jpg"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import * as React from 'react';
+import '../styles/global.css';
+import firebase from 'gatsby-plugin-firebase';
+import perroWatonTriste from '../images/perroWatonTriste.jpg';
+import Layout from '../components/layout';
+import Seo from '../components/seo';
 
 const IndexPage = () => {
   setTimeout(() => {
-    let db = firebase.firestore()
+    let db = firebase.firestore();
 
-    db.collection("posts")
+    db.collection('posts')
       .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
-          console.log(doc.id, " => ", doc.data())
-          if (document.getElementById("sectionPost")) {
+          console.log(doc.id, ' => ', doc.data());
+          if (document.getElementById('sectionPost')) {
             if (document.getElementById(doc.data().name)) {
-              console.log("YA ESTA ESTE ARTICULO!!")
+              console.log('YA ESTA ESTE ARTICULO!!');
             } else {
-              document.getElementById("sectionPost").innerHTML += `
+              document.getElementById('sectionPost').innerHTML += `
               <div id="${doc.data().name}"
               class="wrapper w-full rounded-b-md shadow-lg overflow-hidden   filteredSearch"
               style="background:url('${
@@ -33,7 +33,7 @@ const IndexPage = () => {
                 <hr />
                 <br />
                 ${doc.data().desc}
-                 
+
               </div>
               <a href="/post/article?p=${
                 doc.data().name
@@ -41,15 +41,15 @@ const IndexPage = () => {
                 Mas info
               </a>
             </div>
-    `
+    `;
             }
           }
-        })
+        });
       })
-      .catch(error => {
-        console.log("Error getting documents: ", error)
-      })
-  }, 100)
+      .catch((error) => {
+        console.log('Error getting documents: ', error);
+      });
+  }, 500);
 
   return (
     <Layout>
@@ -62,7 +62,7 @@ const IndexPage = () => {
         <h1
           id="noresultsIndex"
           class="text-2xl text-center p-2 select-none"
-          style={{ display: "none" }}
+          style={{ display: 'none' }}
         >
           Sry, no hay resultados...
           <center>
@@ -75,6 +75,6 @@ const IndexPage = () => {
         {/* INICIO POST */}
       </section>
     </Layout>
-  )
-}
-export default IndexPage
+  );
+};
+export default IndexPage;

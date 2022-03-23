@@ -1,16 +1,10 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import "tooltipster/dist/css/tooltipster.bundle.css"
-import "tooltipster/dist/css/tooltipster.bundle.css"
-import profileUrl from "../../images/profile.jpg"
+import { Transition } from '@headlessui/react';
+import React, { useState } from 'react';
 
-import Menu from "./components/Menu"
-import SearchInput from "./components/SearchInput"
+import profileUrl from '../../images/profile.jpg';
 
-let initialState = false
-let initialStateSearch = false
-let cnt = 0
-let cntSearch = 0
+import Menu from './modules/Menu';
+import SearchInput from './modules/SearchInput';
 
 const LogoContainer = () => {
   return (
@@ -19,7 +13,7 @@ const LogoContainer = () => {
         <img
           src={profileUrl}
           alt
-          class=" print:hidden h-16 w-16 bg-gray-200 border rounded-full"
+          class=" print:hidden h-16 w-full bg-gray-200 border rounded-full"
         />
 
         <span class="flex flex-col ml-2">
@@ -27,63 +21,39 @@ const LogoContainer = () => {
             Kenneth Suarez
           </span>
           <span class="truncate w-20 text-gray-500 text-xs leading-none mt-1">
-            Web UI Developer
+            Full Stack Developer
           </span>
         </span>
       </a>
     </>
-  )
-}
+  );
+};
 
 const Header = ({ siteTitle }) => {
-  const [showMenu, setshowMenu] = React.useState(initialState)
-  const [showSearch, setshowSearch] = React.useState(initialState)
+  const [showMenu, setshowMenu] = useState(false);
+  const [showSearch, setshowSearch] = useState(false);
 
-  const handleMenu = () => {
-    if (cnt == 0) {
-      setshowSearch(true)
-    } else {
-      setshowSearch(initialState)
-
-      if (initialState) {
-        initialState = false
-      } else {
-        initialState = true
-      }
-    }
-    cnt++
-  }
-  const handleSearch = () => {
-    if (cntSearch == 0) {
-      setshowMenu(true)
-    } else {
-      setshowMenu(initialStateSearch)
-
-      if (initialStateSearch) {
-        initialStateSearch = false
-      } else {
-        initialStateSearch = true
-      }
-    }
-    cntSearch++
-  }
+  const cssClass = {
+    hideOnPrint: 'print:hidden',
+  };
 
   return (
     <header
       style={{
-        backgroundColor: "#f2f2f2",
+        backgroundColor: '#f2f2f2',
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.828 12h-3.656z' fill='%23c5c5c5' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E")`,
       }}
-      class=" print:hidden shadow  py-4 px-4 transform translate-y-0  transition-all duration-150 ease-in"
+      class="${cssClass} shadow py-4 px-4 transform translate-y-0 transition-all duration-150 ease-in"
     >
-      <div class="print:hidden   flex md:hidden header-content  items-center flex-row">
-        <LogoContainer></LogoContainer>
+      {/* Mobile */}
+      <div class="${cssClass} flex md:hidden header-content  items-center flex-row">
+        <LogoContainer />
 
-        <div class=" print:hidden flex ml-auto">
+        <div class=" ${cssClass} flex ml-auto">
           <form class="inline-flex  ">
             <div class="flex md:hidden">
               <a
-                onClick={handleMenu}
+                onClick={() => setshowSearch((showSearch) => !showSearch)}
                 class="flex items-center justify-center h-10 w-10 border-transparent"
               >
                 <svg
@@ -102,8 +72,8 @@ const Header = ({ siteTitle }) => {
           </form>
 
           <button
-            class=" print:hidden flex text-center align-text-bottom mt-2 ml-6 mr-4"
-            onClick={handleSearch}
+            class=" ${cssClass} flex text-center align-text-bottom mt-2 ml-6 mr-4"
+            onClick={() => setshowMenu((showMenu) => !showMenu)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -122,22 +92,36 @@ const Header = ({ siteTitle }) => {
           </button>
         </div>
       </div>
-      {showSearch ? <SearchInput /> : null}
-      <div class=" hidden md:flex relative">
+
+      <Transition
+        show={showSearch}
+        enter="transition-all duration-500"
+        enterFrom="h-0 opacity-0"
+        enterTo="h-12 opacity-100"
+        leave="transition-all duration-500"
+        leaveFrom="h-12 opacity-100"
+        leaveTo="h-0 opacity-0"
+      >
+        <SearchInput />
+      </Transition>
+      <Transition
+        show={showMenu}
+        enter="transition-all duration-500"
+        enterFrom="h-0 opacity-0"
+        enterTo="h-52 opacity-100"
+        leave="transition-all duration-500"
+        leaveFrom="h-52 opacity-100"
+        leaveTo="h-0 opacity-0"
+      >
+        <Menu />
+      </Transition>
+
+      {/* Desktop */}
+      <div class="hidden md:flex relative">
         <SearchInput />
       </div>
-
-      {showMenu ? <Menu /> : null}
     </header>
-  )
-}
+  );
+};
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;
