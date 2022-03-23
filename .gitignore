@@ -88,3 +88,4 @@ package-lock.json
 .firebase/hosting.cHVibGlj.cache
 *.cache
 package-lock.json
+*.cache
