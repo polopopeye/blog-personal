@@ -2,9 +2,9 @@ import { Transition } from '@headlessui/react';
 import React, { useState } from 'react';
 
 import profileUrl from '../../images/profile.jpg';
+import HeaderMenu from '../Menu/Header/HeaderMenu';
 import twFormater from '../utils/twFormater';
 
-import Menu from './modules/Menu';
 import SearchInput from './modules/SearchInput';
 
 const LogoContainer = () => {
@@ -133,7 +133,7 @@ const Header = ({ siteTitle }) => {
         leaveFrom="h-52 opacity-100"
         leaveTo="h-0 opacity-0"
       >
-        <Menu />
+        <HeaderMenu />
       </Transition>
 
       {/* Desktop */}

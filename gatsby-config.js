@@ -33,15 +33,15 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-firebase",
+      resolve: 'gatsby-plugin-firebase',
       options: {
         credentials: {
-          apiKey: "AIzaSyCrGBWA3bqK65YK7jaUuFWlr0hRLbUlj1A",
-          authDomain: "blog-personal-kenneth.firebaseapp.com",
-          projectId: "blog-personal-kenneth",
-          storageBucket: "blog-personal-kenneth.appspot.com",
-          messagingSenderId: "833941574074",
-          appId: "1:833941574074:web:701c36ab165f5e84690d83",
+          apiKey: 'AIzaSyCrGBWA3bqK65YK7jaUuFWlr0hRLbUlj1A',
+          authDomain: 'blog-personal-kenneth.firebaseapp.com',
+          projectId: 'blog-personal-kenneth',
+          storageBucket: 'blog-personal-kenneth.appspot.com',
+          messagingSenderId: '833941574074',
+          appId: '1:833941574074:web:701c36ab165f5e84690d83',
         },
       },
     },
@@ -50,4 +50,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

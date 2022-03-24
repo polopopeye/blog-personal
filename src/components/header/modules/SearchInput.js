@@ -1,7 +1,5 @@
-import React, { useRef, useState } from 'react';
-import firebase from 'gatsby-plugin-firebase';
+import React, { useRef } from 'react';
 import twFormater from '../../utils/twFormater';
-import { Transition } from '@headlessui/react';
 
 const SearchIcon = () => {
   return (
@@ -28,7 +26,6 @@ function displayResults(searchInput) {
   let classElement = 'filteredSearch';
 
   if (document.getElementById(idContainer)) {
-    // ES EL INDICE PARA FILTRAR
     var filter, container, element, i, txtValue;
 
     filter = searchInput.value.toUpperCase();

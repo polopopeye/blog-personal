@@ -1,5 +1,7 @@
 import React from 'react';
+import '../components/translationEngine';
 import '../styles/global.css';
+import '../components/translationEngine/i18n';
 
 import Layout from '../components/layout';
 import Seo from '../components/seo';

@@ -1,15 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const BottonCreator = (props) => {
+const BottonCreator = ({ data }) => {
+  const { link, classN, classNActive, nombre, iconD } = data;
   return (
     <>
-      <li id={props.idH} class="my-px ">
-        <Link
-          to={props.link}
-          class={props.classN}
-          activeClassName={props.classNActive}
-        >
+      <li class="my-px ">
+        <Link to={link} class={classN} activeClassName={classNActive}>
           <span class="flex items-center justify-center text-lg text-gray-400 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -22,11 +19,11 @@ const BottonCreator = (props) => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d={props.iconD}
+                d={iconD}
               />
             </svg>
           </span>
-          <span class="ml-3 font-mono"> {props.nombre}</span>
+          <span class="ml-3 font-mono"> {nombre}</span>
         </Link>
       </li>
     </>
