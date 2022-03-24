@@ -6,9 +6,13 @@ import getArticlesList from './modules/getArticlesList';
 
 const ArticleList = () => {
   const [articles, setArticles] = useState(store.getState().articles);
+
   useEffect(() => {
-    getArticlesList(setArticles);
+    if (store.getState().articles.length === 0) {
+      getArticlesList(setArticles);
+    }
   }, []);
+
   return (
     <section
       id="sectionPost"
