@@ -24,7 +24,6 @@ export const createArticle = ({ tittle, post, img, desc, order, id }) => {
       order: order,
     })
     .then(() => {
-      console.log('Document successfully written!');
       alert('CORRECTAMENTE PUBLICADO');
       window.location.href = '/';
     })

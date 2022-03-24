@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
-const BottonCreator = props => {
+const BottonCreator = (props) => {
   return (
     <>
       <li id={props.idH} class="my-px ">
@@ -30,7 +30,7 @@ const BottonCreator = props => {
         </Link>
       </li>
     </>
-  )
-}
+  );
+};
 
-export default BottonCreator
+export default BottonCreator;

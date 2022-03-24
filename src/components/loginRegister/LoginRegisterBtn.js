@@ -1,24 +1,14 @@
-import React, { useEffect } from "react"
+import React, { useEffect } from 'react';
 import {
   logOut,
   checkIsLogedIn,
   registerConnect,
-} from "./components/googleAuth"
-// import firebase from "gatsby-plugin-firebase"
+} from './components/googleAuth';
 
 const LoginRegisterBtn = () => {
-  // let cnt = 0
-  // function checkDisplay() {
-  //   if (cnt > 3) {
-  //     console.log("EJECUTADO VARIAS COMPROBACIONES")
-  //   } else {
-
-  //   }
-  // }
-  // checkDisplay()
   setTimeout(() => {
-    checkIsLogedIn()
-  }, 100)
+    checkIsLogedIn();
+  }, 100);
 
   return (
     <div>
@@ -26,23 +16,15 @@ const LoginRegisterBtn = () => {
 
       <button
         id="Conectar"
-        style={{ display: "none" }}
+        style={{ display: 'none' }}
         onClick={registerConnect}
         class="bg-gray-900 text-white p-4"
       >
         Entrar / REGISTRARSE
       </button>
-      {/* <button
-        href="/crear/"
-        id="crear"
-        style={{ display: "none" }}
-        class="bg-gray-900 text-white p-4"
-      >
-        CREAR POST
-      </button> */}
 
       <button
-        style={{ display: "none" }}
+        style={{ display: 'none' }}
         id="Logout"
         onClick={logOut}
         class="bg-gray-900 text-white p-4"
@@ -50,7 +32,7 @@ const LoginRegisterBtn = () => {
         LOG OUT
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default LoginRegisterBtn
+export default LoginRegisterBtn;

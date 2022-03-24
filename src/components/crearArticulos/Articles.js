@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import './modules/styleEditor.css';
-import isConnected from '../isConnected';
+
 import { createArticle } from './modules/createArticle';
 import { Menu } from '@headlessui/react';
 import { articles } from './constants';
 import FormArticleCreation from './FormArticleCreation';
 import handleEditArticle from './modules/handleEditArticle';
+import isConnected from '../utils/isConnected';
 
 const Articles = () => {
   const editorRef = useRef(),
