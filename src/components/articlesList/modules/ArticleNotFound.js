@@ -4,7 +4,7 @@ import randomNumber from '../../utils/randomNumber';
 
 import twFormater from '../../utils/twFormater';
 
-const ArticleNotFound = () => {
+const ArticleNotFound = ({ display = 'none' }) => {
   const [imgIndex, setImgIndex] = useState(
     randomNumber(0, notFoundImgs.length - 1)
   );
@@ -18,7 +18,7 @@ const ArticleNotFound = () => {
       <h1
         id="noresultsIndex"
         class="text-2xl text-center p-2 select-none"
-        style={{ display: 'none' }}
+        style={{ display: display }}
       >
         Sry, no hay resultados...
         <center>
