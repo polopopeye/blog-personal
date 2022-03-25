@@ -5,10 +5,6 @@ import getArticlesList from './getArticlesList';
 const ArticleItem = ({ dataPost }) => {
   const { desc, imgPost, name, order } = dataPost;
 
-  useEffect(() => {
-    console.log(getArticlesList());
-  }, []);
-
   return (
     <>
       <div

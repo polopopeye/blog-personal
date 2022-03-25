@@ -2,7 +2,7 @@ import firebase from 'gatsby-plugin-firebase';
 import store from '../../../store';
 import articlesSlice from '../../../store/slice/articles';
 
-const getArticlesList = async (setArticles) => {
+const getArticlesList = (setArticles) => {
   const db = firebase.firestore();
   const response = [];
   db.collection('posts')
@@ -12,7 +12,7 @@ const getArticlesList = async (setArticles) => {
         response.push(doc.data());
       });
       if (
-        store.getState().articles !== response &&
+        store.getState().articles.length !== response.length &&
         typeof setArticles === 'function'
       ) {
         setArticles(response);
