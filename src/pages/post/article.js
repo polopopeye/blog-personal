@@ -23,7 +23,7 @@ const article = () => {
 
   setTimeout(() => {
     firebase.auth().onAuthStateChanged(function (user) {
-      if (user && user.email == 'kenneth7e7a@gmail.com') {
+      if (user && user.email === 'kenneth7e7a@gmail.com') {
         document.getElementById('editionButtons').style.display = 'block';
       } else {
         document.getElementById('editionButtons').style.display = 'none';
@@ -33,7 +33,7 @@ const article = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const postName = urlParams.get('p');
     console.log(postName);
-    if (postName.length > 5 && postName != 'undefined') {
+    if (postName.length > 5 && postName !== 'undefined') {
       db = firebase.firestore();
       db.collection('posts')
         .where('name', '==', postName)
@@ -65,7 +65,7 @@ const article = () => {
       <Layout>
         <Seo title="Artículo del blog de Kenneth Suarez" />
         <h1
-          class="text-4xl text-center text-gray-100 font-bolder p-8 font-mono text-xl"
+          className="text-xl text-center text-gray-100 font-bolder p-8 font-mono"
           style={{
             backgroundColor: '#333333',
             backgroundImage: `url(
@@ -78,15 +78,15 @@ const article = () => {
         <p
           id="post"
           style={{ overflow: 'hidden' }}
-          class="w-full p-4 md:p-8 font-mono"
+          className="w-full p-4 md:p-8 font-mono"
         ></p>
         <hr></hr>
-        <div id="editionButtons" class="flex  ">
-          <a class="p-4" id="edit" href="/editar/?p=">
+        <div id="editionButtons" className="flex  ">
+          <a className="p-4" id="edit" href="/editar/?p=">
             Editar
           </a>
           |
-          <a class="p-4" onClick={deleteArticle}>
+          <a className="p-4" onClick={deleteArticle}>
             Eliminar
           </a>
         </div>

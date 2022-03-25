@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
 const FormArticleCreation = ({
@@ -15,26 +15,26 @@ const FormArticleCreation = ({
         placeholder="titulo"
         ref={titleRef}
         type="text"
-        class="p-4 text-xl w-full"
+        className="p-4 text-xl w-full"
       ></input>
       <input
         placeholder="imagen URL"
         ref={ImgURLRef}
         id="imgPost"
         type="text"
-        class="p-4 text-xl w-full"
+        className="p-4 text-xl w-full"
       ></input>
       <input
         placeholder="Descripción del post"
         ref={DescRef}
         type="text"
-        class="p-4 text-xl w-full"
+        className="p-4 text-xl w-full"
       ></input>
       <input
         placeholder="Orden"
         ref={OrderRef}
         type="number"
-        class="p-4 text-xl w-full"
+        className="p-4 text-xl w-full"
       ></input>
       <Editor
         onInit={(evt, editor) => (editorRef.current = editor)}

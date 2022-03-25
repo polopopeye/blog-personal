@@ -28,7 +28,7 @@ const handleEditArticle = (
         inputArticleOrder.current.value = order;
         setPostInHtml(postinHTML);
       } else {
-        return articles.ifaceMesssages.notFoundArticleID;
+        return 'article not Found';
       }
     });
 };

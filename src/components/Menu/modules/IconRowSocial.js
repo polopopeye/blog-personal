@@ -15,18 +15,30 @@ const IconsRowSocial = ({ classCss = ' ' }) => {
         }
       >
         <div>
-          <a href="https://github.com/polopopeye" target="_blank">
+          <a
+            href="https://github.com/polopopeye"
+            rel="noreferrer"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
 
         <div>
-          <a href="https://www.linkedin.com/in/kennethsuarez/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/kennethsuarez/"
+            rel="noreferrer"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </div>
         <div>
-          <a href="https://www.facebook.com/majestichalcon/" target="_blank">
+          <a
+            href="https://www.facebook.com/majestichalcon/"
+            rel="noreferrer"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faFacebook} />
           </a>
         </div>

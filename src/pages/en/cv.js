@@ -1,9 +1,9 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import "../../styles/global.css"
+import * as React from 'react';
+import { Link } from 'gatsby';
+import '../../styles/global.css';
 
-import Layout from "../../components/layout"
-import Seo from "../../components/seo"
+import Layout from '../../components/layout';
+import Seo from '../../components/seo';
 const StarIcon = () => {
   return (
     <>
@@ -22,8 +22,8 @@ const StarIcon = () => {
         />
       </svg>
     </>
-  )
-}
+  );
+};
 
 const ClockIcon = () => {
   return (
@@ -43,37 +43,37 @@ const ClockIcon = () => {
         />
       </svg>
     </>
-  )
-}
+  );
+};
 
 const cv = () => (
   <Layout>
     <Seo title="Curriculum Vitae" />
-    <div class=" print:hidden bg-gray-900 text-white">
+    <div className=" print:hidden bg-gray-900 text-white">
       <Link to="/cv/">
-        <button class="p-4">Español</button>
+        <button className="p-4">Español</button>
       </Link>
-      {/* <button class="  p-4">Español</button> */}
+      {/* <button className="  p-4">Español</button> */}
     </div>
-    <div class="p-6 mx-auto page   print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
-      <header class="flex items-center mb-4 md:mb-8">
-        <div class="initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3">
-          <div class="initial text-center">K</div>
-          <div class="text-center initial">S</div>
+    <div className="p-6 mx-auto page   print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
+      <header className="flex items-center mb-4 md:mb-8">
+        <div className="initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3">
+          <div className="initial text-center">K</div>
+          <div className="text-center initial">S</div>
         </div>
-        <h1 class="text-2xl font-semibold text-gray-750 pb-px">
+        <h1 className="text-2xl font-semibold text-gray-750 pb-px">
           Kenneth Suarez Guineart
         </h1>
       </header>
 
-      <section class="mt-4 first:mt-0">
-        <div class="break-inside-avoid">
-          <h2 class="mb-2 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
+      <section className="mt-4 first:mt-0">
+        <div className="break-inside-avoid">
+          <h2 className="mb-2 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
             BASIC INFORMATION
           </h2>
-          <div class="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <div>
-              <span class="flex flex-inline text-center  rounded-sm p-1   bg-gray-300 w-full">
+              <span className="flex flex-inline text-center  rounded-sm p-1   bg-gray-300 w-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -96,7 +96,7 @@ const cv = () => (
               LinkedIn: <b> /in/kennethsuarez/ </b> <br />
             </div>
             <div>
-              <span class="flex flex-inline text-center  rounded-sm p-1   bg-gray-300 w-full">
+              <span className="flex flex-inline text-center  rounded-sm p-1   bg-gray-300 w-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -120,13 +120,13 @@ const cv = () => (
           </div>
         </div>
 
-        <section class="mb-4.5 break-inside-avoid">
+        <section className="mb-4.5 break-inside-avoid">
           <header>
-            <h2 class=" text-center mt-4 mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
+            <h2 className=" text-center mt-4 mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
               WEB UI DEVELOPER
             </h2>
           </header>
-          <p class="mt-2.1 text-md text-gray-800 leading-normal">
+          <p className="mt-2.1 text-md text-gray-800 leading-normal">
             I've been programming for several years, both with backend and
             frontend technologies, I know their integration and communication
             between both parts, as well as development and communication of
@@ -137,82 +137,82 @@ const cv = () => (
             high definitions, normally I use POP (Prototype-based programming)
             and OOP (Object-oriented programming)
             <hr></hr>I know and develop with frameworks like:
-            <div class=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-1 text-center">
-              <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+            <div className=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-1 text-center">
+              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
-                <h6 class="font-bold">React</h6>
-                <span class="text-sm">
+                <h6 className="font-bold">React</h6>
+                <span className="text-sm">
                   <ClockIcon></ClockIcon> (> 4 Years)
                 </span>
               </div>
-              <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
-                <h6 class="font-bold">Angular</h6>
-                <span class="text-sm">
+              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
+                <h6 className="font-bold">Angular</h6>
+                <span className="text-sm">
                   <ClockIcon></ClockIcon> (1 Year)
                 </span>
               </div>
-              <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
-                <h6 class="font-bold">Node JS </h6>
-                <span class="text-sm">
+                <h6 className="font-bold">Node JS </h6>
+                <span className="text-sm">
                   <ClockIcon></ClockIcon> (> 4 Years)
                 </span>
               </div>
-              <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
-                <h6 class="font-bold">Gatsby </h6>
-                <span class="text-sm">
+                <h6 className="font-bold">Gatsby </h6>
+                <span className="text-sm">
                   <ClockIcon></ClockIcon> (1 Years)
                 </span>
               </div>
-              <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
-                <h6 class="font-bold"> Tailwind CSS </h6>
-                <span class="text-sm">
+                <h6 className="font-bold"> Tailwind CSS </h6>
+                <span className="text-sm">
                   <ClockIcon></ClockIcon> (2 Years)
                 </span>
               </div>
-              <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
-                <h6 class="font-bold"> Bootstrap CSS </h6>
-                <span class="text-sm">
+                <h6 className="font-bold"> Bootstrap CSS </h6>
+                <span className="text-sm">
                   <ClockIcon></ClockIcon> (>4 Years)
                 </span>
               </div>
 
-              <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                 {/* <StarIcon></StarIcon> */}
-                <h6 class="font-bold">Laravel (PHP)</h6>
-                <span class="text-sm">
+                <h6 className="font-bold">Laravel (PHP)</h6>
+                <span className="text-sm">
                   <ClockIcon></ClockIcon> (> 3 Years)
                 </span>
               </div>
-              <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                 {/* <StarIcon></StarIcon> */}
-                <h6 class="font-bold">CodeIgniter (PHP) </h6>
-                <span class="text-sm">
+                <h6 className="font-bold">CodeIgniter (PHP) </h6>
+                <span className="text-sm">
                   <ClockIcon></ClockIcon> (> 4 Años)
                 </span>
               </div>
 
-              <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
-                <h6 class="font-bold">Jquery </h6>
-                <span class="text-sm">
+                <h6 className="font-bold">Jquery </h6>
+                <span className="text-sm">
                   <ClockIcon></ClockIcon> (> 4 Years)
                 </span>
               </div>
-              <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                 {/* <StarIcon></StarIcon> */}
-                <h6 class="font-bold">WebGL</h6>
-                <span class="text-sm">
+                <h6 className="font-bold">WebGL</h6>
+                <span className="text-sm">
                   <ClockIcon></ClockIcon> (2 Years)
                 </span>
               </div>
-              <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                 <StarIcon></StarIcon>
-                <h6 class="font-bold">ThreeJS</h6>
-                <span class="text-sm">
+                <h6 className="font-bold">ThreeJS</h6>
+                <span className="text-sm">
                   <ClockIcon></ClockIcon> (2 Years)
                 </span>
               </div>
@@ -221,59 +221,59 @@ const cv = () => (
             <i>
               I have also worked and developed with other technologies:
               <br></br>
-              <div class=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-1 text-center">
-                <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+              <div className=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-1 text-center">
+                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                   <StarIcon></StarIcon>
-                  <h6 class="font-bold">MySQL</h6>
-                  <span class="text-sm">
+                  <h6 className="font-bold">MySQL</h6>
+                  <span className="text-sm">
                     <ClockIcon></ClockIcon> (> 4 Years)
                   </span>
                 </div>
-                <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                   <StarIcon></StarIcon>
-                  <h6 class="font-bold">Firebase</h6>
-                  <span class="text-sm">
+                  <h6 className="font-bold">Firebase</h6>
+                  <span className="text-sm">
                     <ClockIcon></ClockIcon> (2 Years)
                   </span>
-                  <p class="text-xs">
+                  <p className="text-xs">
                     Including Auth, FireStore, Hosting Deployment, Machine
                     Learning
                   </p>
                 </div>
-                <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                   <StarIcon></StarIcon>
-                  <h6 class="font-bold">FireStore</h6>
-                  <span class="text-sm">
+                  <h6 className="font-bold">FireStore</h6>
+                  <span className="text-sm">
                     <ClockIcon></ClockIcon> (2 Years)
                   </span>
                 </div>
-                <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                   <StarIcon></StarIcon>
-                  <h6 class="font-bold">MongoDB</h6>
-                  <span class="text-sm">
+                  <h6 className="font-bold">MongoDB</h6>
+                  <span className="text-sm">
                     <ClockIcon></ClockIcon> (3 Years)
                   </span>
                 </div>
-                <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                   {/* <StarIcon></StarIcon> */}
-                  <h6 class="font-bold">Advanced Wordpress</h6>
-                  <span class="text-sm">
+                  <h6 className="font-bold">Advanced Wordpress</h6>
+                  <span className="text-sm">
                     <ClockIcon></ClockIcon> (> 4 Years)
                   </span>
-                  <p class="text-xs">development of plugins and themes</p>
+                  <p className="text-xs">development of plugins and themes</p>
                 </div>
-                <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                   <StarIcon></StarIcon>
-                  <h6 class="font-bold">Jest</h6>
-                  <span class="text-sm">
+                  <h6 className="font-bold">Jest</h6>
+                  <span className="text-sm">
                     <ClockIcon></ClockIcon> (2 Years)
                   </span>
-                  <p class="text-xs">automated testing and mockups</p>
+                  <p className="text-xs">automated testing and mockups</p>
                 </div>
-                <div class="grid rounded-xl border-solid border-4 border-light-blue-700">
+                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
                   {/* <StarIcon></StarIcon> */}
-                  <h6 class="font-bold"> TensorFlowJS</h6>
-                  <span class="text-sm">
+                  <h6 className="font-bold"> TensorFlowJS</h6>
+                  <span className="text-sm">
                     <ClockIcon></ClockIcon> (1 Año)
                   </span>
                 </div>
@@ -283,23 +283,23 @@ const cv = () => (
         </section>
       </section>
 
-      <section class="mt-8 first:mt-0">
-        <div class="break-inside-avoid">
-          <h2 class="text-center mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
+      <section className="mt-8 first:mt-0">
+        <div className="break-inside-avoid">
+          <h2 className="text-center mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
             EXPERIENCE
           </h2>
 
-          <section class="mb-4.5 break-inside-avoid">
+          <section className="mb-4.5 break-inside-avoid">
             <header>
-              <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+              <h3 className="text-lg font-semibold text-gray-700 leading-snugish">
                 Sirastudio SL
               </h3>
-              <p class="leading-normal text-md text-gray-650">
+              <p className="leading-normal text-md text-gray-650">
                 January 2017 - December 2017
               </p>
             </header>
-            <p class="mt-2.1 text-md text-gray-700 leading-normal">
-              <span class="flex px-4  bg-gray-300">
+            <p className="mt-2.1 text-md text-gray-700 leading-normal">
+              <span className="flex px-4  bg-gray-300">
                 Reference: Marc Torrente Cesteros, CEO +34 616 248 949
               </span>
               Creation of wordpress, prestashops for clients of SiraStudio,
@@ -308,20 +308,20 @@ const cv = () => (
             </p>
           </section>
 
-          <section class="mb-4.5 break-inside-avoid">
+          <section className="mb-4.5 break-inside-avoid">
             <header>
-              <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+              <h3 className="text-lg font-semibold text-gray-700 leading-snugish">
                 Hard Monkey PC Limited
               </h3>
-              <p class="leading-normal text-md text-gray-650">
+              <p className="leading-normal text-md text-gray-650">
                 January 2016 - December 2019
               </p>
             </header>
-            <p class="mt-2.1 text-md text-gray-700 leading-normal">
+            <p className="mt-2.1 text-md text-gray-700 leading-normal">
               Creation of small agency of programming and direction and
               managment of projects of the clients. in these years I worked
               <br />
-              <ul class="list-disc ml-8">
+              <ul className="list-disc ml-8">
                 <li>Custom Wordpress Sites</li>
                 <li>Custom plugins wordpress</li>
                 <li>
@@ -343,17 +343,17 @@ const cv = () => (
               </span>
             </p>
           </section>
-          <section class="mb-4.5 break-inside-avoid">
+          <section className="mb-4.5 break-inside-avoid">
             <header>
-              <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+              <h3 className="text-lg font-semibold text-gray-700 leading-snugish">
                 Ibermática, S.A
               </h3>
-              <p class="leading-normal text-md text-gray-650">
+              <p className="leading-normal text-md text-gray-650">
                 January 2020 - March 2020
               </p>
             </header>
-            <p class="mt-2.1 text-md text-gray-700 leading-normal">
-              <span class="flex px-4  bg-gray-300">
+            <p className="mt-2.1 text-md text-gray-700 leading-normal">
+              <span className="flex px-4  bg-gray-300">
                 Reference: Juan Miguel Barajas, Project Manager +34 606 428 989
               </span>
               Creation and development of a virtual blackboard in 3D oriented to
@@ -362,17 +362,17 @@ const cv = () => (
             </p>
           </section>
 
-          <section class="mb-4.5 break-inside-avoid">
+          <section className="mb-4.5 break-inside-avoid">
             <header>
-              <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+              <h3 className="text-lg font-semibold text-gray-700 leading-snugish">
                 1d3a S.L
               </h3>
-              <p class="leading-normal text-md text-gray-650">
+              <p className="leading-normal text-md text-gray-650">
                 Abril 2020 - December 2020
               </p>
             </header>
-            <p class="mt-2.1 text-md text-gray-700 leading-normal">
-              <span class="flex px-4  bg-gray-300">
+            <p className="mt-2.1 text-md text-gray-700 leading-normal">
+              <span className="flex px-4  bg-gray-300">
                 Reference: Joan Carbó Laguna, CTO, +34 607 700 297 -
                 juan.carbo@1d3a.com
               </span>
@@ -385,13 +385,13 @@ const cv = () => (
           </section>
         </div>
         <hr></hr>
-        <h1 class="p-4 text-center   bg-gray-300">
+        <h1 className="p-4 text-center   bg-gray-300">
           Personal projects on my Github "polopopeye" or on my blog,
           kennethsuarez.es
         </h1>
       </section>
     </div>
   </Layout>
-)
+);
 
-export default cv
+export default cv;

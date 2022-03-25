@@ -8,7 +8,7 @@ export const createArticle = ({ tittle, post, img, desc, order, id }) => {
     desc.length <= articles.minCharLength.default &&
     post.length <= articles.minCharLength.post
   ) {
-    return articles.ifaceMesssages.ArticleFieildTooShort;
+    return 'TITULO O Articulo MUY PEQUEÑO';
   }
 
   const db = firebase.firestore();

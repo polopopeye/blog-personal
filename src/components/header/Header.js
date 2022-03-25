@@ -3,36 +3,40 @@ import React, { useState } from 'react';
 
 import profileUrl from '../../images/profile.jpg';
 import HeaderMenu from '../Menu/Header/HeaderMenu';
+
 import twFormater from '../utils/twFormater';
 
 import SearchInput from './modules/SearchInput';
 
-const LogoContainer = () => {
-  return (
-    <>
-      <a href className="mx-4 flex   flex-row items-center">
-        <img
-          src={profileUrl}
-          alt
-          className=" print:hidden h-16 w-full bg-gray-200 border rounded-full"
-        />
-
-        <span className="flex flex-col ml-2">
-          <span className="truncate w-20 font-mono font-semibold tracking-wide leading-none">
-            Kenneth Suarez
-          </span>
-          <span className="truncate w-20 text-gray-500 text-xs leading-none mt-1">
-            Full Stack Developer
-          </span>
-        </span>
-      </a>
-    </>
-  );
-};
-
 const Header = ({ siteTitle }) => {
   const [showMenu, setshowMenu] = useState(false);
   const [showSearch, setshowSearch] = useState(false);
+
+  const LogoContainer = () => {
+    return (
+      <>
+        <a href className="mx-4 flex flex-row items-center">
+          <img
+            src={profileUrl}
+            alt="HOT Bro"
+            className={twFormater({
+              base: 'h-16 w-full bg-gray-200 border rounded-full',
+              print: 'hidden',
+            })}
+          />
+
+          <span className="flex flex-col ml-2">
+            <span className="truncate w-20 font-mono font-semibold tracking-wide leading-none">
+              Kenneth Suarez
+            </span>
+            <span className="truncate w-20 text-gray-500 text-xs leading-none mt-1">
+              Full Stack Developer
+            </span>
+          </span>
+        </a>
+      </>
+    );
+  };
 
   return (
     <header

@@ -4,9 +4,9 @@ import twFormater from '../../utils/twFormater';
 const SearchIcon = () => {
   return (
     <>
-      <div class="inline-flex items-center justify-center absolute left-0 top-1 h-full w-10 text-gray-400">
+      <div className="inline-flex items-center justify-center absolute left-0 top-1 h-full w-10 text-gray-400">
         <svg
-          class="h-6 w-6"
+          className="h-6 w-6"
           fill="none"
           stroke-linecap="round"
           stroke-linejoin="round"

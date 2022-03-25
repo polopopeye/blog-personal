@@ -8,6 +8,7 @@ import { articles } from './constants';
 import FormArticleCreation from './FormArticleCreation';
 import handleEditArticle from './modules/handleEditArticle';
 import isConnected from '../utils/isConnected';
+import { useTranslation } from 'react-i18next';
 
 const Articles = () => {
   const editorRef = useRef(),
@@ -39,8 +40,11 @@ const Articles = () => {
     });
   }, [idArticle]);
 
+  const { t } = useTranslation();
+
   return (
     <>
+      <h1 className="text-xl p-2">{t('createNewArticle')}</h1>
       <script
         src="https://cdn.tiny.cloud/1/4ge8itj7zovsnq0e89lw5enf1fudbp3nyiin4xdch5zmnzjq/tinymce/5/tinymce.min.js"
         referrerpolicy="origin"
@@ -57,8 +61,8 @@ const Articles = () => {
           />
           <Menu>
             <Menu.Button>
-              <button class="p-4 bg-red-600 text-gray-100">
-                {articles.ifaceMesssages.btn.publishAnsw}
+              <button className="p-4 bg-red-600 text-gray-100">
+                {t('publishAnsw')}
               </button>
             </Menu.Button>
             <Menu.Items>
@@ -75,9 +79,9 @@ const Articles = () => {
                         id: idArticle,
                       })
                     }
-                    class="bg-green-400 text-gray-100 rounded-xl p-4"
+                    className="bg-green-400 text-gray-100 rounded-xl p-4"
                   >
-                    {articles.ifaceMesssages.btn.publish}
+                    {t('publish')}
                   </button>
                 )}
               </Menu.Item>
@@ -85,8 +89,8 @@ const Articles = () => {
           </Menu>
         </>
       ) : (
-        <div class="bg-red-800 text-gray-100 p-4 rounded-sm">
-          {articles.ifaceMesssages.notLoggedIn}
+        <div className="bg-red-800 text-gray-100 p-4 rounded-sm">
+          {t('notLoggedIn')}
         </div>
       )}
     </>

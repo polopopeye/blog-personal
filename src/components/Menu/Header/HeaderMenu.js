@@ -5,7 +5,7 @@ import IconsRowSocial from '../modules/IconRowSocial';
 
 const HeaderMenu = () => {
   return (
-    <div class="grid grid-flow-col grid-cols-1 grid-rows-5 gap-4 font-mono text-lg text-center ">
+    <div className="grid grid-flow-col grid-cols-1 grid-rows-5 gap-4 font-mono text-lg text-center ">
       <MenuButton
         nombre="Proyectos"
         link="/"

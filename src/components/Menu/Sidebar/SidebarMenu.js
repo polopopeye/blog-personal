@@ -75,14 +75,17 @@ const SidebarMenu = () => {
   ];
 
   return (
-    <ul class="flex flex-col w-full">
+    <ul className="flex flex-col w-full">
       {menuData.map((data) => {
         if (data.link === '/crear/') {
-          if (userConnected && userDetails.email === 'kenneth7e7a@gmail.com')
+          if (userConnected && userDetails.email === 'kenneth7e7a@gmail.com') {
             return <ButtonCreator data={data} />;
-        } else {
-          return <ButtonCreator data={data} />;
+          } else {
+            return null;
+          }
         }
+
+        return <ButtonCreator data={data} />;
       })}
 
       <IconsRowSocial classCss="text-white" />

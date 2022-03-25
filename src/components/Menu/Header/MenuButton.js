@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 const MenuButton = ({ classN, link, classNActive, nombre }) => {
   return (
     <>
-      <div class="w-full">
+      <div className="w-full">
         <Link class={classN} to={link} activeClassName={classNActive}>
           {nombre}
         </Link>

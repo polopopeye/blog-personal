@@ -6,10 +6,10 @@ import { useTranslation } from 'react-i18next';
 const ProfilePicture = () => {
   const { t } = useTranslation();
   return (
-    <div class="inline-flex ">
+    <div className="inline-flex ">
       <MainImage
         alt={t('tooHotPerson')}
-        class="rounded-full border-white border-8"
+        className="rounded-full border-white border-8"
         src={FotoPerfil}
       />
     </div>

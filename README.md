@@ -24,3 +24,5 @@ firebase login
 <br>
 
 </p>
+
+Is important to keep the browserlist updated: `npx browserslist@latest --update-db`

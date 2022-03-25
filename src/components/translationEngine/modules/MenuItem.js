@@ -21,10 +21,6 @@ const MenuItem = ({ setShowSelector, lang }) => {
               'transation-all bg-violet-500 text-gray-900 group flex rounded-md items-center w-full px-2 py-2 text-sm',
             hover: 'text-green-700 bg-green-100',
           })}
-
-          //   {`${
-          //     active ? '' : ''
-          //   } `}
         >
           {t(lang)}
         </button>

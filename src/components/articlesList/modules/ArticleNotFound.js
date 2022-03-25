@@ -17,14 +17,15 @@ const ArticleNotFound = ({ display = 'none' }) => {
     <>
       <h1
         id="noresultsIndex"
-        class="text-2xl text-center p-2 select-none"
+        className="text-2xl text-center p-2 select-none"
         style={{ display: display }}
       >
         Sry, no hay resultados...
         <center>
           <img
             src={notFoundImgs[imgIndex]}
-            class={twFormater({
+            alt="sry"
+            className={twFormater({
               base: 'w-full rounded-xl select-none pt-12',
               md: 'w-64',
             })}

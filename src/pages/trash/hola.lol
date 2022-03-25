@@ -10,12 +10,12 @@ const hola = () => (
   <Layout>
     <Seo title="Curriculum Vitae" />
 
-    <div class="p-16 text-lg max-w-full font-mono bg-gray-200">
-      <div class="grid md:flex  md:flex-flow-col md:flex-cols-2 md:flex-row-2  gap-4">
-        <div class=" md:w-1/5 md:block hidden">
+    <div className="p-16 text-lg max-w-full font-mono bg-gray-200">
+      <div className="grid md:flex  md:flex-flow-col md:flex-cols-2 md:flex-row-2  gap-4">
+        <div className=" md:w-1/5 md:block hidden">
           <img width="100%" src={img1} />
         </div>
-        <div class="md:w-4/5">
+        <div className="md:w-4/5">
           <p>
             &iexcl;Hola! Mi nombre es Kenneth y desde que tengo uso de razón
             siempre me ha gustado la tecnolog&iacute;a, la primera vez que
@@ -31,8 +31,8 @@ const hola = () => (
           </p>
         </div>
       </div>
-      <div class="grid md:flex  md:flex-flow-col md:flex-cols-2 md:flex-row-2  gap-4">
-        <div class="md:w-2/3">
+      <div className="grid md:flex  md:flex-flow-col md:flex-cols-2 md:flex-row-2  gap-4">
+        <div className="md:w-2/3">
           <p>
             Aqui principalmente poniamos programas pirateados, con el tiempo el
             foro creció pero sacaron leyes antipirateria entre ellas la ley SOPA
@@ -59,14 +59,14 @@ const hola = () => (
             Monkey PC.&nbsp;
           </p>
         </div>
-        <div class="md:w-1/3">
+        <div className="md:w-1/3">
           <img width="100%" src={kenhackclan} />
         </div>
       </div>
       <br></br>
       <br></br>
-      <div class="grid md:flex  md:flex-flow-col md:flex-cols-2 md:flex-row-2  gap-4">
-        <div class="md:w-2/3">
+      <div className="grid md:flex  md:flex-flow-col md:flex-cols-2 md:flex-row-2  gap-4">
+        <div className="md:w-2/3">
           <img width="100%" src={fabulosa} />
         </div>
         <div>
@@ -81,14 +81,14 @@ const hola = () => (
       </div>
       <br></br>
       <br></br>
-      <div class=" grid md:flex  md:flex-flow-col   md:flex-cols-2 flex-row-2  gap-4">
-        <div class="w-full md:w-1/2">
+      <div className=" grid md:flex  md:flex-flow-col   md:flex-cols-2 flex-row-2  gap-4">
+        <div className="w-full md:w-1/2">
           A los 20 a&ntilde;os decid&iacute; crear mi propia agencia de
           programaci&oacute;n llamada Hard Monkey PC Limited (la fiscalización
           en londres era mas sencilla antes del brexit)
         </div>
-        <div class="w-full md:w-1/2">
-          <div class="tiny-pageembed">
+        <div className="w-full md:w-1/2">
+          <div className="tiny-pageembed">
             <iframe
               src="https://www.ivoox.com/player_ej_18284042_2_1.html?data=kp2fmpmUeJOhhpywj5aaaZS1kpqah5yncZOhhpywj5aRaZi3jpWah5yncZLh2rjcztrYrdDijJadkJWYcpKrjK3O1MmPkdDixNDS25C0h4yZk524x9PSqdXcjLjiw9fJvoy71pKSmaiRlqy2wJadmJOdb6fBjoqkpZKY&amp;"
               width="100%"
@@ -100,7 +100,7 @@ const hola = () => (
       </div>
       <br></br>
       <br></br>
-      <div class="grid sm:flex  flex-flow-col flex-cols-4 flex-row-1 gap-2">
+      <div className="grid sm:flex  flex-flow-col flex-cols-4 flex-row-1 gap-2">
         <div>
           {/* <p>Aqui haciendo el mongolo...</p> */}
           <iframe
@@ -135,7 +135,7 @@ const hola = () => (
           ></iframe>
         </div>
       </div>
-      <div class="flex  flex-flow-col flex-cols-1 flex-row-2  gap-4">
+      <div className="flex  flex-flow-col flex-cols-1 flex-row-2  gap-4">
         <div>
           <p>
             Durante los siguientes años trabajamos con varios clientes, creando
@@ -159,15 +159,15 @@ const hola = () => (
       </div>
       <br></br>
       <br></br>
-      <div class="grid md:flex  md:flex-flow-col md:flex-cols-2 md:flex-row-2  gap-4">
-        <div class="md:1/3">
+      <div className="grid md:flex  md:flex-flow-col md:flex-cols-2 md:flex-row-2  gap-4">
+        <div className="md:1/3">
           <img
             src="  https://www.infobae.com/new-resizer/8_61oIBJBpGy2fbdkyvVyjqBE6w=/1200x900/filters:format(jpg):quality(85)//s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2016/07/19175636/Estonia-1920-5.jpg
  "
             width="100%s"
           ></img>
         </div>
-        <div class="md:2/3">
+        <div className="md:2/3">
           <p>
             A los 21 A&ntilde;os intentamos crear la fiscalizaci&oacute;n en
             Estonia, pero desgraciadamente las cosas no iban muy bien, nos quedo
@@ -188,8 +188,8 @@ const hola = () => (
       </div>
       <br></br>
       <br></br>
-      <div class="grid md:flex  md:flex-flow-col md:flex-cols-2 md:flex-row-2  gap-4">
-        <div class="md:2/3">
+      <div className="grid md:flex  md:flex-flow-col md:flex-cols-2 md:flex-row-2  gap-4">
+        <div className="md:2/3">
           <p>
             Cuando volv&iacute; trabaj&eacute; en &nbsp;Ibermatica SL
             subcontratado por 1d3a SL desarrollando una Pizarra 3D&nbsp;de
@@ -198,14 +198,14 @@ const hola = () => (
           </p>
           <br></br>
           <br></br>
-          <p class="text-center bg-gray-900 text-gray-100 hover:bg-gray-100 hover:text-gray-900 rounded-md transition-all duration-500">
+          <p className="text-center bg-gray-900 text-gray-100 hover:bg-gray-100 hover:text-gray-900 rounded-md transition-all duration-500">
             <a target="_blank" href="https://aifortext.com/blackboardpage.html">
               Demo de la pizarra
             </a>
             <br></br>
           </p>
         </div>
-        <div class="md:1/3">
+        <div className="md:1/3">
           <img
             src="https://scontent.fmad6-1.fna.fbcdn.net/v/t1.6435-9/155956961_3755549737898343_5053585129780710514_n.png?_nc_cat=102&ccb=1-3&_nc_sid=2c4854&_nc_ohc=O54_zSFMPSYAX8KbXzg&_nc_ht=scontent.fmad6-1.fna&oh=e18e8ce2a6006c34585bfdb50555f15c&oe=60B3510C"
             width="100%"

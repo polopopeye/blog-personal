@@ -5,9 +5,9 @@ const BottonCreator = ({ data }) => {
   const { link, classN, classNActive, nombre, iconD } = data;
   return (
     <>
-      <li class="my-px ">
-        <Link to={link} class={classN} activeClassName={classNActive}>
-          <span class="flex items-center justify-center text-lg text-gray-400 ">
+      <li className="my-px ">
+        <Link to={link} className={classN} activeClassName={classNActive}>
+          <span className="flex items-center justify-center text-lg text-gray-400 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -23,7 +23,7 @@ const BottonCreator = ({ data }) => {
               />
             </svg>
           </span>
-          <span class="ml-3 font-mono"> {nombre}</span>
+          <span className="ml-3 font-mono"> {nombre}</span>
         </Link>
       </li>
     </>

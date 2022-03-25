@@ -1,4 +1,3 @@
-import React from 'react';
 import firebase from 'gatsby-plugin-firebase';
 
 export function checkIsLogedIn() {
@@ -37,7 +36,7 @@ export function logOut() {
       console.log('Session Cerrada correctamente');
     })
     .catch((error) => {
-      console.log('ERROR AL LOGOUT');
+      console.log('🚀 ~ file: googleAuth.js ~ line 39 ~ logOut ~ error', error);
     });
 }
 
@@ -47,32 +46,23 @@ export function registerConnect() {
     .auth()
     .signInWithPopup(provider)
     .then((result) => {
-      var credential = result.credential;
+      console.log(
+        '🚀 ~ file: googleAuth.js ~ line 49 ~ .then ~ result',
+        result
+      );
+      // var credential = result.credential;
       // This gives you a Google Access Token. You can use it to access the Google API.
-      var token = credential.accessToken;
+      // var token = credential.accessToken;
       // The signed-in user info.
-      var user = result.user;
+      // var user = result.user;
       //   document.getElementById("message").innerHTML = "EXITO"
-      console.log(result.user);
+      // console.log(result.user);
       // ...
     })
     .catch((error) => {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // The email of the user's account used.
-      var email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
-      console.log(error.message);
-      // ...
+      console.log(
+        '🚀 ~ file: googleAuth.js ~ line 59 ~ registerConnect ~ error',
+        error
+      );
     });
 }
-
-//   return (
-//     <div>
-//       <h1 id="message">TEST</h1>
-//     </div>
-//   )
-
-// export default googleAuth

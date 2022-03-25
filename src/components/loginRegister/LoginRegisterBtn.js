@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   logOut,
   checkIsLogedIn,
@@ -18,7 +18,7 @@ const LoginRegisterBtn = () => {
         id="Conectar"
         style={{ display: 'none' }}
         onClick={registerConnect}
-        class="bg-gray-900 text-white p-4"
+        className="bg-gray-900 text-white p-4"
       >
         Entrar / REGISTRARSE
       </button>
@@ -27,7 +27,7 @@ const LoginRegisterBtn = () => {
         style={{ display: 'none' }}
         id="Logout"
         onClick={logOut}
-        class="bg-gray-900 text-white p-4"
+        className="bg-gray-900 text-white p-4"
       >
         LOG OUT
       </button>

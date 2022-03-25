@@ -3,10 +3,6 @@ const ifaceMesssages = {
     publishAnsw: '¿Publicar Post?',
     publish: '¡Si, Publicar Post!',
   },
-  notLoggedIn: 'Por favor conectate o registrate, para poder crear un post',
-  ArticleFieildTooShort: 'TITULO O Articulo MUY PEQUEÑO',
-  notFoundArticleID: 'error No post ID',
-  createNewArticle: 'Crear Nuevo Post',
 };
 
 export const articles = {

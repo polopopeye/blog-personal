@@ -7,7 +7,7 @@ const NotFoundPage = () => {
   return (
     <Layout>
       <Seo title="404: Not found" />
-      <section class="w-full flex-start justify-center items-center px-2">
+      <section className="w-full flex-start justify-center items-center px-2">
         <ArticleNotFound display="block" />
       </section>
     </Layout>
