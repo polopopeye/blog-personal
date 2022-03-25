@@ -11,8 +11,13 @@ const getArticlesList = async (setArticles) => {
       querySnapshot.forEach((doc) => {
         response.push(doc.data());
       });
-      if (store.getState().articles !== response) setArticles(response);
-      store.dispatch(articlesSlice.actions.setData(response));
+      if (
+        store.getState().articles !== response &&
+        typeof setArticles === 'function'
+      ) {
+        setArticles(response);
+        store.dispatch(articlesSlice.actions.setData(response));
+      }
     })
     .catch((error) => {
       console.log('Error getting documents: ', error);

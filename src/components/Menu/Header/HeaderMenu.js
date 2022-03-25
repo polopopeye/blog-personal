@@ -13,12 +13,19 @@ const HeaderMenu = () => {
         classNActive="w-full p-2 text-gray-100 bg-gray-700"
       />
       <MenuButton
+        nombre="Tecnologías"
+        link="/tech/"
+        classN="w-full p-4  "
+        classNActive="w-full p-2 text-gray-100 bg-gray-700"
+      />
+      <MenuButton
         nombre="Curriculum"
         link="/cv/"
         classN="w-full p-4  "
         classNActive="w-full p-2 text-gray-100 bg-gray-700"
       />
-      <MenuButton
+
+      {/* <MenuButton
         nombre="Contactar"
         link="/contactar/"
         classN="w-full p-4  "
@@ -29,7 +36,7 @@ const HeaderMenu = () => {
         link="/hola/"
         classN="w-full p-4   "
         classNActive="w-full p-2 text-gray-100 bg-gray-700"
-      />
+      /> */}
 
       <IconsRowSocial classCss="text-black" />
     </div>

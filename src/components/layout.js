@@ -20,16 +20,14 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <header>
-        <div class="flex flex-row min-h-screen bg-gray-100 text-gray-800">
-          <Sidebar />
-          <main class="main flex flex-col flex-grow  w-full -ml-64 md:ml-0 transition-all duration-150 ease-in">
-            <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-            <div class="flex flex-col  ">{children}</div>
-            <Footer />
-          </main>
-        </div>
-      </header>
+      <div class="flex flex-row min-h-screen bg-gray-100 text-gray-800">
+        <Sidebar />
+        <main class="main flex flex-col flex-grow  w-full -ml-64 md:ml-0 transition-all duration-150 ease-in">
+          <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+          <div class="flex flex-col  ">{children}</div>
+          <Footer />
+        </main>
+      </div>
     </>
   );
 };
