@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -9,6 +9,8 @@ import Footer from './footer/Footer';
 import '../components/translationEngine';
 import '../styles/global.css';
 import '../components/translationEngine/i18n';
+import getArticlesList from './articlesList/modules/getArticlesList';
+import store from '../store';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,6 +22,12 @@ const Layout = ({ children }) => {
       }
     }
   `);
+
+  useEffect(() => {
+    if (store.getState().articles.length === 0) {
+      getArticlesList();
+    }
+  }, []);
 
   return (
     <>

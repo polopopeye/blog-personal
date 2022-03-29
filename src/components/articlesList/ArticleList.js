@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import store from '../../store';
 
 import ArticleItem from './modules/ArticleItem';
 import ArticleNotFound from './modules/ArticleNotFound';
-import getArticlesList from './modules/getArticlesList';
 
 const ArticleList = () => {
   const [articles, setArticles] = useState(store.getState().articles);
-
-  useEffect(() => {
-    if (store.getState().articles.length === 0) {
-      getArticlesList(setArticles);
-    }
-  }, []);
+  store.subscribe(() => setArticles(store.getState().articles));
 
   return (
     <section

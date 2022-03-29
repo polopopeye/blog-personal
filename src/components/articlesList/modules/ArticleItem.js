@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { useEffect } from 'react';
 import twFormater from '../../utils/twFormater';
 import getArticlesList from './getArticlesList';
@@ -30,7 +31,7 @@ const ArticleItem = ({ dataPost }) => {
           <hr />
           {desc}
         </div>
-        <a
+        <Link
           href={'/post/article?p=' + name}
           className={twFormater({
             base:
@@ -39,7 +40,7 @@ const ArticleItem = ({ dataPost }) => {
           })}
         >
           Mas info
-        </a>
+        </Link>
       </div>
     </>
   );
