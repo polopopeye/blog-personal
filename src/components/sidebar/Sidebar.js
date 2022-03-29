@@ -6,6 +6,7 @@ import SidebarMenu from '../Menu/Sidebar/SidebarMenu';
 import ProfilePicture from './modules/ProfilePicture';
 import twFormater from '../utils/twFormater';
 import LanguageSelector from '../translationEngine/modules/LanguageSelector';
+import ThemeSelector from './modules/themeSelector/ThemeSelector';
 
 const Sidebar = () => {
   const { t } = useTranslation();
@@ -27,6 +28,7 @@ const Sidebar = () => {
           <h4 className="text-center">{globalConstants.shortName}</h4>
           <h6 className="text-center">{t('titleDevPosition')}</h6>
           <LanguageSelector />
+          <ThemeSelector />
           <SidebarMenu />
         </div>
       </div>

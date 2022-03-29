@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -28,10 +28,19 @@ const Layout = ({ children }) => {
       getArticlesList();
     }
   }, []);
+  const [currentTheme, setcurrentTheme] = useState(
+    store.getState().currentTheme
+  );
+  store.subscribe(() => setcurrentTheme(store.getState().currentTheme));
 
   return (
     <>
-      <div className="flex flex-row min-h-screen bg-primary text-quaternary theme-dark">
+      <div
+        className={
+          'flex flex-row min-h-screen bg-primary text-quaternary ' +
+          currentTheme
+        }
+      >
         <Sidebar />
         <main className="main flex flex-col flex-grow  w-full -ml-64 md:ml-0 transition-all duration-150 ease-in">
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
