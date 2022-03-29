@@ -1,7 +1,6 @@
-// import { string } from 'prop-types';
 import React from 'react';
 import GetSingleArticle from '../components/articleSingle/GetCurrentArticle';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Seo from '../components/seo';
 
 const testDinamicUrl = ({ article: idOrSlug }) => {
@@ -9,7 +8,6 @@ const testDinamicUrl = ({ article: idOrSlug }) => {
     <>
       <Layout>
         <Seo title={idOrSlug + ' Article'} />
-        <div>Article: {idOrSlug}</div>
         <GetSingleArticle idOrSlug={idOrSlug} />
       </Layout>
     </>

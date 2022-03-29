@@ -5,3 +5,24 @@
 img {
   -webkit-user-drag: none;
 }
+
+.theme-default {
+  --color-primary: #08d9d6;
+  --color-secondary: #252a34;
+  --color-tertiary: #ff2e63;
+  --color-quaternary: #eaeaea;
+}
+
+.theme-dark {
+  --color-primary: #222831;
+  --color-secondary: #393e46;
+  --color-tertiary: #00adb5;
+  --color-quaternary: #eeeeee;
+}
+
+.theme-funny {
+  --color-primary: #f9ed69;
+  --color-secondary: #f08a5d;
+  --color-tertiary: #b83b5e;
+  --color-quaternary: #6a2c70;
+}

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import '../../styles/global.css';
 
-import Layout from '../../components/layout';
+import Layout from '../../components/Layout';
 import Seo from '../../components/seo';
 const StarIcon = () => {
   return (
