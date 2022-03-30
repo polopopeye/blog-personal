@@ -20,10 +20,10 @@ const ThemeSelector = () => {
           as="button"
           className={twFormater({
             base:
-              'inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20',
+              'inline-flex justify-center w-52 px-4 py-2 text-sm font-medium z-0 text-quaternary bg-secondary rounded-md',
             hover: 'bg-opacity-30 ',
             focus: 'outline-none',
-            'focus-visible': 'ring-white ring-opacity-75 ring-2',
+            'focus-visible': 'ring-quaternary ring-opacity-75 ring-2',
           })}
         >
           {({ open }) => {
@@ -42,17 +42,18 @@ const ThemeSelector = () => {
 
         <Transition
           show={showSelector}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
+          enter="transition-all  duration-300"
+          enterFrom="h-0"
+          enterTo="h-32"
+          entered="h-32"
+          leave="transation-all  duration-300"
+          leaveFrom="h-32"
+          leaveTo="h-0"
         >
           <Menu.Items
             className={twFormater({
               base:
-                'absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 ',
+                ' z-10 absolute left-4 w-48 mt-2 origin-top-right bg-quaternary divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-primary ring-opacity-5 ',
               focus: 'outline-none',
             })}
           >

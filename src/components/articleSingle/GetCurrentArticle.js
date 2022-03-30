@@ -3,6 +3,7 @@ import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 import store from '../../store';
 import setCurrentArticle from './modules/setCurrentArticle';
+import { format } from 'fecha';
 
 const GetSingleArticle = (idOrSlug) => {
   useEffect(() => {
@@ -10,24 +11,39 @@ const GetSingleArticle = (idOrSlug) => {
   }, []);
 
   const [article, setArticle] = useState(store.getState().currentArticle);
+  const [currentTime, setCurrentTime] = useState('fetching...');
+
   store.subscribe(() => {
-    console.log('store.getState()');
     setArticle(store.getState().currentArticle);
+
+    setCurrentTime(
+      format(store.getState().currentArticle.timeStamp, 'dddd MMMM Do, YYYY')
+    );
+
     console.log(article);
   });
+  console.log(currentTime);
 
   return (
     <>
-      <div className="w-full md:max-w-4xl mx-auto px-8 font-mono">
+      <div className="w-full md:max-w-4xl mx-auto px-8 font-mono bg-secondary">
         {/* Header */}
-        <div>
-          <h1 className="text-center">{article.title}</h1>
-          <h1 className="text-center">{article.timeStamp}</h1>
-          <div className="text-center">{article.desc}</div>
+        <div
+          style={{
+            backgroundImage: `url(${article.coverImg})`,
+            backgroundBlendMode: 'darken',
+          }}
+          className="bg-tertiary p-4 rounded-b-lg font-extrabold bg-center bg-cover "
+        >
+          {currentTime && <h1 className="text-center">{currentTime}</h1>}
+          <h1 className="text-center text-2xl">{article.title}</h1>
+          <div className="  text-sm text-justify font-light font-sans">
+            {article.desc}
+          </div>
         </div>
         {/* Article */}
         {article.postinHTML && (
-          <div className="text-center">{parse(article.postinHTML)}</div>
+          <div className="text-justify">{parse(article.postinHTML)}</div>
         )}
       </div>
     </>

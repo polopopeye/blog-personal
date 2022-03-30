@@ -52,31 +52,43 @@ function displayResults(searchInput) {
   }
 }
 
+const searchInPost = () => {};
+
+const ResultsContainer = () => {
+  return (
+    <>
+      <div className="absolute mt-20 bg-secondary w-full">Resultsss</div>
+    </>
+  );
+};
+
 const SearchInput = () => {
   const searchInputRef = useRef();
 
   return (
-    <div className={twFormater({ base: 'w-full relative pt-3', md: 'flex' })}>
-      <SearchIcon />
-
-      <input
-        ref={searchInputRef}
-        onKeyUp={() => {
-          displayResults(searchInputRef.current);
-        }}
-        onFocus={() => {
-          displayResults(searchInputRef.current);
-        }}
-        type="text"
-        className={twFormater({
-          base:
-            'placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-300 w-full h-10 text-sm',
-          sm: 'text-base',
-          focus: 'border-indigo-400 outline-none',
-        })}
-        placeholder="Search..."
-      />
-    </div>
+    <>
+      <div className={twFormater({ base: 'w-full relative pt-3', md: 'flex' })}>
+        <SearchIcon />
+        <input
+          ref={searchInputRef}
+          onKeyUp={() => {
+            displayResults(searchInputRef.current);
+          }}
+          onFocus={() => {
+            displayResults(searchInputRef.current);
+          }}
+          type="text"
+          className={twFormater({
+            base:
+              'placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-300 w-full h-10 text-sm bg-quaternary text-primary',
+            sm: 'text-base',
+            focus: 'border-indigo-400 outline-none',
+          })}
+          placeholder="Search..."
+        />
+        {/* <ResultsContainer /> */}
+      </div>
+    </>
   );
 };
 

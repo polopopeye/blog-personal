@@ -4,7 +4,7 @@ module.exports = {
   },
   siteMetadata: {
     title: `Blog Personal`,
-    description: `Blog Donde Mostrar Proyectos y CV.`,
+    description: `Blog donde Mostrar Proyectos y CV.`,
     author: `@elmerca69`,
   },
   plugins: [

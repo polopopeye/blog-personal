@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
         }
       >
         <Sidebar />
-        <main className="main flex flex-col flex-grow  w-full -ml-64 md:ml-0 transition-all duration-150 ease-in">
+        <main className="  flex flex-col flex-grow  w-full -ml-64 md:ml-0 transition-all duration-150 ease-in">
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
           <div className="flex flex-col  ">{children}</div>
           <Footer />

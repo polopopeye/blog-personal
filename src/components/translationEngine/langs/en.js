@@ -16,7 +16,7 @@ export const en = {
     publish: '¡Si, Publicar Post!',
     selectTheme: 'Select Theme',
     ...theme,
-    selectLanguage: 'Select your language',
+    selectLanguage: 'Select language',
     ...lang,
   },
 };
