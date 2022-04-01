@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 
-import Layout from '../components/Layout';
+import Layout from '../layout/Layout';
 import Seo from '../components/seo';
 const StarIcon = () => {
   return (
@@ -48,11 +47,7 @@ const ClockIcon = () => {
 const cv = () => (
   <Layout>
     <Seo title="Curriculum Vitae" />
-    <div className=" print:hidden bg-gray-900 text-white">
-      <Link to="/en/cv/">
-        <button className="p-4">English</button>
-      </Link>
-    </div>
+
     <div className="p-6 mx-auto page   print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
       <header className="flex items-center mb-4 md:mb-8">
         <div className="initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3">

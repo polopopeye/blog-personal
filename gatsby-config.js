@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env`,
+});
+
 module.exports = {
   flags: {
     THE_FLAGS: false,
@@ -36,16 +40,16 @@ module.exports = {
       resolve: 'gatsby-plugin-firebase',
       options: {
         credentials: {
-          apiKey: 'AIzaSyCrGBWA3bqK65YK7jaUuFWlr0hRLbUlj1A',
-          authDomain: 'blog-personal-kenneth.firebaseapp.com',
-          projectId: 'blog-personal-kenneth',
-          storageBucket: 'blog-personal-kenneth.appspot.com',
-          messagingSenderId: '833941574074',
-          appId: '1:833941574074:web:701c36ab165f5e84690d83',
+          apiKey: process.env.API_KEY,
+          authDomain: process.env.AUTH_DOMAIN,
+          projectId: process.env.PROJECT_ID,
+          storageBucket: process.env.STORAGE_BUCKET,
+          messagingSenderId: process.env.MESSAGING_SENDER_ID,
+          appId: process.env.APP_ID,
         },
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
+    // `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

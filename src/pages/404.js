@@ -1,7 +1,7 @@
 import React from 'react';
 import ArticleNotFound from '../components/articlesList/modules/ArticleNotFound';
-import Layout from '../components/Layout';
 import Seo from '../components/seo';
+import Layout from '../layout/Layout';
 
 const NotFoundPage = () => {
   return (

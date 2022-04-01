@@ -1,9 +1,9 @@
 import React from 'react';
 import { Menu } from '@headlessui/react';
 import { useTranslation } from 'react-i18next';
-import store from '../../../../store';
-import twFormater from '../../../utils/twFormater';
-import currentThemeSlice from '../../../../store/slice/currentTheme';
+import store from '../../../store';
+import currentThemeSlice from '../../../store/slice/currentTheme';
+import twFormater from '../../utils/twFormater';
 
 const MenuItem = ({ setShowSelector, theme }) => {
   const changeTheme = () => {

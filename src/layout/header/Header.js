@@ -1,10 +1,9 @@
 import { Transition } from '@headlessui/react';
 import React, { useState } from 'react';
+import twFormater from '../../components/utils/twFormater';
 
 import profileUrl from '../../images/profile.jpg';
-import HeaderMenu from '../Menu/Header/HeaderMenu';
-
-import twFormater from '../utils/twFormater';
+import HeaderMenu from './../Menu/Header/HeaderMenu';
 
 import SearchInput from './modules/SearchInput';
 
@@ -74,11 +73,12 @@ const Header = ({ siteTitle }) => {
                 className="flex items-center justify-center h-10 w-10 border-transparent"
               >
                 <svg
-                  className="h-6 w-6 text-gray-500"
+                  role={'img'}
+                  className="h-6 w-6 text-primary"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >

@@ -1,14 +1,19 @@
 import React from 'react';
 import GetSingleArticle from '../components/articleSingle/GetCurrentArticle';
-import Layout from '../components/Layout';
+import Layout from '../layout/Layout';
 import Seo from '../components/seo';
+import ArticleNotFound from '../components/articlesList/modules/ArticleNotFound';
 
 const testDinamicUrl = ({ article: idOrSlug }) => {
   return (
     <>
       <Layout>
         <Seo title={idOrSlug + ' Article'} />
-        <GetSingleArticle idOrSlug={idOrSlug} />
+        {idOrSlug ? (
+          <GetSingleArticle idOrSlug={idOrSlug} />
+        ) : (
+          <ArticleNotFound />
+        )}
       </Layout>
     </>
   );

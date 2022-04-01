@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { notFoundImgs } from '../../utils/globalConsts';
 import randomNumber from '../../utils/randomNumber';
 
@@ -9,9 +9,11 @@ const ArticleNotFound = ({ display = 'none' }) => {
     randomNumber(0, notFoundImgs.length - 1)
   );
 
-  setTimeout(() => {
-    setImgIndex(randomNumber(0, notFoundImgs.length - 1));
-  }, 5000);
+  useEffect(() => {
+    setInterval(() => {
+      setImgIndex(randomNumber(0, notFoundImgs.length - 1));
+    }, 5000);
+  }, []);
 
   return (
     <>

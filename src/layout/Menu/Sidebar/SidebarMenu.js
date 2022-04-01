@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import isConnected from '../../utils/isConnected';
+import isConnected from '../../../components/utils/isConnected';
 import IconsRowSocial from '../modules/IconRowSocial';
 import ButtonCreator from './BottonCreator';
 const SidebarMenu = () => {

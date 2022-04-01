@@ -3,9 +3,9 @@ import React from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { useState } from 'react';
 import { ChevronDownIcon, TranslateIcon } from '@heroicons/react/solid';
-import MenuItem from './MenuItem';
+import MenuItem from './modules/MenuItem';
 import { useTranslation } from 'react-i18next';
-import twFormater from '../../../utils/twFormater';
+import twFormater from '../utils/twFormater';
 
 const ThemeSelector = () => {
   const { t } = useTranslation();

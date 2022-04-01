@@ -9,10 +9,7 @@ const ArticleList = () => {
   store.subscribe(() => setArticles(store.getState().articles));
 
   return (
-    <section
-      id="sectionPost"
-      className=" w-full flex-start justify-center items-center px-2"
-    >
+    <section className="bg-secondary w-full md:max-w-5xl mx-auto flex-start justify-center items-center p-4">
       <ArticleNotFound />
 
       {articles.map((dataPost) => (

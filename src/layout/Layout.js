@@ -3,14 +3,18 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './header/Header';
+
 import Sidebar from './sidebar/Sidebar';
 import Footer from './footer/Footer';
 
-import './translationEngine';
+import '../translationEngine';
+import '../translationEngine/i18n';
+
 import '../styles/global.css';
-import './translationEngine/i18n';
-import getArticlesList from './articlesList/modules/getArticlesList';
 import store from '../store';
+import SubMenu from './Menu/SubMenu/SubMenu';
+
+import getArticlesList from './../components/articlesList/modules/getArticlesList';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -44,6 +48,7 @@ const Layout = ({ children }) => {
         <Sidebar />
         <main className="  flex flex-col flex-grow  w-full -ml-64 md:ml-0 transition-all duration-150 ease-in">
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+          <SubMenu />
           <div className="flex flex-col  ">{children}</div>
           <Footer />
         </main>

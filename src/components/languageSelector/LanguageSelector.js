@@ -1,12 +1,10 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { useState } from 'react';
 import { ChevronDownIcon, TranslateIcon } from '@heroicons/react/solid';
-import MenuItem from './MenuItem';
-import { resources } from '../langs';
+import MenuItem from './modules/MenuItem';
 import { useTranslation } from 'react-i18next';
-import twFormater from '../../utils/twFormater';
+import twFormater from '../utils/twFormater';
+import { resources } from '../../translationEngine/langs';
 
 const LanguageSelector = () => {
   const { t } = useTranslation();

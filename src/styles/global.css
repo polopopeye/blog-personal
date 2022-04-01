@@ -6,6 +6,11 @@ img {
   -webkit-user-drag: none;
 }
 
+.articleBody * {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
 .theme-default {
   --color-primary: #08d9d6;
   --color-secondary: #252a34;

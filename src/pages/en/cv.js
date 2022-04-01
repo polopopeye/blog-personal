@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import '../../styles/global.css';
 
-import Layout from '../../components/Layout';
+import Layout from '../../layout/Layout';
 import Seo from '../../components/seo';
 const StarIcon = () => {
   return (
@@ -29,6 +29,7 @@ const ClockIcon = () => {
   return (
     <>
       <svg
+        role="img"
         xmlns="http://www.w3.org/2000/svg"
         className="h-3 w-3 absolute ml-1 -mt-1"
         fill="none"
@@ -36,9 +37,10 @@ const ClockIcon = () => {
         stroke="currentColor"
       >
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          role="img"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
