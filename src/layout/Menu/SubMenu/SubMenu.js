@@ -5,6 +5,7 @@ import LanguageSelector from '../../../components/languageSelector/LanguageSelec
 import OrderBySelector from '../../../components/orderBy/OrderBySelector';
 import ThemeSelector from '../../../components/themeSelector/ThemeSelector';
 import twFormater from '../../../components/utils/twFormater';
+import bgSubmenu from './../../../images/svg/endlessClouds.svg';
 
 const DownloadPdfBtn = () => {
   return (
@@ -26,7 +27,15 @@ const DownloadPdfBtn = () => {
 
 const SubMenu = () => {
   return (
-    <div className="print:hidden bg-tertiary ">
+    <div
+      className="print:hidden bg-tertiary mt-24  md:ml-64 md:pr-64 w-full"
+      style={{
+        backgroundImage: `url(${bgSubmenu})`,
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'round',
+        overflowX: 'auto',
+      }}
+    >
       <div
         className={twFormater({
           base: ' text-quaternary w-min text-center mx-auto p-4',

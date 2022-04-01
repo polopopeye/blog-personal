@@ -16,6 +16,8 @@ import SubMenu from './Menu/SubMenu/SubMenu';
 
 import getArticlesList from './../components/articlesList/modules/getArticlesList';
 
+import bgPage from '../images/svg/diagonalLines.svg';
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -41,15 +43,18 @@ const Layout = ({ children }) => {
     <>
       <div
         className={
-          'flex flex-row min-h-screen bg-primary text-quaternary ' +
+          'flex flex-row min-h-screen bg-secondary text-quaternary ' +
           currentTheme
         }
+        style={{ backgroundImage: `url(${bgPage})`, overflow: 'hidden' }}
       >
         <Sidebar />
         <main className="  flex flex-col flex-grow  w-full -ml-64 md:ml-0 transition-all duration-150 ease-in">
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
           <SubMenu />
-          <div className="flex flex-col  ">{children}</div>
+          <div className="flex flex-col  md:ml-64 md:pr-64 w-full">
+            {children}
+          </div>
           <Footer />
         </main>
       </div>

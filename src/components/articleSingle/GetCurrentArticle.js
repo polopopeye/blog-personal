@@ -31,7 +31,7 @@ const GetSingleArticle = (idOrSlug) => {
     return (
       <>
         <div
-          className=" absolute left-0 w-full top-36 md:top-20"
+          className=" fixed left-0 w-full top-36 md:top-20 md:pr-72 md:ml-64"
           onClick={() => {
             for (
               let i = 0;

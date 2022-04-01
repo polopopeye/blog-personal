@@ -6,6 +6,7 @@ import profileUrl from '../../images/profile.jpg';
 import HeaderMenu from './../Menu/Header/HeaderMenu';
 
 import SearchInput from './modules/SearchInput';
+import bgHeader from '../../images/svg/diagonalLines.svg';
 
 const Header = ({ siteTitle }) => {
   const [showMenu, setshowMenu] = useState(false);
@@ -41,9 +42,13 @@ const Header = ({ siteTitle }) => {
     <header
       className={twFormater({
         base:
-          'shadow py-4 px-4 transform translate-y-0 transition-all duration-150 ease-in bg-secondary',
+          ' w-full  fixed z-10 shadow py-4 px-4 transform translate-y-0 transition-all duration-150 ease-in bg-secondary',
         print: 'hidden',
+        md: 'pr-72 ml-64 ',
       })}
+      style={{
+        backgroundImage: `url(${bgHeader})`,
+      }}
     >
       {/* Mobile */}
       <div

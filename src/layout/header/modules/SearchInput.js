@@ -1,26 +1,6 @@
+import { SearchIcon } from '@heroicons/react/solid';
 import React, { useRef } from 'react';
 import twFormater from '../../../components/utils/twFormater';
-
-const SearchIcon = () => {
-  return (
-    <>
-      <div className="inline-flex items-center justify-center absolute left-0 top-1 h-full w-10 text-primary">
-        <svg
-          role="img"
-          className="h-6 w-6"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-      </div>
-    </>
-  );
-};
 
 function displayResults(searchInput) {
   function searchNormalize(text) {
@@ -108,7 +88,9 @@ const SearchInput = () => {
   return (
     <>
       <div className={twFormater({ base: 'w-full relative pt-3', md: 'flex' })}>
-        <SearchIcon />
+        <div className="inline-flex items-center justify-center absolute left-1 top-1 h-full w-8 text-primary">
+          <SearchIcon />
+        </div>
         <input
           ref={searchInputRef}
           onKeyUp={() => {
