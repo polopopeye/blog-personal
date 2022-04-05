@@ -13,9 +13,9 @@ img {
 
 .theme-default {
   --color-primary: #08d9d6;
-  --color-secondary: #252a34;
+  --color-secondary: #eaeaea;
   --color-tertiary: #ff2e63;
-  --color-quaternary: #eaeaea;
+  --color-quaternary: #252a34;
 }
 
 .theme-dark {
