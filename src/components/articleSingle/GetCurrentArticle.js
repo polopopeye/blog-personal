@@ -7,6 +7,7 @@ import { format } from 'fecha';
 import { Link } from 'gatsby';
 import getArticlesList from '../articlesList/modules/getArticlesList';
 import ArticleNotFound from '../articlesList/modules/ArticleNotFound';
+import BodyArticle from './modules/BodyArticle';
 
 const GetSingleArticle = (idOrSlug) => {
   const [article, setArticle] = useState(store.getState().currentArticle);
@@ -100,7 +101,7 @@ const GetSingleArticle = (idOrSlug) => {
             {/* Article */}
             {article.postinHTML && (
               <div className="articleBody text-justify">
-                {parse(article.postinHTML)}
+                <BodyArticle postinHTML={parse(article.postinHTML)} />
               </div>
             )}
           </>

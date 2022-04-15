@@ -1,3 +1,5 @@
+// const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
@@ -11,6 +13,8 @@ module.exports = {
         secondary: 'var(--color-secondary)',
         tertiary: 'var(--color-tertiary)',
         quaternary: 'var(--color-quaternary)',
+
+        // rose: colors.rose,
       },
     },
   },
@@ -18,5 +22,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };
