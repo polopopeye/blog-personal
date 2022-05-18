@@ -1,5 +1,6 @@
 import React from 'react';
-import FotoPerfil from '../../../images/profile.jpg';
+import profileUrl from '../../../images/profile.jpg';
+
 import { MainImage } from 'gatsby-plugin-image';
 import { useTranslation } from 'react-i18next';
 
@@ -10,7 +11,7 @@ const ProfilePicture = () => {
       <MainImage
         alt={t('tooHotPerson')}
         className="rounded-full border-white border-8"
-        src={FotoPerfil}
+        src={profileUrl}
       />
     </div>
   );

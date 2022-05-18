@@ -26,3 +26,11 @@ firebase login
 </p>
 
 Is important to keep the browserlist updated: `npx browserslist@latest --update-db`
+
+# Deploy
+
+```
+gatsby clean
+gatsby build
+firebase deploy --only hosting
+```

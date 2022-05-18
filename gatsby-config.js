@@ -3,9 +3,6 @@ require('dotenv').config({
 });
 
 module.exports = {
-  flags: {
-    THE_FLAGS: false,
-  },
   siteMetadata: {
     title: `Blog Personal`,
     description: `Blog donde Mostrar Proyectos y CV.`,

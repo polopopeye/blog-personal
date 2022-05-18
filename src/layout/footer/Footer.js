@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <>
-      <footer className="footer px-4 py-6 select-none bg-tertiary">
+      <footer className="footer px-4 py-6 select-none bg-tertiary print:hidden">
         <div className="footer-content flex-row">
           <p className="text-sm text-quatertiary text-center">
             <span role="img" aria-label="Hot bro">

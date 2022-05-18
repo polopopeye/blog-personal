@@ -1,16 +1,25 @@
 import { Menu } from '@headlessui/react';
-import { TranslateIcon } from '@heroicons/react/solid';
-import React from 'react';
+import { DownloadIcon } from '@heroicons/react/solid';
+import React, { useEffect, useState } from 'react';
 import LanguageSelector from '../../../components/languageSelector/LanguageSelector';
 import OrderBySelector from '../../../components/orderBy/OrderBySelector';
 import ThemeSelector from '../../../components/themeSelector/ThemeSelector';
 import twFormater from '../../../components/utils/twFormater';
 import bgSubmenu from './../../../images/svg/endlessClouds.svg';
+import { Location } from '@reach/router';
+import useLocation from '../../../components/utils/useLocation';
+import { useTranslation } from 'react-i18next';
+import en from '../../../components/pdfCV/encv.pdf';
+import es from '../../../components/pdfCV/escv.pdf';
 
-const DownloadPdfBtn = () => {
+const DownloadPdfBtn = (props) => {
+  const { url } = props;
+
   return (
     <>
-      <button
+      <a
+        target="_blank"
+        href={url}
         className={twFormater({
           base:
             'mx-auto px-4 h-9 text-sm font-medium z-0 text-quaternary bg-secondary rounded-md whitespace-nowrap  mt-4 items-center flex transition-all duration-500 ',
@@ -19,13 +28,26 @@ const DownloadPdfBtn = () => {
           'focus-visible': 'ring-quaternary ring-opacity-75 ring-2',
         })}
       >
-        <TranslateIcon className="w-8 pr-3" /> download as pdf
-      </button>
+        <DownloadIcon className="w-8 pr-3" /> download as pdf
+      </a>
     </>
   );
 };
 
 const SubMenu = () => {
+  const lang = useTranslation()?.i18n.language;
+
+  const [url, setUrl] = useState(lang === 'en' ? en : es);
+  useEffect(() => {
+    const dwnUrl = lang === 'en' ? en : es;
+    setUrl(dwnUrl);
+  }, [lang]);
+
+  const location = useLocation();
+  if (location.loading) return <>Loading...</>;
+
+  const pathName = location.location.pathname.replaceAll('/', '').trim();
+
   return (
     <div
       className="print:hidden bg-tertiary mt-24  md:ml-64 md:pr-64 w-full"
@@ -44,11 +66,8 @@ const SubMenu = () => {
       >
         <LanguageSelector />
         <ThemeSelector />
-
-        {/* Only home */}
-        <OrderBySelector />
-        {/* Only on CV View */}
-        <DownloadPdfBtn />
+        {pathName === '' && <OrderBySelector />}
+        {pathName === 'cv' && <DownloadPdfBtn url={url} />}
       </div>
     </div>
   );

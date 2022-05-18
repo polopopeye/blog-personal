@@ -2,7 +2,11 @@ import React from 'react';
 
 import { Menu, Transition } from '@headlessui/react';
 import { useState } from 'react';
-import { ChevronDownIcon, TranslateIcon } from '@heroicons/react/solid';
+import {
+  ChevronDownIcon,
+  PencilAltIcon,
+  TranslateIcon,
+} from '@heroicons/react/solid';
 import MenuItem from './modules/MenuItem';
 import { useTranslation } from 'react-i18next';
 import twFormater from '../utils/twFormater';
@@ -30,7 +34,7 @@ const ThemeSelector = () => {
             setShowSelector(open);
             return (
               <>
-                <TranslateIcon className="w-8 pr-3" /> {t('selectTheme')}
+                <PencilAltIcon className="w-8 pr-3" /> {t('selectTheme')}
                 <ChevronDownIcon
                   className="w-5 h-5 ml-2 -mr-1 text-violet-200 hover:text-violet-100"
                   aria-hidden="true"

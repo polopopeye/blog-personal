@@ -1,6 +1,7 @@
 import { SearchIcon } from '@heroicons/react/solid';
 import React, { useRef } from 'react';
 import twFormater from '../../../components/utils/twFormater';
+import useLocation from '../../../components/utils/useLocation';
 
 function displayResults(searchInput) {
   function searchNormalize(text) {
@@ -84,48 +85,66 @@ function displayResults(searchInput) {
 
 const SearchInput = () => {
   const searchInputRef = useRef();
+  const location = useLocation();
+  if (location.loading) return <>Loading...</>;
+
+  const pathName = location.location.pathname.replaceAll('/', '').trim();
 
   return (
     <>
-      <div className={twFormater({ base: 'w-full relative pt-3', md: 'flex' })}>
-        <div className="inline-flex items-center justify-center absolute left-1 top-1 h-full w-8 text-primary">
-          <SearchIcon />
-        </div>
-        <input
-          ref={searchInputRef}
-          onKeyUp={() => {
-            displayResults(searchInputRef.current);
-          }}
-          onFocus={() => {
-            displayResults(searchInputRef.current);
-          }}
-          onBlur={() => {
-            if (window.location.pathname !== '/') {
-              setTimeout(() => {
-                document.getElementById('noresultsIndex').style.display =
-                  'none';
-                for (
-                  let i = 0;
-                  i < document.getElementsByClassName('filteredSearch').length;
-                  i++
-                ) {
-                  const itemSearch = document.getElementsByClassName(
-                    'filteredSearch'
-                  )[i];
-                  itemSearch.style.display = 'none';
-                }
-              }, 500);
-            }
-          }}
-          type="text"
-          className={twFormater({
-            base:
-              'placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-300 w-full h-10 text-sm bg-quaternary text-primary',
-            sm: 'text-base',
-            focus: 'border-indigo-400 outline-none',
-          })}
-          placeholder="Search..."
-        />
+      <div
+        className={twFormater({
+          base: 'w-full relative pt-3',
+          md: 'flex',
+        })}
+      >
+        {pathName !== 'crear' &&
+          pathName !== 'cv' &&
+          pathName !== 'conectar' &&
+          pathName !== 'tech' && (
+            <>
+              <div className="inline-flex items-center justify-center absolute left-1 top-1 h-full w-8 text-primary">
+                <SearchIcon />
+              </div>
+              <input
+                ref={searchInputRef}
+                onKeyUp={() => {
+                  displayResults(searchInputRef.current);
+                }}
+                onFocus={() => {
+                  displayResults(searchInputRef.current);
+                }}
+                onBlur={() => {
+                  if (window.location.pathname !== '/') {
+                    setTimeout(() => {
+                      document.getElementById('noresultsIndex').style.display =
+                        'none';
+                      for (
+                        let i = 0;
+                        i <
+                        document.getElementsByClassName('filteredSearch')
+                          .length;
+                        i++
+                      ) {
+                        const itemSearch = document.getElementsByClassName(
+                          'filteredSearch'
+                        )[i];
+                        itemSearch.style.display = 'none';
+                      }
+                    }, 500);
+                  }
+                }}
+                type="text"
+                className={twFormater({
+                  base:
+                    'placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-300 w-full h-10 text-sm bg-quaternary text-primary',
+                  sm: 'text-base',
+                  focus: 'border-indigo-400 outline-none',
+                })}
+                placeholder="Search..."
+              />
+            </>
+          )}
       </div>
     </>
   );

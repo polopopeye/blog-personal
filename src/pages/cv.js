@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import Layout from '../layout/Layout';
 import Seo from '../components/seo';
+import { useTranslation } from 'react-i18next';
+
 const StarIcon = () => {
   return (
     <>
@@ -28,7 +30,7 @@ const ClockIcon = () => {
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-3 w-3 absolute ml-1 -mt-1"
+        className="h-3 w-3 ml-1 -mt-1 inline"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -44,343 +46,382 @@ const ClockIcon = () => {
   );
 };
 
-const cv = () => (
-  <Layout>
-    <Seo title="Curriculum Vitae" />
+const Cv = () => {
+  const { t } = useTranslation();
 
-    <div className="p-6 mx-auto page   print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
-      <header className="flex items-center mb-4 md:mb-8">
-        <div className="initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3">
-          <div className="initial text-center">K</div>
-          <div className="text-center initial">S</div>
+  return (
+    <Layout>
+      <Seo title="Curriculum Vitae" />
+
+      <div className="p-6 mx-auto page   print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
+        <header className="flex items-center mb-8 ">
+          <div className="initials-container mr-5 text-base leading-none text-white bg-gray-900 font-medium px-3">
+            <div className="initial text-center">K</div>
+            <div className="text-center initial">S</div>
+          </div>
+          <h1 className="text-2xl font-semibold text-black pb-px">
+            Kenneth Suarez Guineart
+          </h1>
+        </header>
+        <div>
+          <h1 className="text-base font-semibold text-black -mt-8">
+            {t('titleDevPosition')}
+          </h1>
         </div>
-        <h1 className="text-2xl font-semibold text-gray-750 pb-px">
-          Kenneth Suarez Guineart
-        </h1>
-      </header>
-
-      <section className="mt-4 first:mt-0">
-        <div className="break-inside-avoid">
-          <h2 className="mb-2 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-            INFORMACIÓN BÁSICA
-          </h2>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <span className="flex flex-inline text-center  rounded-sm p-1   bg-gray-300 w-full">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-                  />
-                </svg>
-                Contacto
-              </span>
-              Telefono: <b> +34604144510 </b> <br />
-              Email: <b> Kenneth7e7a@gmail.com </b> <br />
-              Github: <b> @polopopeye </b> <br />
-              LinkedIn: <b> /in/kennethsuarez/ </b> <br />
-            </div>
-            <div>
-              <span className="flex flex-inline text-center  rounded-sm p-1   bg-gray-300 w-full">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                  />
-                </svg>
-                Idiomas
-              </span>
-              Español:Nativo <br />
-              English:Alto <br />
-              Català:Bilingue <br />
+        <section className="mt-4 first:mt-0">
+          <div className="break-inside-avoid">
+            <h2 className="mb-2 font-bold tracking-widest text-sm2 text-black print:font-bold">
+              {t('basicInformationTittle')}
+            </h2>
+            <div className="grid grid-cols-2 gap-4 text-black">
+              <div>
+                <span className="flex flex-inline text-center rounded-t-md p-2 bg-gray-300 w-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+                    />
+                  </svg>
+                  {t('contactDetails')}
+                </span>
+                <div className="p-2 border-2 border-gray-300 rounded-b-md">
+                  {t('phoneNumberField')}: <b> +34604144510 </b> <br />
+                  {t('emailField')}: <b> Kenneth7e7a@gmail.com </b> <br />
+                  {t('githubField')}: <b> @polopopeye </b> <br />
+                  {t('LinkedInField')}: <b> /in/kennethsuarez/ </b> <br />
+                </div>
+              </div>
+              <div>
+                <span className="flex flex-inline text-center rounded-t-md p-2 bg-gray-300 w-full">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    />
+                  </svg>
+                  {t('LanguagesTittle')}
+                </span>
+                <div className="p-2 border-2 border-gray-300 rounded-b-md">
+                  Español:{t('highLang')} <br />
+                  English:{t('normalLang')} <br />
+                  Català:{t('lowLang')} <br />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <section className="mb-4.5 break-inside-avoid">
-          <header>
-            <h2 className=" text-center mt-4 mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-              WEB UI DEVELOPER
-            </h2>
-          </header>
-          <p className="mt-2.1 text-md text-gray-800 leading-normal">
-            Llevo varios años programando, tanto con tecnologias del backend
-            como del frontend, conozco su integración y comunicación entre ambas
-            partes, asi como desarrollo y comunicacion de APIs.
-            <br></br>
-            Programo usando metodologias ágiles (TDD, GIT, Kanban, Scrum),
-            wireframing y mockups de alta resolución, POP (Programación
-            orientada a propiedades) y POO (Programación orientada a objetos).
-            <hr></hr>
-            Desarrollo y conozco frameworks como:
-            <div className=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-1 text-center">
-              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                <StarIcon></StarIcon>
-                <h6 className="font-bold">React</h6>
-                <span className="text-sm">
-                  <ClockIcon></ClockIcon> (> 4 Años)
-                </span>
+          <section className="mb-4.5 break-inside-avoid">
+            <p className="mt-2.1 text-md text-gray-800 leading-normal">
+              <div className="p-2 m-2">
+                {t('description1')}
+                <hr className="my-4" />
+                {t('description2')}
               </div>
-              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                <h6 className="font-bold">Angular</h6>
-                <span className="text-sm">
-                  <ClockIcon></ClockIcon> (1 Año)
-                </span>
-              </div>
-              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                <StarIcon></StarIcon>
-                <h6 className="font-bold">Node JS </h6>
-                <span className="text-sm">
-                  <ClockIcon></ClockIcon> (> 4 Años)
-                </span>
-              </div>
-              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                <StarIcon></StarIcon>
-                <h6 className="font-bold">Gatsby </h6>
-                <span className="text-sm">
-                  <ClockIcon></ClockIcon> (1 Años)
-                </span>
-              </div>
-              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                <StarIcon></StarIcon>
-                <h6 className="font-bold"> Tailwind CSS </h6>
-                <span className="text-sm">
-                  <ClockIcon></ClockIcon> (2 Años)
-                </span>
-              </div>
-              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                <StarIcon></StarIcon>
-                <h6 className="font-bold"> Bootstrap CSS </h6>
-                <span className="text-sm">
-                  <ClockIcon></ClockIcon> (>4 Años)
-                </span>
-              </div>
-
-              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                {/* <StarIcon></StarIcon> */}
-                <h6 className="font-bold">Laravel (PHP)</h6>
-                <span className="text-sm">
-                  <ClockIcon></ClockIcon> (> 3 Años)
-                </span>
-              </div>
-              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                {/* <StarIcon></StarIcon> */}
-                <h6 className="font-bold">CodeIgniter (PHP) </h6>
-                <span className="text-sm">
-                  <ClockIcon></ClockIcon> (> 4 Años)
-                </span>
-              </div>
-
-              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                <StarIcon></StarIcon>
-                <h6 className="font-bold">Jquery </h6>
-                <span className="text-sm">
-                  <ClockIcon></ClockIcon> (> 4 Años)
-                </span>
-              </div>
-              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                {/* <StarIcon></StarIcon> */}
-                <h6 className="font-bold">WebGL</h6>
-                <span className="text-sm">
-                  <ClockIcon></ClockIcon> (2 Años)
-                </span>
-              </div>
-              <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                <StarIcon></StarIcon>
-                <h6 className="font-bold">ThreeJS</h6>
-                <span className="text-sm">
-                  <ClockIcon></ClockIcon> (2 Años)
-                </span>
-              </div>
-            </div>
-            <br></br>
-            <i>
-              Además he trabajado y desarrollado con Otras tecnologias:
-              <br></br>
-              <div className=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-1 text-center">
-                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
+              <h2 className="mt-4 mb-2 font-bold tracking-widest text-sm2 text-black print:font-bold">
+                {t('techs')}
+              </h2>
+              <div className=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-2 text-center">
+                <div className="grid rounded-xl border-solid border-4 border-yellow-100">
                   <StarIcon></StarIcon>
-                  <h6 className="font-bold">MySQL</h6>
+                  <h6 className="font-bold">TypeScript</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> (> 4 Años)
+                    <ClockIcon></ClockIcon> 3 {t('years')}
                   </span>
                 </div>
-                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
+
+                <div className="grid rounded-xl border-solid border-4 border-yellow-100">
+                  <StarIcon></StarIcon>
+                  <h6 className="font-bold">React</h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
+                  </span>
+                </div>
+
+                <div className="grid rounded-xl border-solid border-4 border-yellow-100">
+                  <StarIcon></StarIcon>
+                  <h6 className="font-bold"> Tailwind CSS </h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> 3 {t('years')}
+                  </span>
+                </div>
+
+                <div className="grid rounded-xl border-solid border-4 border-yellow-100">
+                  <StarIcon></StarIcon>
+                  <h6 className="font-bold">Node JS </h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
+                  </span>
+                </div>
+                <div className="grid rounded-xl border-solid border-4 border-yellow-100">
+                  <StarIcon></StarIcon>
+                  <h6 className="font-bold">Next JS </h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> 3 {t('years')}
+                  </span>
+                </div>
+                <div className="grid rounded-xl border-solid border-4 border-yellow-100">
+                  <StarIcon></StarIcon>
+                  <h6 className="font-bold">Nest JS </h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> 3 {t('years')}
+                  </span>
+                </div>
+
+                <div className="grid rounded-xl border-solid border-4 border-yellow-100">
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">Firebase</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> (2 Años)
-                  </span>
-                  <p className="text-xs">
-                    Including Auth, FireStore, Hosting Deployment, Machine
-                    Learning
-                  </p>
-                </div>
-                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                  <StarIcon></StarIcon>
-                  <h6 className="font-bold">FireStore</h6>
-                  <span className="text-sm">
-                    <ClockIcon></ClockIcon> (2 Años)
+                    <ClockIcon></ClockIcon> 3 {t('years')}
                   </span>
                 </div>
-                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                  <StarIcon></StarIcon>
+
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">MongoDB</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> (3 Años)
+                    <ClockIcon></ClockIcon> 3 {t('years')}
                   </span>
                 </div>
-                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                  {/* <StarIcon></StarIcon> */}
-                  <h6 className="font-bold">Wordpress Avanzado</h6>
+
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold">Gatsby </h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> (> 4 Años)
+                    <ClockIcon></ClockIcon> 2 {t('years')}
                   </span>
-                  <p className="text-xs">Desarrollo de plugins y temas</p>
                 </div>
-                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                  <StarIcon></StarIcon>
-                  <h6 className="font-bold">Jest</h6>
+
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold">React Native</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> (2 Años)
+                    <ClockIcon></ClockIcon> 1 {t('year')}
                   </span>
-                  <p className="text-xs">
-                    Para el testeo automático de código y mockups
-                  </p>
                 </div>
-                <div className="grid rounded-xl border-solid border-4 border-light-blue-700">
-                  {/* <StarIcon></StarIcon> */}
+
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold">Go lang</h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> 1 {t('year')}
+                  </span>
+                </div>
+
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold">Go lang</h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon>1 {t('year')}
+                  </span>
+                </div>
+
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold"> TensorFlowJS</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> (1 Año)
+                    <ClockIcon></ClockIcon> 1 {t('year')}
                   </span>
                 </div>
               </div>
-            </i>
-          </p>
+
+              <div className="mt-8 mb-0 pb-0">{t('techSub')}</div>
+              <br></br>
+              <div className=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-1 text-center">
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold">MySQL</h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon>&gt; 4 {t('years')}
+                  </span>
+                </div>
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <StarIcon></StarIcon>
+                  <h6 className="font-bold">Google Cloud Platform</h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> 2 {t('years')}
+                  </span>
+                </div>
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold">Heroku</h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> 3 {t('years')}
+                  </span>
+                </div>
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <StarIcon></StarIcon>
+                  <h6 className="font-bold">Jest</h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> 3 {t('years')}
+                  </span>
+                </div>
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold"> Bootstrap CSS </h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
+                  </span>
+                </div>
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold">Jquery </h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
+                  </span>
+                </div>
+              </div>
+            </p>
+            <h1 className="text-black font-bolder my-2">
+              {t('techSub2')}
+              <a href="https://kennethsuarez.es/tech/">
+                https://kennethsuarez.es/tech/
+              </a>
+            </h1>
+          </section>
         </section>
-      </section>
 
-      <section className="mt-8 first:mt-0">
-        <div className="break-inside-avoid">
-          <h2 className="text-center mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-            EXPERIÈNCIA
-          </h2>
+        <section className="mt-8 first:mt-0">
+          <div className="break-inside-avoid">
+            <h2 className="mt-4 mb-4 font-bold tracking-widest text-sm2 text-black print:font-bold">
+              {t('experience')}
+            </h2>
 
-          <section className="mb-4.5 break-inside-avoid">
-            <header>
-              <h3 className="text-lg font-semibold text-gray-700 leading-snugish">
-                Sirastudio SL
-              </h3>
-              <p className="leading-normal text-md text-gray-650">
-                Enero 2017 - Diciembre 2017
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  Sirastudio SL
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  {t('january')} 2017 - {t('december')} 2017
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <span className="flex px-4  bg-gray-300">
+                  Ref: Marc Torrente Cesteros, CEO +34 616 248 949
+                </span>
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  {t('job1desc')}
+                </div>
               </p>
-            </header>
-            <p className="mt-2.1 text-md text-gray-700 leading-normal">
-              <span className="flex px-4  bg-gray-300">
-                Referencia: Marc Torrente Cesteros, CEO +34 616 248 949
-              </span>
-              Creación de wordpress y prestashops personalizados para clientes
-              de SiraStudio &bull; Creación de servidores personalizados,
-              Orientados a wordpress &bull; Desarrollo de Scripts en PHP.
-            </p>
-          </section>
+            </section>
 
-          <section className="mb-4.5 break-inside-avoid">
-            <header>
-              <h3 className="text-lg font-semibold text-gray-700 leading-snugish">
-                Hard Monkey PC Limited
-              </h3>
-              <p className="leading-normal text-md text-gray-650">
-                Enero 2016 - Enero 2019
-              </p>
-            </header>
-            <p className="mt-2.1 text-md text-gray-700 leading-normal">
-              Creación de pequeña agencia de programación, Dirección y gestión
-              de proyectos para los clientes, en ese tiempo trabaje realizando.
-              <br />
-              <ul className="list-disc ml-8">
-                <li>Wordpress Personalizados</li>
-                <li>Plugins Personalizados</li>
-                <li>
-                  Creación de servidores Dedicados a traves del Partner de
-                  LiquidNet
-                </li>
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  Hard Monkey PC Ltd.
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  {t('january')} 2017 - {t('january')} 2019
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  {t('job2desc')}
 
-                <li>
-                  Creación de Webs utilizando frameworks, Laravel o CodeIgniter
-                  PHP
-                </li>
-                <li>Creación de Webs utilizando frameworks, React y NodeJS</li>
-              </ul>
-              <span>
-                Tamaño de la empresa alcanzó 6 personas (Marketers, Diseñadores
-                y Programadores)
-              </span>
-            </p>
-          </section>
-          <section className="mb-4.5 break-inside-avoid">
-            <header>
-              <h3 className="text-lg font-semibold text-gray-700 leading-snugish">
-                Ibermática, S.A
-              </h3>
-              <p className="leading-normal text-md text-gray-650">
-                Enero 2020 - Marzo 2020
+                  <br />
+                  <ul className="list-disc ml-8">
+                    <li> {t('job2desc1')}</li>
+                    <li> {t('job2desc2')}</li>
+                    <li>{t('job2desc3')}</li>
+                    <li>{t('job2desc4')}</li>
+                    <li>{t('job2desc5')}</li>
+                  </ul>
+                </div>
               </p>
-            </header>
-            <p className="mt-2.1 text-md text-gray-700 leading-normal">
-              <span className="flex px-4  bg-gray-300">
-                Referencia: Juan Miguel Barajas, Project Manager +34 606 428 989
-              </span>
-              Creación de una pizarra deportiva virtual en 3D para 1d3a S.L con
-              las tecnologias de ThreeJS, WebGL y NodeJS.
-            </p>
-          </section>
+            </section>
 
-          <section className="mb-4.5 break-inside-avoid">
-            <header>
-              <h3 className="text-lg font-semibold text-gray-700 leading-snugish">
-                1d3a S.L
-              </h3>
-              <p className="leading-normal text-md text-gray-650">
-                Abril 2020 - Diciembre 2020
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  Ibermática SA
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  {t('january')} 2020 - {t('march')} 2020
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <span className="flex px-4  bg-gray-300">
+                  Ref: Juan Miguel Barajas, Project Manager +34 606 428 989
+                </span>
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  {t('job3desc')}
+                </div>
               </p>
-            </header>
-            <p className="mt-2.1 text-md text-gray-700 leading-normal">
-              <span className="flex px-4  bg-gray-300">
-                Referencia: Joan Carbó Laguna, CTO, +34 607 700 297 -
-                juan.carbo@1d3a.com
-              </span>
-              Desarrollo Web FrontEnd / BackEnd <br />
-              Desarrollo e Integración de APIs y applicaciones en JS, NodeJS y
-              PHP, para diferentes entornos del core de 1d3a SL.
-            </p>
-          </section>
-        </div>
-        <hr></hr>
-        <h1 className="p-4 text-center   bg-gray-300">
-          Proyectos personales en mi Github "polopopeye" o en mi blog,
-          kennethsuarez.es
+            </section>
+
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  1d3a SL
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  {t('april')} 2020 - {t('december')} 2020
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <span className="flex px-4  bg-gray-300">
+                  Ref: Joan Carbó Laguna, CTO, +34 607 700 297 -
+                  juan.carbo@1d3a.com
+                </span>
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  {t('job4desc')} <br />
+                  {t('job4desc1')}
+                </div>
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  Amaris Consulting & innovation SL
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  {t('april')} 2021 - {t('february')} 2022
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <span className="flex px-4  bg-gray-300">
+                  Ref: Saita Giovanni, Project Manager, +34 695 947 076
+                </span>
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  {t('job5desc')} <br />
+                  {t('job5desc1')}
+                  <br></br>
+                  {t('job5desc2')}
+                </div>
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  MVST.
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  {t('february')} 2022 - {t('march')} 2022
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  {t('job6desc')} <br />
+                  {t('job6desc1')}
+                </div>
+              </p>
+            </section>
+          </div>
+        </section>
+        <h1 className="p-4 text-center  text-gray-900 font-medium bg-white">
+          {t('footercvmsg')}
         </h1>
-      </section>
-    </div>
-  </Layout>
-);
+      </div>
+    </Layout>
+  );
+};
 
-export default cv;
+export default Cv;
