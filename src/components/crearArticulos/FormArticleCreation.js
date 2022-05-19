@@ -5,9 +5,11 @@ const FormArticleCreation = ({
   titleRef,
   ImgURLRef,
   DescRef,
-  OrderRef,
   editorRef,
   postInHtml,
+  slugRef,
+  timeStampRef,
+  langRef,
 }) => {
   return (
     <>
@@ -15,27 +17,42 @@ const FormArticleCreation = ({
         placeholder="titulo"
         ref={titleRef}
         type="text"
-        className="p-4 text-xl w-full"
+        className="p-4 text-xl w-full text-black"
       ></input>
       <input
         placeholder="imagen URL"
         ref={ImgURLRef}
         id="imgPost"
         type="text"
-        className="p-4 text-xl w-full"
+        className="p-4 text-xl w-full text-black"
       ></input>
       <input
         placeholder="Descripción del post"
         ref={DescRef}
         type="text"
-        className="p-4 text-xl w-full"
+        className="p-4 text-xl w-full text-black"
+      ></input>
+
+      <input
+        placeholder="SLUG / URL"
+        ref={slugRef}
+        type="string"
+        className="p-4 text-xl w-full text-black"
       ></input>
       <input
-        placeholder="Orden"
-        ref={OrderRef}
+        placeholder="TIMESTAMP"
+        defaultValue={new Date().getTime().toString().substring(0, 10)}
+        ref={timeStampRef}
         type="number"
-        className="p-4 text-xl w-full"
+        className="p-4 text-xl w-full text-black"
       ></input>
+
+      <select ref={langRef} className="text-black w-full">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="jp">Japones</option>
+      </select>
+
       <Editor
         onInit={(evt, editor) => (editorRef.current = editor)}
         initialValue={postInHtml}

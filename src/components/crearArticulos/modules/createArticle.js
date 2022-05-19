@@ -1,7 +1,16 @@
 import { articles } from '../constants';
 import firebase from 'gatsby-plugin-firebase';
 
-export const createArticle = ({ tittle, post, img, desc, order, id }) => {
+export const createArticle = ({
+  tittle,
+  post,
+  img,
+  desc,
+  slug,
+  timeStamp,
+  lang,
+  id,
+}) => {
   if (
     tittle.length <= articles.minCharLength.default &&
     img.length <= articles.minCharLength.default &&
@@ -21,7 +30,9 @@ export const createArticle = ({ tittle, post, img, desc, order, id }) => {
       postinHTML: post,
       imgPost: img,
       desc: desc,
-      order: order,
+      slug: slug,
+      timeStamp: timeStamp,
+      lang: lang,
     })
     .then(() => {
       alert('CORRECTAMENTE PUBLICADO');

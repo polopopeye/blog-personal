@@ -15,7 +15,9 @@ const Articles = () => {
     inputArticleTitle = useRef(),
     inputArticleImgURL = useRef(),
     inputArticleDesc = useRef(),
-    inputArticleOrder = useRef();
+    inputArticleSlug = useRef(),
+    inputArticleTimeStamp = useRef(),
+    inputArticleLang = useRef();
 
   const [idArticle, setIdArticle] = useState(undefined),
     [isUserConected, setIsUserConected] = useState(false);
@@ -34,7 +36,9 @@ const Articles = () => {
       inputArticleTitle,
       inputArticleImgURL,
       inputArticleDesc,
-      inputArticleOrder,
+      inputArticleSlug,
+      inputArticleTimeStamp,
+      inputArticleLang,
 
       setPostInHtml,
     });
@@ -55,9 +59,11 @@ const Articles = () => {
             titleRef={inputArticleTitle}
             ImgURLRef={inputArticleImgURL}
             DescRef={inputArticleDesc}
-            OrderRef={inputArticleOrder}
             editorRef={editorRef}
             postInHtml={postInHtml}
+            slugRef={inputArticleSlug}
+            timeStampRef={inputArticleTimeStamp}
+            langRef={inputArticleLang}
           />
           <Menu>
             <Menu.Button>
@@ -75,7 +81,9 @@ const Articles = () => {
                         post: editorRef.current.getContent(),
                         img: inputArticleImgURL.current.value,
                         desc: inputArticleDesc.current.value,
-                        order: inputArticleOrder.current.value,
+                        slug: inputArticleSlug.current.value,
+                        timeStamp: inputArticleTimeStamp.current.value,
+                        lang: inputArticleLang.current.value,
                         id: idArticle,
                       })
                     }

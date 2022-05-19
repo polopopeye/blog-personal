@@ -9,7 +9,9 @@ const getArticlesList = () => {
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        response.push(doc.data());
+        const data = { id: doc.id, ...doc.data() };
+
+        response.push(data);
       });
       if (store.getState().articles.length !== response.length) {
         store.dispatch(articlesSlice.actions.setData(response));

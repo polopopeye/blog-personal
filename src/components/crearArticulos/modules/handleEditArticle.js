@@ -7,8 +7,9 @@ const handleEditArticle = (
     inputArticleTitle,
     inputArticleImgURL,
     inputArticleDesc,
-    inputArticleOrder,
-
+    inputArticleSlug,
+    inputArticleTimeStamp,
+    inputArticleLang,
     setPostInHtml,
   }
 ) => {
@@ -19,13 +20,23 @@ const handleEditArticle = (
     .doc(idArticle)
     .get()
     .then((doc) => {
-      const { name, imgPost, desc, order, postinHTML } = doc.data();
+      const {
+        name,
+        imgPost,
+        desc,
+        slug,
+        postinHTML,
+        timeStamp,
+        lang,
+      } = doc.data();
 
       if (doc.exists) {
         inputArticleTitle.current.value = name;
         inputArticleImgURL.current.value = imgPost;
         inputArticleDesc.current.value = desc;
-        inputArticleOrder.current.value = order;
+        inputArticleSlug.current.value = slug;
+        inputArticleTimeStamp.current.value = timeStamp;
+        inputArticleLang.current.value = lang;
         setPostInHtml(postinHTML);
       } else {
         return 'article not Found';

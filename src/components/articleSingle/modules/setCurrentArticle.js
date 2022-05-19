@@ -10,7 +10,9 @@ const setCurrentArticle = ({ idOrSlug }) => {
   const db = firebase.firestore();
   const dbRef = db.collection('posts');
   const setData = (doc) =>
-    store.dispatch(currentArticleSlice.actions.setData(doc.data()));
+    store.dispatch(
+      currentArticleSlice.actions.setData({ id: doc.id, ...doc.data() })
+    );
 
   const dataNotFound = () =>
     store.dispatch(currentArticleSlice.actions.setData({ error: 404 }));

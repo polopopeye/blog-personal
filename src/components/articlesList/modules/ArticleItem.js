@@ -2,28 +2,20 @@ import { Link } from 'gatsby';
 import React from 'react';
 
 const ArticleItem = ({ dataPost }) => {
-  const { desc, imgPost, coverImg, name, title, slug, order } = dataPost;
+  const { desc, imgPost, name, slug } = dataPost;
 
   return (
     <div
       key={slug}
       id={name}
       className="filteredSearch w-full rounded-md p-8  shadow-lg overflow-hidden  bg-cover bg-center mb-2"
-      style={
-        imgPost
-          ? {
-              backgroundImage: 'url(' + imgPost + ')',
-
-              order: order,
-            }
-          : {
-              backgroundImage: 'url(' + coverImg + ')',
-            }
-      }
+      style={{
+        backgroundImage: 'url(' + imgPost + ')',
+      }}
     >
       <div className="p-4">
         <h3 className="font-mono text-4xl font-bold rounded-md p-2 w-auto bg-primary opacity-80 mx-auto">
-          {name || title}
+          {name}
         </h3>
 
         <div className="rounded-md opacity-80 bg-primary  p-2 mt-28 font-sans text-center text-quaternary mx-16">

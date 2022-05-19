@@ -11,6 +11,7 @@ const BodyArticle = ({ postinHTML }) => {
                 <div>
                   <div className="font-sans">{postinHTML}</div>
                 </div>
+
                 {/* TODO: MAKE COMMENTS FOR ARTICLES */}
                 {/* <section
                   aria-labelledby="activity-title"

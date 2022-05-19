@@ -9,12 +9,16 @@ import getArticlesList from '../articlesList/modules/getArticlesList';
 import ArticleNotFound from '../articlesList/modules/ArticleNotFound';
 import BodyArticle from './modules/BodyArticle';
 import { useTranslation } from 'react-i18next';
+import isConnected from '../utils/isConnected';
 
 const GetSingleArticle = (idOrSlug) => {
   const i18Lang = useTranslation()?.i18n.language;
   const [article, setArticle] = useState(store.getState().currentArticle);
   const [articles, setArticles] = useState(
-    store.getState().articles.filter((art) => art.lang === i18Lang)
+    store
+      .getState()
+      .articles.filter((art) => art.lang === i18Lang)
+      .sort((a, b) => b.timeStamp - a.timeStamp)
   );
   const [currentTime, setCurrentTime] = useState('fetching...');
   getArticlesList();
@@ -26,11 +30,17 @@ const GetSingleArticle = (idOrSlug) => {
   store.subscribe(() => {
     setArticle(store.getState().currentArticle);
     setArticles(
-      store.getState().articles.filter((art) => art.lang === i18Lang)
+      store
+        .getState()
+        .articles.filter((art) => art.lang === i18Lang)
+        .sort((a, b) => b.timeStamp - a.timeStamp)
     );
 
     setCurrentTime(
-      format(store.getState().currentArticle?.timeStamp, 'dddd MMMM Do, YYYY')
+      format(
+        parseInt(store.getState().currentArticle?.timeStamp),
+        'dddd MMMM Do, YYYY'
+      )
     );
   });
 
@@ -60,15 +70,15 @@ const GetSingleArticle = (idOrSlug) => {
               key={index}
               className="filteredSearch max-w-3xl m-auto bg-center bg-cover p-8 bg-primary"
               style={{
-                backgroundImage: 'url(' + article.coverImg + ')',
+                backgroundImage: 'url(' + article.imgPost + ')',
                 display: 'none',
               }}
             >
               <Link href={'/' + article.slug}>
-                <h4 className="text-2xl font-mono">{article.title}</h4>
+                <h4 className="text-2xl font-mono">{article.name}</h4>
                 {article.timeStamp && (
                   <h5 className="text-right">
-                    {format(article.timeStamp, 'dddd MMMM Do, YYYY')}
+                    {format(parseInt(article.timeStamp), 'dddd MMMM Do, YYYY')}
                   </h5>
                 )}
                 <div className="text-sm p-8">{article.desc}</div>
@@ -80,6 +90,13 @@ const GetSingleArticle = (idOrSlug) => {
       </>
     );
   };
+
+  const [userConnected, setUserConnected] = useState(false);
+  const [userDetails, setUserDetails] = useState(undefined);
+
+  useEffect(() => {
+    isConnected(setUserConnected, setUserDetails);
+  }, []);
 
   return (
     <>
@@ -93,13 +110,13 @@ const GetSingleArticle = (idOrSlug) => {
             {/* Header */}
             <div
               style={{
-                backgroundImage: `url(${article.coverImg})`,
+                backgroundImage: `url(${article.imgPost})`,
                 backgroundBlendMode: 'darken',
               }}
               className="bg-tertiary p-4 rounded-b-lg font-extrabold bg-center bg-cover "
             >
               {currentTime && <h1 className="text-center">{currentTime}</h1>}
-              <h1 className="text-center text-2xl">{article.title}</h1>
+              <h1 className="text-center text-2xl">{article.name}</h1>
               <div className="  text-sm text-justify font-light font-sans">
                 {article.desc}
               </div>
@@ -108,6 +125,11 @@ const GetSingleArticle = (idOrSlug) => {
             {article.postinHTML && (
               <div className="articleBody text-justify">
                 <BodyArticle postinHTML={parse(article.postinHTML)} />
+              </div>
+            )}
+            {userConnected && userDetails.email === 'kenneth7e7a@gmail.com' && (
+              <div className="w-full">
+                <a href={'/crear?id=' + article.id}>EDITAR</a>
               </div>
             )}
           </>
@@ -122,14 +144,3 @@ GetSingleArticle.propTypes = {
 };
 
 export default GetSingleArticle;
-
-// const postData = {
-//   id: string,
-//   lang: string,
-//   title: string,
-//   slug: string,
-//   coverImg: string,
-//   desc: string,
-//   postinHTML: string,
-//   timeStamp: number,
-// };
