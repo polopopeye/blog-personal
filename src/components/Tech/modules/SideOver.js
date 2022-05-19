@@ -4,8 +4,11 @@ import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
 import store from '../../../store';
 import modalsSlice from '../../../store/slice/modals';
+import { useTranslation } from 'react-i18next';
 
 const SideOver = () => {
+  const { t } = useTranslation();
+
   const [open, setOpen] = useState(store.getState().modals.techSideOver);
   const [techSideOver, setTechSideOver] = useState(
     store.getState().modals.techSideOverData
@@ -62,19 +65,21 @@ const SideOver = () => {
                       </div>
                       <div>
                         <div className="py-3 flex justify-between text-sm font-medium">
-                          <dt className="text-gray-500">Years of Experience</dt>
+                          <dt className="text-gray-500">
+                            {t('yearsOfExperience')}
+                          </dt>
                           <dd className="text-gray-900">
                             {techSideOver.years}
                           </dd>
                         </div>
                         <div className="py-3 flex justify-between text-sm font-medium">
-                          <dt className="text-gray-500">Learned on</dt>
+                          <dt className="text-gray-500">{t('learnedOn')}</dt>
                           <dd className="text-gray-900">{techSideOver.date}</dd>
                         </div>
                       </div>
                       <div>
                         <h3 className="font-medium text-gray-900">
-                          Description
+                          {t('descriptionField')}
                         </h3>
                         <div className="mt-2 flex items-center justify-between">
                           <p className="text-sm text-black">
@@ -85,7 +90,7 @@ const SideOver = () => {
                       {techSideOver.sharedWith && (
                         <div>
                           <h3 className="font-medium text-gray-900">
-                            Personal projects
+                            {t('personalProjects')}
                           </h3>
                           <ul
                             role="list"

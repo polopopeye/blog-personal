@@ -6,6 +6,94 @@ const theme = {
   'theme-funny': 'Theme Funny',
 };
 
+const app = {
+  sryNotFound: 'Sry, no results found...',
+  edit: 'Edit Article',
+  fetching: 'Fetching Article...',
+  moreLink: 'See full article',
+  connect: 'Connect',
+  home: 'Home',
+  tech: 'Stack tech',
+  search: 'Search...  ',
+  developed: 'Developed by Kenneth Suarez ',
+  lookCode: ' look at the code of this site on github',
+  yearsOfExperience: 'Years of Experience ',
+  learnedOn: 'Learned On',
+  descriptionField: 'Description',
+  personalProjects: 'Personal projects',
+};
+
+const tech = {
+  react:
+    'One of my favourite technologies, my first option when we talk about frontEnd',
+  angular:
+    'Not my main option, but I like this tech developed by google and I now how the basics, I prefer to use react by popularity',
+
+  bootstrap:
+    'I love to use bootstrap CSS, nowadays I prefer Tailwind, but sometimes I use it if I want to develop an app fast without to worry about the CSS',
+
+  cloudflare:
+    'I love cloudflare for an extra security layer, DDos shield, extra analisys and great dns manager, sad that most of the companies not know about it',
+
+  codeigniter:
+    'Easy to use and lot of potential when we talk about to build an app with PHP',
+
+  cypress:
+    'first option when we want to test integrational testing and frontend rendering',
+
+  firebase:
+    'I love to use the stack of firebase, like firestore and take advantage of the google cloud servers',
+
+  gatsby:
+    'love to use Gatsby with nextJS is one of my favorite framework to use in frontend,  easy to use and lot of potential like graphQL',
+
+  googleCloud:
+    'I like advantatge of all the enviroment of google platforms, due to scalability and performance',
+
+  heroku:
+    'When we talk about backend, the servers of heroku leads us to freedom and scalability',
+
+  jest: 'My first option for unit testing',
+
+  laravel:
+    'My first option when we have to develop with PHP, the most professional and powerfull framework to use',
+
+  mongodb: 'My favourite DB besides the firestore, due to scalability',
+
+  mysql: ' My first database engine that I learned, I like it',
+
+  nestjs:
+    'First option for the backend with nodeJS, I like all the infrastructure behind, lot of potential for the API',
+
+  nextjs:
+    'First option for the frontEnd with react, lot of potential and freedom',
+  nodejs:
+    'With GoLang I think are the best techs to the backend, my first option to use',
+
+  sanityjs:
+    'Good option like db engine for small projects, and easy and fast way to develop, (Not my first option but I like it)',
+
+  tailwind:
+    'My first option to use as css framework, mainly performance, mobile first, and scalability in themes',
+
+  tensorflowjs:
+    "I love Machine Learning and all related with AI, I'm happy and eager to see the future with this tech, Tensorflow applied to web development is really exciting!",
+
+  threejs:
+    'Usefull tool to make interactive websites with canvas, and interaction with other tools, It depends a lot for wich project we use that, otherwise i will go with Unity but still usefull',
+  typescript:
+    'I love TS, my first option to develop a serius project, is like a javascript but with superpowers',
+
+  webgl:
+    'Usefull tech to make interactive a website, not my first option but usefull for small developments of website development',
+
+  wordpress:
+    'I loved this tech, and the easy enviroment to develop and integrate plugins and themes, not using it right now... I prefer to go with Typescript tech like nextJS, nestJS etc.',
+
+  golang:
+    'One of my favourites langs for the backend after nodeJS, so fast and simple <3',
+};
+
 const cv = {
   basicInformationTittle: 'BASIC INFORMATION',
   contactDetails: 'Contact details',
@@ -87,5 +175,8 @@ export const en = {
     ...theme,
     ...lang,
     ...cv,
+    ...app,
+
+    ...tech,
   },
 };

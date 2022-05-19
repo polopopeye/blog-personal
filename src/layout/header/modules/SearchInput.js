@@ -1,5 +1,6 @@
 import { SearchIcon } from '@heroicons/react/solid';
 import React, { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function displayResults(searchInput) {
   function searchNormalize(text) {
@@ -83,6 +84,7 @@ function displayResults(searchInput) {
 
 const SearchInput = () => {
   const searchInputRef = useRef();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -118,7 +120,7 @@ const SearchInput = () => {
           }}
           type="text"
           className="focus:border-indigo-400 focus:outline-none sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-300 w-full h-10 text-sm bg-quaternary text-primary"
-          placeholder="Search..."
+          placeholder={t('search')}
         />
       </div>
     </>

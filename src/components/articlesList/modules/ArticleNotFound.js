@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { notFoundImgs } from '../../utils/globalConsts';
 import randomNumber from '../../utils/randomNumber';
 
@@ -13,6 +14,8 @@ const ArticleNotFound = ({ display = 'none' }) => {
     }, 5000);
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <>
       <h1
@@ -20,7 +23,8 @@ const ArticleNotFound = ({ display = 'none' }) => {
         className="text-2xl text-center p-2 select-none"
         style={{ display: display }}
       >
-        Sry, no hay resultados...
+        {t('sryNotFound')}
+
         <center>
           <img
             src={notFoundImgs[imgIndex]}

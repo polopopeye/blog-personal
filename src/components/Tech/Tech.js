@@ -32,13 +32,13 @@ import wordpress from '../../images/icons/tech/wordpress.png';
 import golang from '../../images/icons/tech/golang.png';
 
 const Tech = () => {
+  const { t } = useTranslation();
   const files = [
     {
       name: 'React',
       years: '> 4', // Years of experience
       date: '30/10/2016', //Learned On
-      description:
-        'One of my favourite technologies, my first option when we talk about frontEnd',
+      description: t('react'),
       src: reactLogo,
       projects: [
         {
@@ -59,16 +59,14 @@ const Tech = () => {
       name: 'Angular JS',
       years: '1', // Years of experience
       date: '2020', //Learned On
-      description:
-        'Not my main option, but I like this tech developed by google and I now how the basics, I prefer to use react by popularity',
+      description: t('angular'),
       src: angularLogo,
     },
     {
       name: 'Bootstrap',
       years: '> 4', // Years of experience
       date: '2016', //Learned On
-      description:
-        'I love to use bootstrap CSS, nowadays I prefer Tailwind, but sometimes I use it if I want to develop an app fast without to worry about the CSS',
+      description: t('bootstrap'),
       src: bootstrap,
       projects: [
         {
@@ -81,8 +79,7 @@ const Tech = () => {
       name: 'cloudflare',
       years: '> 4', // Years of experience
       date: '2016', //Learned On
-      description:
-        'I love cloudflare for an extra security layer, DDos shield, extra analisys and great dns manager, sad that most of the companies not know about it',
+      description: t('cloudflare'),
       src: cloudflare,
       projects: [
         {
@@ -99,8 +96,7 @@ const Tech = () => {
       name: 'codeIgniter',
       years: '> 4', // Years of experience
       date: '2016', //Learned On
-      description:
-        'Easy to use and lot of potential when we talk about to build an app with PHP',
+      description: t('codeigniter'),
       src: codeigniter,
       projects: [
         {
@@ -113,8 +109,8 @@ const Tech = () => {
       name: 'cypress',
       years: '> 4', // Years of experience
       date: '2016', //Learned On
-      description:
-        'first option when we want to test integrational testing and frontend rendering',
+      description: t('cypress'),
+
       src: cypress,
       projects: [
         {
@@ -127,8 +123,8 @@ const Tech = () => {
       name: 'firebase',
       years: '3', // Years of experience
       date: '2020', //Learned On
-      description:
-        'I love to use the stack of firebase, like firestore and take advantage of the google cloud servers',
+      description: t('firebase'),
+
       src: firebase,
       projects: [
         {
@@ -141,8 +137,8 @@ const Tech = () => {
       name: 'gatsby',
       years: '3', // Years of experience
       date: '2020', //Learned On
-      description:
-        'love to use Gatsby with nextJS is one of my favorite framework to use in frontend,  easy to use and lot of potential like graphQL',
+      description: t('gatsby'),
+
       src: gatsby,
       projects: [
         {
@@ -155,8 +151,8 @@ const Tech = () => {
       name: 'google cloud',
       years: '3', // Years of experience
       date: '2020', //Learned On
-      description:
-        'I like advantatge of all the enviroment of google platforms, due to scalability and performance',
+      description: t('googleCloud'),
+
       src: googleCloud,
       projects: [
         {
@@ -177,8 +173,8 @@ const Tech = () => {
       name: 'Heroku',
       years: '3', // Years of experience
       date: '2020', //Learned On
-      description:
-        'When we talk about backend, the servers of heroku leads us to freedom and scalability',
+      description: t('heroku'),
+
       src: heroku,
       projects: [
         {
@@ -203,7 +199,7 @@ const Tech = () => {
       name: 'Jest',
       years: '3', // Years of experience
       date: '2020', //Learned On
-      description: 'My first option for unit testing',
+      description: t('jest'),
       src: jest,
       projects: [
         {
@@ -224,15 +220,15 @@ const Tech = () => {
       name: 'laravel',
       years: '3', // Years of experience
       date: '2020', //Learned On
-      description:
-        'My first option when we have to develop with PHP, the most professional and powerfull framework to use',
+      description: t('laravel'),
+
       src: laravel,
     },
     {
       name: 'mongodb',
       years: '3', // Years of experience
       date: '2020', //Learned On
-      description: 'My favourite DB besides the firestore, due to scalability',
+      description: t('mongodb'),
       src: mongodb,
       projects: [
         {
@@ -245,15 +241,15 @@ const Tech = () => {
       name: 'mysql',
       years: '>4', // Years of experience
       date: '2016', //Learned On
-      description: ' My first database engine that I learned, I like it',
+      description: t('mysql'),
       src: mysql,
     },
     {
       name: 'Nest JS',
       years: '>4', // Years of experience
       date: '2016', //Learned On
-      description:
-        'First option for the backend with nodeJS, I like all the infrastructure behind, lot of potential for the API',
+      description: t('nestjs'),
+
       src: nestjs,
       projects: [
         {
@@ -266,8 +262,8 @@ const Tech = () => {
       name: 'Next JS',
       years: '>4', // Years of experience
       date: '2016', //Learned On
-      description:
-        'First option for the frontEnd with react, lot of potential and freedom',
+      description: t('nextjs'),
+
       src: nextjs,
       projects: [
         {
@@ -280,8 +276,8 @@ const Tech = () => {
       name: 'Node JS',
       years: '>4', // Years of experience
       date: '2016', //Learned On
-      description:
-        'With GoLang I think are the best techs to the backend, my first option to use',
+      description: t('nodejs'),
+
       src: nodejs,
       projects: [
         {
@@ -304,18 +300,18 @@ const Tech = () => {
     },
     {
       name: 'Sanity JS',
-      years: '>4', // Years of experience
-      date: '2016', //Learned On
-      description:
-        'Good option like db engine for small projects, and easy and fast way to develop, (Not my first option but I like it)',
+      years: '1', // Years of experience
+      date: '2022', //Learned On
+      description: t('sanityjs'),
+
       src: sanityjs,
     },
     {
       name: 'Tailwind css',
-      years: '>4', // Years of experience
-      date: '2016', //Learned On
-      description:
-        'My first option to use as css framework, mainly performance, mobile first, and scalability in themes',
+      years: '3', // Years of experience
+      date: '2019', //Learned On
+      description: t('tailwind'),
+
       src: tailwind,
       projects: [
         {
@@ -332,8 +328,8 @@ const Tech = () => {
       name: 'Tensorflow JS',
       years: '>4', // Years of experience
       date: '2016', //Learned On
-      description:
-        "I love Machine Learning and all related with AI, I'm happy and eager to see the future with this tech, Tensorflow applied to web development is really exciting!",
+      description: t('tensorflowjs'),
+
       src: tensorflowjs,
       projects: [
         {
@@ -346,40 +342,40 @@ const Tech = () => {
       name: 'Three JS',
       years: '>4', // Years of experience
       date: '2016', //Learned On
-      description:
-        'Usefull tool to make interactive websites with canvas, and interaction with other tools, It depends a lot for wich project we use that, otherwise i will go with Unity but still usefull',
+      description: t('threejs'),
+
       src: threejs,
     },
     {
       name: 'Typescript',
       years: '3', // Years of experience
       date: '2020', //Learned On
-      description:
-        'I love TS, my first option to develop a serius project, is like a javascript but with superpowers',
+      description: t('typescript'),
+
       src: typescript,
     },
     {
       name: 'webgl',
       years: '>4', // Years of experience
       date: '2016', //Learned On
-      description:
-        'Usefull tech to make interactive a website, not my first option but usefull for small developments of website development',
+      description: t('webgl'),
+
       src: webgl,
     },
     {
       name: 'wordpress',
       years: '>4', // Years of experience
       date: '2016', //Learned On
-      description:
-        'I loved this tech, and the easy enviroment to develop and integrate plugins and themes, not using it right now... I prefer to go with Typescript tech like nextJS, nestJS etc.',
+      description: t('wordpress'),
+
       src: wordpress,
     },
     {
       name: 'GO lang',
       years: '2', // Years of experience
       date: '2020', //Learned On
-      description:
-        'One of my favourites langs for the backend after nodeJS, so fast and simple <3',
+      description: t('golang'),
+
       src: golang,
     },
   ];
@@ -388,7 +384,6 @@ const Tech = () => {
     store.dispatch(modalsSlice.actions.techSideOver(true));
     store.dispatch(modalsSlice.actions.setTechSideOver(currentTechData));
   };
-  const { t } = useTranslation();
 
   return (
     <>

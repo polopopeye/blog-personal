@@ -1,7 +1,10 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ArticleItem = ({ dataPost }) => {
+  const { t } = useTranslation();
+
   const { desc, imgPost, name, slug } = dataPost;
 
   return (
@@ -23,10 +26,10 @@ const ArticleItem = ({ dataPost }) => {
         </div>
       </div>
       <Link
-        href={'/' + slug}
+        to={'/' + slug}
         className="rounded-md bg-secondary opacity-80 w-full flex justify-center p-2 text-quaternary font-semibold  transition-all duration-500 hover:bg-tertiary  hover:opacity-100"
       >
-        Mas info
+        {t('moreLink')}
       </Link>
     </div>
   );

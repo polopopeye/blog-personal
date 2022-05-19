@@ -12,6 +12,8 @@ import { useTranslation } from 'react-i18next';
 import isConnected from '../utils/isConnected';
 
 const GetSingleArticle = (idOrSlug) => {
+  const { t } = useTranslation();
+
   const i18Lang = useTranslation()?.i18n.language;
   const [article, setArticle] = useState(store.getState().currentArticle);
   const [articles, setArticles] = useState(
@@ -20,7 +22,7 @@ const GetSingleArticle = (idOrSlug) => {
       .articles.filter((art) => art.lang === i18Lang)
       .sort((a, b) => b.timeStamp - a.timeStamp)
   );
-  const [currentTime, setCurrentTime] = useState('fetching...');
+  const [currentTime, setCurrentTime] = useState(t('fetching'));
   getArticlesList();
 
   useEffect(() => {
@@ -74,7 +76,7 @@ const GetSingleArticle = (idOrSlug) => {
                 display: 'none',
               }}
             >
-              <Link href={'/' + article.slug}>
+              <Link to={'/' + article.slug}>
                 <h4 className="text-2xl font-mono">{article.name}</h4>
                 {article.timeStamp && (
                   <h5 className="text-right">
@@ -129,7 +131,7 @@ const GetSingleArticle = (idOrSlug) => {
             )}
             {userConnected && userDetails.email === 'kenneth7e7a@gmail.com' && (
               <div className="w-full">
-                <a href={'/crear?id=' + article.id}>EDITAR</a>
+                <Link to={'/crear?id=' + article.id}>{t('edit')}</Link>
               </div>
             )}
           </>

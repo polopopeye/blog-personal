@@ -1,17 +1,20 @@
 import React from 'react';
 import Layout from '../layout/Layout';
 import Seo from '../components/seo';
-import Tech from '../components/Tech/Tech';
+import TechGallery from '../components/Tech/Tech';
+import { useTranslation } from 'react-i18next';
 
-const tech = () => {
+const Tech = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Layout>
-        <Seo title="Tecnologías" />
-        <Tech />
+        <Seo title={t('tech')} />
+        <TechGallery />
       </Layout>
     </>
   );
 };
 
-export default tech;
+export default Tech;

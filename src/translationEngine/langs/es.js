@@ -6,6 +6,86 @@ const theme = {
   'theme-funny': 'Tema Funny',
 };
 
+const app = {
+  sryNotFound: 'Sry, no hay resultados...',
+  edit: 'Editar Artículo',
+  fetching: 'Cargando artículo...',
+  moreLink: 'Ver Artículo completo',
+  connect: 'Conectar',
+  home: 'Inicio',
+  tech: 'Tecnologías usadas',
+  search: 'Buscar...',
+  developed: 'Desarrollado por Kenneth Suarez ',
+  lookCode: 'mira el código del sitio en github',
+  yearsOfExperience: 'Años de experiencia ',
+  learnedOn: 'Aprendido el',
+  descriptionField: 'Descripción',
+  personalProjects: 'Proyectos personales',
+};
+
+const tech = {
+  react:
+    'Una de mis tecnologías favoritas, mi primera opción cuando hablamos de frontEnd',
+  angular:
+    'No es mi opción principal, pero me gusta esta tecnología desarrollada por Google y ahora sé lo básico, prefiero usar reaccionar por popularidad',
+  bootstrap:
+    'Me encanta usar Bootstrap CSS, hoy en día prefiero Tailwind, pero a veces lo uso si quiero desarrollar una aplicación rápido sin preocuparme por el CSS',
+  cloudflare:
+    'Me encanta Cloudflare por una capa de seguridad adicional, escudo DDos, análisis adicional y excelente administrador de DNS, es triste que la mayoría de las empresas no lo sepan',
+  codeigniter:
+    'Fácil de usar y con mucho potencial cuando hablamos de construir una aplicación con PHP',
+  cypress:
+    'primera opción cuando queremos probar pruebas de integración y renderizado frontend',
+
+  firebase:
+    'Me encanta usar el entorno de firebase tanto el sistema de login con oauth, como firestore y aprovechar los servidores de la nube de google',
+
+  gatsby:
+    'Me encanta usar Gatsby con nextJS, es uno de mis marcos favoritos para usar en la interfaz, es fácil de usar y tiene mucho potencial como graphQL',
+  googleCloud:
+    'Me gusta la ventaja de todo el entorno de las plataformas de Google, debido a la escalabilidad y el rendimiento',
+  heroku:
+    'Cuando hablamos de backend, los servidores de heroku nos llevan a la libertad y escalabilidad',
+
+  jest: 'Mi primera opción para pruebas unitarias',
+
+  laravel:
+    'Mi primera opción cuando tenemos que desarrollar con PHP, el framework más profesional y potente para usar',
+  mongodb:
+    'Mi base de datos favorita además de firestore, debido a la escalabilidad',
+
+  mysql: 'Mi primer motor de base de datos que aprendí, me gusta',
+
+  nestjs:
+    'Primera opción para el backend con nodeJS, me gusta toda la infraestructura detrás, mucho potencial para la API',
+  nextjs:
+    'Primera opción para el frontEnd con reacción, mucho potencial y libertad',
+  nodejs:
+    'junto con GoLang, creo que son las mejores tecnologías para el backend, mi primera opción para usar',
+
+  sanityjs:
+    'Buena opción como motor de db para proyectos pequeños, y forma fácil y rápida de desarrollar (no es mi primera opción pero me gusta)',
+
+  tailwind:
+    'Mi primera opción para usar como marco css, principalmente por su rendimiento, por que es mobile first y su escalabilidad en temas',
+
+  tensorflowjs:
+    'Me encanta el aprendizaje automático y todo lo relacionado con la IA, estoy feliz y ansioso por ver el futuro con esta tecnología, ¡Tensorflow aplicado al desarrollo web es realmente emocionante!',
+  threejs:
+    'Herramienta útil para hacer sitios web interactivos con lienzo e interacción con otras herramientas. Depende mucho del proyecto que usemos, de lo contrario, usaré Unity pero aún así será útil',
+  typescript:
+    'Me encanta TS, mi primera opción para desarrollar un proyecto serio, es como un javascript pero con superpoderes',
+
+  webgl:
+    'Tecnología útil para hacer un sitio web interactivo, no es mi primera opción pero es útil para pequeños desarrollos de desarrollo de sitios web',
+
+  wordpress:
+    'Me encantó esta tecnología y el entorno fácil para desarrollar e integrar complementos y temas, no la uso en este momento... Prefiero ir con la tecnología Typescript como nextJS, nestJS, etc.',
+
+  golang:
+    'Uno de mis lenguajes de programación favoritos para el backend después de nodeJS, muy rápido y simple <3',
+};
+
 const cv = {
   basicInformationTittle: 'INFORMACIÓN BÁSICA',
   contactDetails: 'Contacto',
@@ -82,9 +162,11 @@ export const es = {
     'create.title': 'Crear ',
     selectTheme: 'Seleccionar Tema',
     // General
-    selectLanguage: 'Language',
+    selectLanguage: 'Idioma',
     ...theme,
     ...lang,
     ...cv,
+    ...app,
+    ...tech,
   },
 };
