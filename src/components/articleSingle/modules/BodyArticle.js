@@ -11,7 +11,8 @@ const BodyArticle = ({ postinHTML }) => {
                 <div>
                   <div className="font-sans">{postinHTML}</div>
                 </div>
-                <section
+                {/* TODO: MAKE COMMENTS FOR ARTICLES */}
+                {/* <section
                   aria-labelledby="activity-title"
                   className="mt-8 xl:mt-10"
                 >
@@ -28,7 +29,7 @@ const BodyArticle = ({ postinHTML }) => {
                       <h1>COMMENTS</h1>
                     </div>
                   </div>
-                </section>
+                </section> */}
               </div>
             </div>
           </main>

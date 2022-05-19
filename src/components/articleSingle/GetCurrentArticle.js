@@ -8,10 +8,14 @@ import { Link } from 'gatsby';
 import getArticlesList from '../articlesList/modules/getArticlesList';
 import ArticleNotFound from '../articlesList/modules/ArticleNotFound';
 import BodyArticle from './modules/BodyArticle';
+import { useTranslation } from 'react-i18next';
 
 const GetSingleArticle = (idOrSlug) => {
+  const i18Lang = useTranslation()?.i18n.language;
   const [article, setArticle] = useState(store.getState().currentArticle);
-  const [articles, setArticles] = useState(store.getState().articles);
+  const [articles, setArticles] = useState(
+    store.getState().articles.filter((art) => art.lang === i18Lang)
+  );
   const [currentTime, setCurrentTime] = useState('fetching...');
   getArticlesList();
 
@@ -21,7 +25,9 @@ const GetSingleArticle = (idOrSlug) => {
 
   store.subscribe(() => {
     setArticle(store.getState().currentArticle);
-    setArticles(store.getState().articles);
+    setArticles(
+      store.getState().articles.filter((art) => art.lang === i18Lang)
+    );
 
     setCurrentTime(
       format(store.getState().currentArticle?.timeStamp, 'dddd MMMM Do, YYYY')

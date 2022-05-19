@@ -40,8 +40,14 @@ const SubMenu = () => {
 
   return (
     <>
-      {location.location.pathname === '/' ||
-      location.location.pathname === '' ? (
+      {location.location.pathname !== '/tech/' &&
+      location.location.pathname !== '/tech' &&
+      location.location.pathname !== '/cv/' &&
+      location.location.pathname !== '/cv' &&
+      location.location.pathname !== '/conectar/' &&
+      location.location.pathname !== '/conectar' &&
+      location.location.pathname !== '/crear/' &&
+      location.location.pathname !== '/crear' ? (
         <>
           <div
             className="print:hidden bg-tertiary mt-20  md:ml-64 md:pr-64 w-full"
@@ -53,11 +59,11 @@ const SubMenu = () => {
             }}
           >
             <div className="md:flex text-quaternary w-min text-center mx-auto p-4">
-              <LanguageSelector />
+              {(location.location.pathname === '/' ||
+                location.location.pathname === '') && <LanguageSelector />}
               <ThemeSelector />
               {/* TODO: FINISH ORDER BY: */}
               {/* <OrderBySelector /> */}
-
               {(location.location.pathname === '/cv/' ||
                 location.location.pathname === '/cv') && (
                 <DownloadPdfBtn url={url} />
@@ -76,7 +82,16 @@ const SubMenu = () => {
           }}
         >
           <div className="md:flex text-quaternary w-min text-center mx-auto p-4">
-            <LanguageSelector />
+            {(location.location.pathname === '/' ||
+              location.location.pathname === '' ||
+              location.location.pathname === '/tech/' ||
+              location.location.pathname === '/tech' ||
+              location.location.pathname === '/cv/' ||
+              location.location.pathname === '/cv' ||
+              location.location.pathname === '/conectar/' ||
+              location.location.pathname === '/conectar' ||
+              location.location.pathname === '/crear/' ||
+              location.location.pathname === '/crear') && <LanguageSelector />}
             <ThemeSelector />
 
             {(location.location.pathname === '/cv/' ||

@@ -1,20 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import store from '../../store';
 
 import ArticleItem from './modules/ArticleItem';
 import ArticleNotFound from './modules/ArticleNotFound';
 
 const ArticleList = () => {
-  const [articles, setArticles] = useState(store.getState().articles);
-  store.subscribe(() => setArticles(store.getState().articles));
+  const i18Lang = useTranslation()?.i18n.language;
+
+  const [articles, setArticles] = useState(
+    store.getState().articles.filter((art) => art.lang === i18Lang)
+  );
+  store.subscribe(() =>
+    setArticles(store.getState().articles.filter((art) => art.lang === i18Lang))
+  );
+
+  useEffect(() => {
+    setArticles(
+      store.getState().articles.filter((art) => art.lang === i18Lang)
+    );
+  }, [i18Lang]);
 
   return (
     <section className="bg-secondary w-full md:max-w-5xl mx-auto flex-start justify-center items-center p-4">
       <ArticleNotFound />
 
-      {articles.map((dataPost) => (
-        <ArticleItem dataPost={dataPost} />
-      ))}
+      {articles.map((dataPost) => {
+        console.log(articles);
+        return <ArticleItem dataPost={dataPost} />;
+      })}
     </section>
   );
 };
