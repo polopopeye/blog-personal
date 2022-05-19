@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
         style={{ backgroundImage: `url(${bgPage})`, overflow: 'hidden' }}
       >
         <Sidebar />
-        <main className="  flex flex-col flex-grow  w-full -ml-64 md:ml-0 transition-all duration-150 ease-in">
+        <main className="flex flex-col flex-grow  w-full -ml-64 md:ml-0 transition-all duration-150 ease-in">
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
           <SubMenu />
           <div className="flex flex-col  md:ml-64 md:pr-64 w-full">

@@ -30,7 +30,12 @@ Is important to keep the browserlist updated: `npx browserslist@latest --update-
 # Deploy
 
 ```
+first : create bundle
 gatsby clean
-gatsby build
+npm run build
+second: check your bundle
+gatsby serve
+third: commit and save data
+fourth:
 firebase deploy --only hosting
 ```

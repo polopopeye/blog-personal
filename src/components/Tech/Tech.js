@@ -409,11 +409,8 @@ const Tech = () => {
                   className="mt-8 pb-16"
                   aria-labelledby="gallery-heading"
                 >
-                  <ul
-                    role="list"
-                    className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-x-8"
-                  >
-                    {files.map((file) => {
+                  <ul className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-x-8">
+                    {files.map((file, i) => {
                       const {
                         name,
                         years,
@@ -423,31 +420,30 @@ const Tech = () => {
                         projects,
                       } = file;
                       return (
-                        <>
-                          <li
-                            onClick={() => {
-                              handleOpenSideOver({
-                                name: name,
-                                description: description,
-                                years: years,
-                                date: date,
-                                source: src,
-                                sharedWith: projects,
-                              });
-                            }}
-                            key={name}
-                          >
-                            <div className="group block w-full aspect-w-8 aspect-h-8 rounded-lg bg-primary overflow-hidden">
-                              <img
-                                src={src}
-                                className="p-4 w-full h-auto bg-gray-100 rounded-md"
-                              />
-                              <p className="mt-4 ml-4 block text-xl h-8 font-bold text-black bg-gradient-to-b from-gray-100 to-transparent   truncate">
-                                {name}
-                              </p>
-                            </div>
-                          </li>
-                        </>
+                        <li
+                          onClick={() => {
+                            handleOpenSideOver({
+                              name: name,
+                              description: description,
+                              years: years,
+                              date: date,
+                              source: src,
+                              sharedWith: projects,
+                            });
+                          }}
+                          key={i}
+                        >
+                          <div className="group block w-full aspect-w-8 aspect-h-8 rounded-lg bg-primary overflow-hidden">
+                            <img
+                              src={src}
+                              className="p-4 w-full h-auto bg-gray-100 rounded-md"
+                              alt=""
+                            />
+                            <p className="mt-4 ml-4 block text-xl h-8 font-bold text-black bg-gradient-to-b from-gray-100 to-transparent   truncate">
+                              {name}
+                            </p>
+                          </div>
+                        </li>
                       );
                     })}
                   </ul>

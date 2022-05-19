@@ -3,7 +3,7 @@ import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon, TranslateIcon } from '@heroicons/react/solid';
 import MenuItem from './modules/MenuItem';
 import { useTranslation } from 'react-i18next';
-import twFormater from '../utils/twFormater';
+
 import { resources } from '../../translationEngine/langs';
 
 const LanguageSelector = () => {
@@ -17,13 +17,7 @@ const LanguageSelector = () => {
       <Menu as="div" className="relative">
         <Menu.Button
           as="button"
-          className={twFormater({
-            base:
-              'inline-flex justify-center w-52 px-4 py-2 text-sm font-medium z-0 text-quaternary bg-secondary rounded-md',
-            hover: 'bg-opacity-30 ',
-            focus: 'outline-none',
-            'focus-visible': 'ring-white ring-opacity-75 ring-2',
-          })}
+          className="focus-visible:ring-white ring-opacity-75 ring-2 focus:outline-none hover:bg-opacity-30 inline-flex justify-center w-52 px-4 py-2 text-sm font-medium z-0 text-quaternary bg-secondary rounded-md"
         >
           {({ open }) => {
             setShowSelector(open);
@@ -49,17 +43,15 @@ const LanguageSelector = () => {
           leaveFrom="h-32"
           leaveTo="h-0"
         >
-          <Menu.Items
-            className={twFormater({
-              base:
-                ' z-10 absolute left-4 w-48 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 ',
-              focus: 'outline-none',
-            })}
-          >
+          <Menu.Items className="z-10 absolute left-4 w-48 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 ">
             <div className="px-1 py-1 ">
-              {langsArr.map((lang) => {
+              {langsArr.map((lang, index) => {
                 return (
-                  <MenuItem setShowSelector={setShowSelector} lang={lang} />
+                  <MenuItem
+                    setShowSelector={setShowSelector}
+                    lang={lang}
+                    key={index}
+                  />
                 );
               })}
             </div>

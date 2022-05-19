@@ -5,7 +5,7 @@ const MenuButton = ({ classN, link, classNActive, nombre }) => {
   return (
     <>
       <div className="w-full">
-        <Link class={classN} to={link} activeClassName={classNActive}>
+        <Link className={classN} to={link} activeClassName={classNActive}>
           {nombre}
         </Link>
       </div>

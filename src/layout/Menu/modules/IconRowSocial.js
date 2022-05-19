@@ -10,8 +10,9 @@ const IconsRowSocial = ({ classCss = ' ' }) => {
   return (
     <>
       <div
-        class={
-          'grid grid-flow-col pt-8 grid-cols-3 gap-1 text-center ' + classCss
+        className={
+          'grid grid-flow-col py-2 grid-cols-3   text-center text-white' +
+          classCss
         }
       >
         <div>

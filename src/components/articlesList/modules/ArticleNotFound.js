@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { notFoundImgs } from '../../utils/globalConsts';
 import randomNumber from '../../utils/randomNumber';
 
-import twFormater from '../../utils/twFormater';
-
 const ArticleNotFound = ({ display = 'none' }) => {
   const [imgIndex, setImgIndex] = useState(
     randomNumber(0, notFoundImgs.length - 1)
@@ -27,10 +25,7 @@ const ArticleNotFound = ({ display = 'none' }) => {
           <img
             src={notFoundImgs[imgIndex]}
             alt="sry"
-            className={twFormater({
-              base: 'w-full rounded-xl select-none pt-12',
-              md: 'w-64',
-            })}
+            className="w-full rounded-xl select-none pt-12 md:w-64"
           />
         </center>
       </h1>
