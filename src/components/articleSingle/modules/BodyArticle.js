@@ -9,7 +9,9 @@ const BodyArticle = ({ postinHTML }) => {
             <div className="py-8 xl:py-10">
               <div className="w-full mx-auto px-4 ">
                 <div>
-                  <div className="font-sans">{postinHTML}</div>
+                  <div id="post" className="font-sans">
+                    {postinHTML}
+                  </div>
                 </div>
 
                 {/* TODO: MAKE COMMENTS FOR ARTICLES */}
