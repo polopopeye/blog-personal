@@ -102,13 +102,13 @@ const cv = {
   githubField: 'Github',
   LinkedInField: 'LinkedIn',
   LanguagesTittle: 'Languages',
-  highLang: 'native',
-  normalLang: 'high',
-  lowLang: 'bilingual',
+  highLang: 'Native',
+  normalLang: 'High',
+  lowLang: 'Bilingual',
   description1:
-    'I am programming for a few years now, with both backend and frontend technologies, and know how to integrate them and communicate between the two, and also how to develop and build APIs.',
+    'I am programming for a few years now, I love both backend and frontend technologies, and I know how to integrate them and how communicate propertly, and also how to develop and build APIs.',
   description2:
-    "I always use agile methods and good practices like TDD, GIT, Kanban or Scrum, wireframming and mockups of high definitions, POP (Prototype-based programming) and OOP (Object-oriented programming), I like to define DTO's, entities and work in an encapsulated way, for a better scalability of the infrastructure. Following principles of DDD (Domain driven design)",
+    "I always use agile methods and good practices like TDD with  wireframming and mockups of high definitions, GIT, Kanban or Scrum, POP (Prototype-based programming) and OOP (Object-oriented programming), I like to define DTO's, entities and work in an encapsulated way, for a better scalability of the infrastructure. Following principles of DDD (Domain driven design)",
 
   year: 'Year',
   years: 'Years',
@@ -127,7 +127,7 @@ const cv = {
   april: 'April',
 
   job1desc:
-    'Creation of custom wordpress and Prestashop (Development of plugins and themes) for clients, Creation of custom servers, Oriented to wordpress and Development of Scripts in PHP.',
+    'Creation of custom wordpress and Prestashop websites (Development of plugins and themes) for clients, Creation of custom servers, Oriented to wordpress and Development of Scripts in PHP.',
 
   job2desc:
     'Creation of a small programming agency, Direction and management of projects for clients, I mainly did:',
@@ -146,11 +146,12 @@ const cv = {
     'Development and Integration of APIs and applications in JS, NodeJS and PHP, for different environments of the core of 1d3a SL.',
   job5desc: 'FullStack Developer, NodeJS and React Consultor',
   job5desc1:
-    'Creation and development of web tools for international clients, Development in nodeJS and React mainly (Tailwind, Redux, OpenShift, in addition to other tools) for an international client of an artificial intelligence project oriented to chatbots and human language processing.',
+    'Development of web tools for international clients, Development in nodeJS and React mainly (Tailwind, Redux, OpenShift, in addition to other tools) for an international client of an artificial intelligence project oriented to chatbots and human language processing.',
   job5desc2:
     'The deployment, development and scalability is international and oriented to a large number of users. Mainly used in (Asia and Europe)',
   job6desc: 'FullStack Developer',
-  job6desc1: 'Website development for a German bank.',
+  job6desc1:
+    'Website development for an investment German Bank of berlin, with NextJS, React, Node, on front, and Ruby on backend.',
 
   footercvmsg:
     'Personal projects on my Github "polopopeye" or on my blog, kennethsuarez.es',

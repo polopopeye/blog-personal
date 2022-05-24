@@ -118,9 +118,9 @@ const Cv = () => {
                   {t('LanguagesTittle')}
                 </span>
                 <div className="p-2 border-2 border-gray-300 rounded-b-md">
-                  Español:{t('highLang')} <br />
-                  English:{t('normalLang')} <br />
-                  Català:{t('lowLang')} <br />
+                  Español: {t('highLang')} <br />
+                  English: {t('normalLang')} <br />
+                  Català: {t('lowLang')} <br />
                 </div>
               </div>
             </div>
@@ -220,13 +220,6 @@ const Cv = () => {
                 </div>
 
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
-                  <h6 className="font-bold">Go lang</h6>
-                  <span className="text-sm">
-                    <ClockIcon></ClockIcon>1 {t('year')}
-                  </span>
-                </div>
-
-                <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold"> TensorFlowJS</h6>
                   <span className="text-sm">
                     <ClockIcon></ClockIcon> 1 {t('year')}
@@ -288,6 +281,7 @@ const Cv = () => {
 
         <section className="mt-8 first:mt-0">
           <div className="break-inside-avoid">
+            <hr className="mt-28 mb-1"></hr>
             <h2 className="mt-4 mb-4 font-bold tracking-widest text-sm2 text-black print:font-bold">
               {t('experience')}
             </h2>
@@ -416,6 +410,51 @@ const Cv = () => {
             </section>
           </div>
         </section>
+        <section className="mt-8 first:mt-0">
+          <div className="break-inside-avoid">
+            <hr className="mt-8 mb-1"></hr>
+            <h2 className="mt-4 mb-4 font-bold tracking-widest text-sm2 text-black print:font-bold">
+              EDUCATION
+            </h2>
+
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  IES Ausies March - SMIX
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  2013 - 2015
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  Technician in microcomputer systems and networks.
+                </div>
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <header className="flex self-center">
+                <a href="https://taltech.ee/en/cyber-msc">
+                  <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                    Tallinna Tehnikaülikool - MSC in Cyber Security
+                  </h3>
+                </a>
+
+                <p className="leading-normal text-md text-gray-800">
+                  2018 - 2020
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  Started in the field of Cyber Security, but I decided to focus
+                  more on the website development.
+                </div>
+              </p>
+            </section>
+          </div>
+        </section>
+
         <h1 className="p-4 text-center  text-gray-900 font-medium bg-white">
           {t('footercvmsg')}
         </h1>
