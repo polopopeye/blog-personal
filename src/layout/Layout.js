@@ -33,6 +33,15 @@ const Layout = ({ children }) => {
     if (store.getState().articles.length === 0) {
       getArticlesList();
     }
+
+    if (window) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-GX77BSZGDV');
+    }
   }, []);
   const [currentTheme, setcurrentTheme] = useState(
     store.getState().currentTheme
@@ -41,6 +50,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-GX77BSZGDV"
+      ></script>
       <div
         className={
           'flex flex-row min-h-screen bg-secondary text-quaternary ' +
