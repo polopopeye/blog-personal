@@ -17,6 +17,7 @@ import SubMenu from './Menu/SubMenu/SubMenu';
 import getArticlesList from './../components/articlesList/modules/getArticlesList';
 
 import bgPage from '../images/svg/diagonalLines.svg';
+import TagManager from 'react-gtm-module';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,14 +35,7 @@ const Layout = ({ children }) => {
       getArticlesList();
     }
 
-    if (window) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-GX77BSZGDV');
-    }
+    TagManager.initialize({ gtmId: 'G-GX77BSZGDV' });
   }, []);
   const [currentTheme, setcurrentTheme] = useState(
     store.getState().currentTheme
