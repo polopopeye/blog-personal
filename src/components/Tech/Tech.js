@@ -1,11 +1,10 @@
 import React from 'react';
 
-import SideOver from './modules/SideOver';
-import modalsSlice from '../../store/slice/modals';
-import store from '../../store';
 import { useTranslation } from 'react-i18next';
+import store from '../../store';
+import modalsSlice from '../../store/slice/modals';
+import SideOver from './modules/SideOver';
 
-import reactLogo from '../../images/icons/tech/react.png';
 import angularLogo from '../../images/icons/tech/angular.png';
 import bootstrap from '../../images/icons/tech/bootstrap.png';
 import cloudflare from '../../images/icons/tech/cloudflare.png';
@@ -13,6 +12,7 @@ import codeigniter from '../../images/icons/tech/codeigniter.png';
 import cypress from '../../images/icons/tech/cypress.png';
 import firebase from '../../images/icons/tech/firebase.png';
 import gatsby from '../../images/icons/tech/gatsby.png';
+import golang from '../../images/icons/tech/golang.png';
 import googleCloud from '../../images/icons/tech/googleCloud.jpg';
 import heroku from '../../images/icons/tech/heroku.jpg';
 import jest from '../../images/icons/tech/jest.png';
@@ -22,6 +22,7 @@ import mysql from '../../images/icons/tech/mysql.png';
 import nestjs from '../../images/icons/tech/nestjs.png';
 import nextjs from '../../images/icons/tech/nextjs.png';
 import nodejs from '../../images/icons/tech/nodejs.png';
+import reactLogo from '../../images/icons/tech/react.png';
 import sanityjs from '../../images/icons/tech/sanityjs.png';
 import tailwind from '../../images/icons/tech/tailwind.png';
 import tensorflowjs from '../../images/icons/tech/tensorflowjs.png';
@@ -29,7 +30,6 @@ import threejs from '../../images/icons/tech/threejs.png';
 import typescript from '../../images/icons/tech/typescript.png';
 import webgl from '../../images/icons/tech/webgl.png';
 import wordpress from '../../images/icons/tech/wordpress.png';
-import golang from '../../images/icons/tech/golang.png';
 
 const Tech = () => {
   const { t } = useTranslation();

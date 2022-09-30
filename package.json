@@ -64,11 +64,11 @@
   "scripts": {
     "build": "gatsby build",
     "deploy": "firebase deploy --only hosting",
-    "develop": "gatsby develop",
-    "dev": "gatsby clean && gatsby develop",
+    "develop": "gatsby develop --port 3500",
+    "dev": "gatsby clean && gatsby develop --port 3500",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --port 3500",
     "clean": "gatsby clean",
     "test": "jest",
     "test:watch": "jest --watch"

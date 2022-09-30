@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import isConnected from '../../../components/utils/isConnected';
 import IconsRowSocial from '../modules/IconRowSocial';
-import ButtonCreator from './BottonCreator';
+import BottonCreator from './BottonCreator';
 const SidebarMenu = () => {
   const [userConnected, setUserConnected] = useState(false);
   const [userDetails, setUserDetails] = useState(undefined);
@@ -66,13 +66,13 @@ const SidebarMenu = () => {
       {menuData.map((data) => {
         if (data.link === '/crear/') {
           if (userConnected && userDetails.email === 'kenneth7e7a@gmail.com') {
-            return <ButtonCreator data={data} />;
+            return <BottonCreator data={data} />;
           } else {
             return null;
           }
         }
 
-        return <ButtonCreator data={data} />;
+        return <BottonCreator data={data} />;
       })}
 
       <IconsRowSocial classCss="text-white" />

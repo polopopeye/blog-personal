@@ -408,6 +408,23 @@ const Cv = () => {
                 </div>
               </p>
             </section>
+
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  Embat Technologies SL
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  {t('july')} 2022 - {t('currently')}
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  {t('job7desc')} <br />
+                  {t('job7desc1')}
+                </div>
+              </p>
+            </section>
           </div>
         </section>
         <section className="mt-8 first:mt-0">

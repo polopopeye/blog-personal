@@ -117,6 +117,8 @@ const cv = {
   december: 'diciembre',
   march: 'marzo',
   april: 'abril',
+  july: 'julio',
+  currentlly: 'Actualmente trabajando',
 
   job1desc:
     'Creación de wordpress y Prestashops personalizados (Desarrollo de plugins y temas) para clientes, Creación de servidores personalizados, Orientados a wordpress y Desarrollo de Scripts en PHP.',
@@ -142,6 +144,9 @@ const cv = {
     'El deployment, desarrollo y escalabilidad es a nivel internacional y orientado a gran cantidad de usuarios. Principalmente utilizado en (Asia y Europa)',
   job6desc: 'FullStack Developer',
   job6desc1: 'Desarrollo del sitio web de un banco alemán',
+  job7desc: 'FullStack Developer',
+  job7desc1:
+    'Desarrollo del sitio web para la gestión de tesorería para empresas',
   footercvmsg:
     'Proyectos personales en mi Github "polopopeye" o en mi blog, kennethsuarez.es',
 };

@@ -125,6 +125,8 @@ const cv = {
   december: 'December',
   march: 'March',
   april: 'April',
+  july: 'July',
+  currently: 'Currently working',
 
   job1desc:
     'Creation of custom wordpress and Prestashop websites (Development of plugins and themes) for clients, Creation of custom servers, Oriented to wordpress and Development of Scripts in PHP.',
@@ -152,7 +154,9 @@ const cv = {
   job6desc: 'FullStack Developer',
   job6desc1:
     'Website development for an investment German Bank of berlin, with NextJS, React, Node, on front, and Ruby on backend.',
-
+  job7desc: 'FullStack Developer',
+  job7desc1:
+    'Development of the website for the management of treasury for companies',
   footercvmsg:
     'Personal projects on my Github "polopopeye" or on my blog, kennethsuarez.es',
 };

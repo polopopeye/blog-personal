@@ -1,10 +1,8 @@
-import React from 'react';
-import { Fragment, useState } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
+import { Dialog } from '@headlessui/react';
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import store from '../../../store';
 import modalsSlice from '../../../store/slice/modals';
-import { useTranslation } from 'react-i18next';
 
 const SideOver = () => {
   const { t } = useTranslation();
@@ -109,6 +107,7 @@ const SideOver = () => {
                                 <a
                                   href={project.href}
                                   target="_blank"
+                                  rel="noreferrer"
                                   type="button"
                                   className="ml-6 bg-white rounded-md text-sm font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                 >

@@ -12,7 +12,7 @@ const LoginRegisterBtn = () => {
 
   return (
     <div>
-      <h1 id="tittleWelcome"></h1>
+      <h1 id="tittleWelcome">loading</h1>
 
       <button
         id="Conectar"
