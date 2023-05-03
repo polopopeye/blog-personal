@@ -3,6 +3,7 @@ import * as React from 'react';
 import Layout from '../layout/Layout';
 import Seo from '../components/seo';
 import { useTranslation } from 'react-i18next';
+import ExperienceCard from '../components/cv/containers/ExperienceCard';
 
 const StarIcon = () => {
   return (
@@ -126,7 +127,7 @@ const Cv = () => {
             </div>
           </div>
 
-          <section className="mb-4.5 break-inside-avoid">
+          <section className="break-inside-avoid">
             <p className="mt-2.1 text-md text-gray-800 leading-normal">
               <div className="p-2 m-2">
                 {t('description1')}
@@ -279,122 +280,92 @@ const Cv = () => {
           </section>
         </section>
 
-        <section className="mt-8 first:mt-0">
+        <section className="first:mt-0">
           <div className="break-inside-avoid">
-            <hr className="mt-28 mb-1"></hr>
+            <hr className="mt-5 mb-1"></hr>
             <h2 className="mt-4 mb-4 font-bold tracking-widest text-sm2 text-black print:font-bold">
               {t('experience')}
             </h2>
-
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  Embat Technologies SL
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
-                  {t('may')} 2022 - {t('february')} 2023
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+            <ExperienceCard
+              title={'Embat Technologies SL'}
+              dates={t('may') + '2022 - ' + t('february') + ' 2023'}
+              description={
+                <>
                   {t('job7desc')} <br />
                   {t('job7desc1')}
-                </div>
-              </p>
-            </section>
+                </>
+              }
+            />
 
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  MVST.
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
+            <ExperienceCard
+              title={'MVST.'}
+              dates={
+                <>
                   {t('february')} 2022 - {t('may')} 2022
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                </>
+              }
+              description={
+                <>
                   {t('job6desc')} <br />
                   {t('job6desc1')}
-                </div>
-              </p>
-            </section>
+                </>
+              }
+            />
 
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  Amaris Consulting & innovation SL
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
+            <ExperienceCard
+              title={'Amaris Consulting & innovation SL'}
+              dates={
+                <>
                   {t('april')} 2021 - {t('february')} 2022
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <span className="flex px-4  bg-gray-300">
-                  Ref: Saita Giovanni, Project Manager, +34 695 947 076
-                </span>
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                </>
+              }
+              description={
+                <>
                   {t('job5desc')} <br />
                   {t('job5desc1')}
                   <br></br>
                   {t('job5desc2')}
-                </div>
-              </p>
-            </section>
+                </>
+              }
+              referenceSpan="Ref: Saita Giovanni, Project Manager, +34 695 947 076"
+            />
 
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  1d3a SL
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
+            <ExperienceCard
+              title={'1d3a SL'}
+              dates={
+                <>
                   {t('march')} 2020 - {t('december')} 2020
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <span className="flex px-4  bg-gray-300">
-                  Ref: Joan Carbó Laguna, CTO, +34 607 700 297 -
-                  juan.carbo@1d3a.com
-                </span>
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                </>
+              }
+              description={
+                <>
                   {t('job4desc')} <br />
                   {t('job4desc1')}
-                </div>
-              </p>
-            </section>
+                </>
+              }
+              referenceSpan="Ref: Joan Carbó Laguna, CTO, +34 607 700 297 - juan.carbo@1d3a.com"
+            />
 
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  Ibermática SA
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
+            <ExperienceCard
+              title={'Ibermática SA'}
+              dates={
+                <>
                   {t('january')} 2020 - {t('march')} 2020
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <span className="flex px-4  bg-gray-300">
-                  Ref: Juan Miguel Barajas, Project Manager +34 606 428 989
-                </span>
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  {t('job3desc')}
-                </div>
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  Hard Monkey PC Ltd.
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
+                </>
+              }
+              description={<>{t('job3desc')}</>}
+              referenceSpan="Ref: Juan Miguel Barajas, Project Manager +34 606 428 989"
+            />
+            <ExperienceCard
+              title={'Hard Monkey PC Ltd.'}
+              dates={
+                <>
                   {t('january')} 2017 - {t('january')} 2019
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                </>
+              }
+              description={
+                <>
                   {t('job2desc')}
-
                   <br />
                   <ul className="list-disc ml-8">
                     <li> {t('job2desc1')}</li>
@@ -403,28 +374,20 @@ const Cv = () => {
                     <li>{t('job2desc4')}</li>
                     <li>{t('job2desc5')}</li>
                   </ul>
-                </div>
-              </p>
-            </section>
+                </>
+              }
+            />
 
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  Sirastudio SL
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
+            <ExperienceCard
+              title={'Sirastudio SL'}
+              dates={
+                <>
                   {t('january')} 2017 - {t('december')} 2017
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <span className="flex px-4  bg-gray-300">
-                  Ref: Marc Torrente Cesteros, CEO +34 616 248 949
-                </span>
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  {t('job1desc')}
-                </div>
-              </p>
-            </section>
+                </>
+              }
+              description={<>{t('job1desc')}</>}
+              referenceSpan="Ref: Marc Torrente Cesteros, CEO +34 616 248 949"
+            />
           </div>
         </section>
         <section className="mt-8 first:mt-0">
@@ -434,40 +397,18 @@ const Cv = () => {
               {t('educationTitle')}
             </h2>
 
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  IES Ausies March - SMIX
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
-                  2013 - 2015
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  {t('education1')}
-                </div>
-              </p>
-            </section>
+            <ExperienceCard
+              title={'IES Ausies March - SMIX'}
+              dates={<>2013 - 2015</>}
+              description={<> {t('education1')}</>}
+            />
 
-            <section className="mb-8">
-              <header className="flex self-center">
-                <a href="https://taltech.ee/en/cyber-msc">
-                  <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                    Tallinna Tehnikaülikool - MSC in Cyber Security
-                  </h3>
-                </a>
-
-                <p className="leading-normal text-md text-gray-800">
-                  2018 - 2020
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  {t('education2')}
-                </div>
-              </p>
-            </section>
+            <ExperienceCard
+              title={'Tallinna Tehnikaülikool - MSC in Cyber Security'}
+              titleLink={'https://taltech.ee/en/cyber-msc'}
+              dates={<>2018 - 2020</>}
+              description={<> {t('education2')}</>}
+            />
           </div>
         </section>
 
