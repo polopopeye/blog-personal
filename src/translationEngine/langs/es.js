@@ -112,12 +112,18 @@ const cv = {
 
   experience: 'EXPERIENCIA',
 
-  january: 'enero ',
-  february: 'febrero',
-  december: 'diciembre',
-  march: 'marzo',
-  april: 'abril',
-  july: 'julio',
+  january: 'Enero',
+  february: 'Febrero',
+  march: 'Marzo',
+  april: 'Abril',
+  may: 'Mayo',
+  june: 'Junio',
+  july: 'Julio',
+  august: 'Agosto',
+  september: 'Septiembre',
+  october: 'Octubre',
+  november: 'Noviembre',
+  december: 'Diciembre',
   currentlly: 'Actualmente trabajando',
 
   job1desc:

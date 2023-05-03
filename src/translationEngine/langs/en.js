@@ -122,10 +122,16 @@ const cv = {
 
   january: 'January',
   february: 'February',
-  december: 'December',
   march: 'March',
   april: 'April',
+  may: 'May',
+  june: 'June',
   july: 'July',
+  august: 'August',
+  september: 'September',
+  october: 'October',
+  november: 'November',
+  december: 'December',
   currently: 'Currently working',
 
   job1desc:

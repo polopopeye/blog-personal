@@ -289,18 +289,95 @@ const Cv = () => {
             <section className="mb-8">
               <header className="flex self-center">
                 <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  Sirastudio SL
+                  Embat Technologies SL
                 </h3>
                 <p className="leading-normal text-md text-gray-800">
-                  {t('january')} 2017 - {t('december')} 2017
+                  {t('may')} 2022 - {t('february')} 2023
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  {t('job7desc')} <br />
+                  {t('job7desc1')}
+                </div>
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  MVST.
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  {t('february')} 2022 - {t('may')} 2022
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  {t('job6desc')} <br />
+                  {t('job6desc1')}
+                </div>
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  Amaris Consulting & innovation SL
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  {t('april')} 2021 - {t('february')} 2022
                 </p>
               </header>
               <p className="mt-2.1 text-md text-gray-700 leading-normal">
                 <span className="flex px-4  bg-gray-300">
-                  Ref: Marc Torrente Cesteros, CEO +34 616 248 949
+                  Ref: Saita Giovanni, Project Manager, +34 695 947 076
                 </span>
                 <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  {t('job1desc')}
+                  {t('job5desc')} <br />
+                  {t('job5desc1')}
+                  <br></br>
+                  {t('job5desc2')}
+                </div>
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  1d3a SL
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  {t('march')} 2020 - {t('december')} 2020
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <span className="flex px-4  bg-gray-300">
+                  Ref: Joan Carbó Laguna, CTO, +34 607 700 297 -
+                  juan.carbo@1d3a.com
+                </span>
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  {t('job4desc')} <br />
+                  {t('job4desc1')}
+                </div>
+              </p>
+            </section>
+
+            <section className="mb-8">
+              <header className="flex self-center">
+                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
+                  Ibermática SA
+                </h3>
+                <p className="leading-normal text-md text-gray-800">
+                  {t('january')} 2020 - {t('march')} 2020
+                </p>
+              </header>
+              <p className="mt-2.1 text-md text-gray-700 leading-normal">
+                <span className="flex px-4  bg-gray-300">
+                  Ref: Juan Miguel Barajas, Project Manager +34 606 428 989
+                </span>
+                <div className=" border-2 border-gray-300 rounded-b-md p-1">
+                  {t('job3desc')}
                 </div>
               </p>
             </section>
@@ -333,95 +410,18 @@ const Cv = () => {
             <section className="mb-8">
               <header className="flex self-center">
                 <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  Ibermática SA
+                  Sirastudio SL
                 </h3>
                 <p className="leading-normal text-md text-gray-800">
-                  {t('january')} 2020 - {t('march')} 2020
+                  {t('january')} 2017 - {t('december')} 2017
                 </p>
               </header>
               <p className="mt-2.1 text-md text-gray-700 leading-normal">
                 <span className="flex px-4  bg-gray-300">
-                  Ref: Juan Miguel Barajas, Project Manager +34 606 428 989
+                  Ref: Marc Torrente Cesteros, CEO +34 616 248 949
                 </span>
                 <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  {t('job3desc')}
-                </div>
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  1d3a SL
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
-                  {t('april')} 2020 - {t('december')} 2020
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <span className="flex px-4  bg-gray-300">
-                  Ref: Joan Carbó Laguna, CTO, +34 607 700 297 -
-                  juan.carbo@1d3a.com
-                </span>
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  {t('job4desc')} <br />
-                  {t('job4desc1')}
-                </div>
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  Amaris Consulting & innovation SL
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
-                  {t('april')} 2021 - {t('february')} 2022
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <span className="flex px-4  bg-gray-300">
-                  Ref: Saita Giovanni, Project Manager, +34 695 947 076
-                </span>
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  {t('job5desc')} <br />
-                  {t('job5desc1')}
-                  <br></br>
-                  {t('job5desc2')}
-                </div>
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  MVST.
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
-                  {t('february')} 2022 - {t('march')} 2022
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  {t('job6desc')} <br />
-                  {t('job6desc1')}
-                </div>
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <header className="flex self-center">
-                <h3 className="text-lg font-semibold text-gray-900 mr-4 bg-gray-300 p-2 rounded-t-md">
-                  Embat Technologies SL
-                </h3>
-                <p className="leading-normal text-md text-gray-800">
-                  {t('july')} 2022 - {t('currently')}
-                </p>
-              </header>
-              <p className="mt-2.1 text-md text-gray-700 leading-normal">
-                <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  {t('job7desc')} <br />
-                  {t('job7desc1')}
+                  {t('job1desc')}
                 </div>
               </p>
             </section>
