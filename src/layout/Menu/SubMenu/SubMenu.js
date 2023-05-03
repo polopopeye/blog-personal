@@ -2,25 +2,32 @@ import { DownloadIcon } from '@heroicons/react/solid';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../../../components/languageSelector/LanguageSelector';
-import en from '../../../components/pdfCV/EN_CV.pdf';
-import es from '../../../components/pdfCV/EN_CV.pdf';
-import jp from '../../../components/pdfCV/JP_CV.pdf';
+import en from '../../../components/pdfCV/en.pdf';
+import es from '../../../components/pdfCV/es.pdf';
+import jp from '../../../components/pdfCV/jp.pdf';
 import ThemeSelector from '../../../components/themeSelector/ThemeSelector';
 import useLocation from '../../../components/utils/useLocation';
 import bgSubmenu from './../../../images/svg/endlessClouds.svg';
 
 const DownloadPdfBtn = (props) => {
+  const { t } = useTranslation();
+
   const { url } = props;
+  const [pdfSrc, setpdfSrc] = useState(url);
+
+  useEffect(() => {
+    setpdfSrc(url);
+  }, [url]);
 
   return (
     <>
       <a
         target="_blank"
         rel="noreferrer"
-        href={url}
+        href={pdfSrc}
         className="hover:bg-primary mx-auto px-4 h-9 text-sm font-medium z-0 text-quaternary bg-secondary rounded-md whitespace-nowrap  mt-4 items-center flex transition-all duration-500"
       >
-        <DownloadIcon className="w-8 pr-3" /> download as pdf
+        <DownloadIcon className="w-8 pr-3" /> {t('downloadAsPdf')}
       </a>
     </>
   );
@@ -28,7 +35,8 @@ const DownloadPdfBtn = (props) => {
 
 const SubMenu = () => {
   const lang = useTranslation()?.i18n.language;
-  let defaultUrl = es;
+
+  let defaultUrl;
   switch (lang) {
     case 'en':
       defaultUrl = en;
@@ -43,27 +51,6 @@ const SubMenu = () => {
       defaultUrl = es;
       break;
   }
-
-  const [url, setUrl] = useState(defaultUrl);
-  useEffect(() => {
-    let defaultUrl = es;
-    switch (lang) {
-      case 'en':
-        defaultUrl = en;
-        break;
-      case 'es':
-        defaultUrl = es;
-        break;
-      case 'jp':
-        defaultUrl = jp;
-        break;
-      default:
-        defaultUrl = es;
-        break;
-    }
-
-    setUrl(defaultUrl);
-  }, [lang]);
 
   const location = useLocation();
 
@@ -97,7 +84,7 @@ const SubMenu = () => {
               {/* <OrderBySelector /> */}
               {(location.location.pathname === '/cv/' ||
                 location.location.pathname === '/cv') && (
-                <DownloadPdfBtn url={url} />
+                <DownloadPdfBtn url={defaultUrl} />
               )}
             </div>
           </div>
@@ -127,7 +114,7 @@ const SubMenu = () => {
 
             {(location.location.pathname === '/cv/' ||
               location.location.pathname === '/cv') && (
-              <DownloadPdfBtn url={url} />
+              <DownloadPdfBtn url={defaultUrl} />
             )}
           </div>
         </div>

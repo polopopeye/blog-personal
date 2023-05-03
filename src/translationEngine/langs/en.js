@@ -21,6 +21,7 @@ const app = {
   learnedOn: 'Learned On',
   descriptionField: 'Description',
   personalProjects: 'Personal projects',
+  downloadAsPdf: 'Download as PDF',
 };
 
 const tech = {
@@ -162,9 +163,14 @@ const cv = {
     'Website development for an investment German Bank of berlin, with NextJS, React, Node, on front, and Ruby on backend.',
   job7desc: 'FullStack Developer',
   job7desc1:
-    'Development of the website for the management of treasury for companies',
+    'Creation of new features and modules for the embat app, which highlights the treasury management module for business holdings and scenario forecasting',
   footercvmsg:
     'Personal projects on my Github "polopopeye" or on my blog, kennethsuarez.es',
+
+  educationTitle: 'EDUCATION',
+  education1: 'Technician in microcomputer systems and networks.',
+  education2:
+    'Started in the field of Cyber Security, but I decided to focus more on the website development.',
 };
 
 export const en = {

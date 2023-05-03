@@ -1,9 +1,9 @@
 import { lang } from './default';
 
 const theme = {
-  'theme-dark': 'asd Dark',
-  'theme-default': 'asd Default',
-  'theme-funny': 'asd Funny',
+  'theme-dark': 'Theme Dark',
+  'theme-default': 'Theme Default',
+  'theme-funny': 'Theme Funny',
 };
 
 const app = {
@@ -21,6 +21,7 @@ const app = {
   learnedOn: '学習した',
   descriptionField: '説明',
   personalProjects: '個人プロジェクト',
+  downloadAsPdf: 'PDFとしてダウンロード',
 };
 
 const tech = {
@@ -107,7 +108,7 @@ const cv = {
   description1:
     '私はバックエンドとフロントエンドの両方のテクノロジーを使って数年間プログラミングを行ってきました。両者の統合と通信、およびAPIの開発と作成を知っています。',
   description2:
-    '私はアジャイル手法（TDD、GIT、スクラム、ポーカープランニング）、ワイヤーフレーミングと高解像度モックアップ、POP（プロパティ指向プログラミング）とOOP（オブジェクト指向プログラミング）を使用しています。 インフラストラクチャのスケーラビリティを向上させるために、カプセル化された方法でDTOS、エンティティ、および作業を定義するのが好きです。 DDD（ドメイン駆動設計）の原則に従う。',
+    '私はアジャイル手法 (BDD、スクラム)、POP (プロパティ指向プログラミング)、OOP (オブジェクト指向プログラミング) を使用し、愛用しています。 インフラストラクチャのスケーラビリティを向上させるために、DTOS、エンティティ、および作業をカプセル化された方法で定義するのが好きです。 DDD (ドメイン駆動設計) の原則に従います。',
 
   year: '年',
   years: '年',
@@ -158,10 +159,16 @@ const cv = {
   job6desc: 'フルスタック開発者',
   job6desc1: 'ドイツの銀行のウェブサイト開発。',
   job7desc: 'フルスタック開発者',
-  job7desc1: '企業向け資金管理サイトの開発',
+  job7desc1:
+    '保有事業とシナリオ予測のための財務管理モジュールを強調する embat アプリの新機能とモジュールの作成',
 
   footercvmsg:
     '私のGithub「polopopeye」または私のブログkennethsuarez.esの個人プロジェクト',
+
+  educationTitle: '教育',
+  education1: 'マイクロコンピュータシステムおよびローカルネットワークの技術者',
+  education2:
+    '私はエストニアで Cyber​​ Security MSC を開始しましたが、私が最も好きな Web 開発にもっと集中することにしました。',
 };
 
 export const jp = {

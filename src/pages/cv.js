@@ -183,8 +183,7 @@ const Cv = () => {
                   </span>
                 </div>
 
-                <div className="grid rounded-xl border-solid border-4 border-yellow-100">
-                  <StarIcon></StarIcon>
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">Firebase</h6>
                   <span className="text-sm">
                     <ClockIcon></ClockIcon> 3 {t('years')}
@@ -231,37 +230,38 @@ const Cv = () => {
               <br></br>
               <div className=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-1 text-center">
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
-                  <h6 className="font-bold">MySQL</h6>
+                  <h6 className="font-bold">MySQL & ORM</h6>
                   <span className="text-sm">
                     <ClockIcon></ClockIcon>&gt; 4 {t('years')}
                   </span>
                 </div>
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
-                  <StarIcon></StarIcon>
-                  <h6 className="font-bold">Google Cloud Platform</h6>
+                  <h6 className="font-bold">AWS</h6>
                   <span className="text-sm">
                     <ClockIcon></ClockIcon> 2 {t('years')}
                   </span>
                 </div>
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
-                  <h6 className="font-bold">Heroku</h6>
+                  <StarIcon></StarIcon>
+                  <h6 className="font-bold">GCP</h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> 3 {t('years')}
+                  </span>
+                </div>
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold">Heroku </h6>
                   <span className="text-sm">
                     <ClockIcon></ClockIcon> 3 {t('years')}
                   </span>
                 </div>
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <StarIcon></StarIcon>
-                  <h6 className="font-bold">Jest</h6>
+                  <h6 className="font-bold">Jest/Cypress</h6>
                   <span className="text-sm">
                     <ClockIcon></ClockIcon> 3 {t('years')}
                   </span>
                 </div>
-                <div className="grid rounded-xl border-solid border-4 border-gray-300">
-                  <h6 className="font-bold"> Bootstrap CSS </h6>
-                  <span className="text-sm">
-                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
-                  </span>
-                </div>
+
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">Jquery </h6>
                   <span className="text-sm">
@@ -431,7 +431,7 @@ const Cv = () => {
           <div className="break-inside-avoid">
             <hr className="mt-8 mb-1"></hr>
             <h2 className="mt-4 mb-4 font-bold tracking-widest text-sm2 text-black print:font-bold">
-              EDUCATION
+              {t('educationTitle')}
             </h2>
 
             <section className="mb-8">
@@ -445,7 +445,7 @@ const Cv = () => {
               </header>
               <p className="mt-2.1 text-md text-gray-700 leading-normal">
                 <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  Technician in microcomputer systems and networks.
+                  {t('education1')}
                 </div>
               </p>
             </section>
@@ -464,8 +464,7 @@ const Cv = () => {
               </header>
               <p className="mt-2.1 text-md text-gray-700 leading-normal">
                 <div className=" border-2 border-gray-300 rounded-b-md p-1">
-                  Started in the field of Cyber Security, but I decided to focus
-                  more on the website development.
+                  {t('education2')}
                 </div>
               </p>
             </section>

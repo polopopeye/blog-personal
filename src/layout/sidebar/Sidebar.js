@@ -13,7 +13,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className="bg-primary border-r-4 border-tertiary drop-shadow-2xl text-quaternary sidebar w-64 max-w-64 p-2 transform -translate-x-full transition-transform duration-150 ease-in      md:translate-x-0 md:h-screen md:fixed"
+      className="bg-primary border-tertiary drop-shadow-2xl text-quaternary sidebar w-64 max-w-64 p-2 transform -translate-x-full transition-transform duration-150 ease-in      md:translate-x-0 md:h-screen md:fixed"
       style={{
         backgroundImage: `url(${bgSidebar})`,
         backgroundBlendMode: 'soft-light',

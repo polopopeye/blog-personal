@@ -27,6 +27,10 @@ firebase login
 
 Is important to keep the browserlist updated: `npx browserslist@latest --update-db`
 
+# dev
+
+`npm run start` will start dev mode server in http://localhost:3500/
+
 # Deploy
 
 ```

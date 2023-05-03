@@ -21,6 +21,7 @@ const app = {
   learnedOn: 'Aprendido el',
   descriptionField: 'Descripción',
   personalProjects: 'Proyectos personales',
+  downloadAsPdf: 'Descargar en PDF',
 };
 
 const tech = {
@@ -100,7 +101,7 @@ const cv = {
   description1:
     'Llevo varios años programando, tanto con tecnologías del backend como del frontend, conozco su integración y comunicación entre ambas partes, asi como desarrollo y la creación de APIs.',
   description2:
-    'Utilizo metodologías ágiles (TDD, GIT, Scrum, Poker Planning), wireframing y mockups de alta resolución, POP (Programación orientada a propiedades) y POO (Programación orientada a objetos). Me gusta definir DTOS, Entidades y Trabajar de manera encapsulada para una mejor escalabilidad de la infraestructura. Siguiendo principios del DDD (Domain driven design).',
+    'Utilizo y me encantan las metodologías ágiles (BDD, Scrum), POP (Programación orientada a propiedades) y POO (Programación orientada a objetos). Me gusta definir DTOS, Entidades y Trabajar de manera encapsulada para una mejor escalabilidad de la infraestructura. Siguiendo principios del DDD (Domain driven design).',
 
   year: 'Año',
   years: 'Años',
@@ -152,9 +153,14 @@ const cv = {
   job6desc1: 'Desarrollo del sitio web de un banco alemán',
   job7desc: 'FullStack Developer',
   job7desc1:
-    'Desarrollo del sitio web para la gestión de tesorería para empresas',
+    'Creación de nuevas características y modulos para la app de embat, el cual destaca el modulo de gestion de tesorería para Holdings empresariales y la previsión  de escenarios',
   footercvmsg:
     'Proyectos personales en mi Github "polopopeye" o en mi blog, kennethsuarez.es',
+
+  educationTitle: 'EDUCACIÓN',
+  education1: 'Técnico en sistemas microinformaticos y redes locales',
+  education2:
+    'Comencé un MSC de Seguridad Cibernética en Estonia, pero decidí enfocarme más en el desarrollo web que es lo que mas me gusta',
 };
 
 export const es = {
