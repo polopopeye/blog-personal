@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import Layout from '../layout/Layout';
 import Seo from '../components/seo';
 import { useTranslation } from 'react-i18next';
@@ -286,6 +284,28 @@ const Cv = () => {
             <h2 className="mt-4 mb-4 font-bold tracking-widest text-sm2 text-black print:font-bold">
               {t('experience')}
             </h2>
+
+            <ExperienceCard
+              title={'LambdaLoopers'}
+              dates={t('october') + '2023 - ' + t('january') + ' 2023'}
+              description={
+                <>
+                  {t('job9desc')} <br />
+                  {t('job9desc1')}
+                </>
+              }
+            />
+
+            <ExperienceCard
+              title={'Union Avatars'}
+              dates={t('may') + '2023 - ' + t('october') + ' 2023'}
+              description={
+                <>
+                  {t('job8desc')} <br />
+                  {t('job8desc1')}
+                </>
+              }
+            />
             <ExperienceCard
               title={'Embat Technologies SL'}
               dates={t('may') + '2022 - ' + t('february') + ' 2023'}
