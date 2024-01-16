@@ -1,16 +1,16 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "blog-personal-kenneth",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple website developed with Gatsby and TailwindCSS",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kenneth Suarez <kenneth@interplanetaryshare.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "@headlessui/react": "^1.5.0",
+    "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^1.0.6",
     "@reduxjs/toolkit": "^1.8.0",
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -55,7 +55,7 @@
     "postcss": "^8.2.12",
     "prettier": "2.2.1",
     "react-test-renderer": "^17.0.2",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^3.4.1"
   },
   "keywords": [
     "gatsby"
@@ -72,10 +72,6 @@
     "clean": "gatsby clean",
     "test": "jest",
     "test:watch": "jest --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

@@ -107,10 +107,7 @@ const cv = {
   normalLang: 'High',
   lowLang: 'Bilingual',
   description1:
-    'I am programming for a few years now, I love both backend and frontend technologies, and I know how to integrate them and how communicate propertly, and also how to develop and build APIs.',
-  description2:
-    "I always use agile methods and good practices like TDD with  wireframming and mockups of high definitions, GIT, Kanban or Scrum, POP (Prototype-based programming) and OOP (Object-oriented programming), I like to define DTO's, entities and work in an encapsulated way, for a better scalability of the infrastructure. Following principles of DDD (Domain driven design)",
-
+    'As a passionate FullStack Developer, my expertise spans API creation and development, with a keen interest in prototyping projects. I engage deeply in every detail, employing methods like sprint design for rapid and effective conceptualization. Capable of handling complete project development, I have experience in teamwork and making crucial decisions in various settings. My approach is grounded in agile practices and sound techniques like TDD, GIT, and methodologies such as Kanban and Scrum, always focusing on scalability and efficiency.',
   year: 'Year',
   years: 'Years',
   wordpressDesc: 'Development of plugins, themes and scripts',
@@ -136,34 +133,29 @@ const cv = {
   currently: 'Currently working',
 
   job1desc:
-    'Creation of custom wordpress and Prestashop websites (Development of plugins and themes) for clients, Creation of custom servers, Oriented to wordpress and Development of Scripts in PHP.',
-
+    'At Sirastudio, I focused on custom WordPress and PrestaShop website development, including the creation of specific plugins and themes. I also set up optimized servers for WordPress and developed PHP scripts, providing comprehensive web solutions to clients',
   job2desc:
-    'Creation of a small programming agency, Direction and management of projects for clients, I mainly did:',
-  job2desc1: 'Custom WordPress',
-  job2desc2: 'Custom Plugins',
-  job2desc3:
-    'Creation and Sale of Dedicated servers jointly with LiquidNet Ltd.',
-  job2desc4:
-    'Web creation in PHP using frameworks such as Laravel or CodeIgniter.',
-  job2desc5:
-    'Creation of Webs in Javascript using frameworks such as React and NodeJS',
+    'I founded Hard Monkey PC, a programming agency focused on assisting SMEs in developing their online presence. My services included web design and development, digital marketing, as well as custom WordPress site and plugin development. I was also responsible for creating and selling dedicated servers in collaboration with LiquidNet Ltd., and developing websites using PHP with frameworks like Laravel and CodeIgniter, in addition to JavaScript technologies such as React and NodeJS',
   job3desc:
-    'Creation of a 3D virtual sports board for 1d3a S.L with ThreeJS, WebGL and NodeJS technologies.',
+    'At Ibermática, I created a 3D virtual sports board for 1d3a S.L using ThreeJS, WebGL, and NodeJS. My work garnered positive feedback from the client, leading to a direct engagement to continue the development and expansion of the project. This included tackling more complex aspects and other related applications',
   job4desc: 'FullStack Developer',
   job4desc1:
-    'Development and Integration of APIs and applications in JS, NodeJS and PHP, for different environments of the core of 1d3a SL.',
+    'At 1d3a SL, I engaged in the integration of APIs and applications using JS, NodeJS, and PHP. I developed a 3D virtual whiteboard for sports strategies, used by teams like Futbol Club Barcelona. Additionally, I created a video editing tool for coaches and supported the integration of this technology into apps for managing sports teams.',
   job5desc: 'FullStack Developer, NodeJS and React Consultor',
   job5desc1:
-    'Development of web tools for international clients, Development in nodeJS and React mainly (Tailwind, Redux, OpenShift, in addition to other tools) for an international client of an artificial intelligence project oriented to chatbots and human language processing.',
-  job5desc2:
-    'The deployment, development and scalability is international and oriented to a large number of users. Mainly used in (Asia and Europe)',
+    'At AXA, I led the deployment, development, and scaling of a chatbot management application and dashboard, widely used in Asia and Europe. Utilizing NLP.js, an open-source AI tool from Microsoft, I developed a daily backup system for chatbots and an innovative dashboard graph for intuitive user pathway visualization and real-time issue detection. This dashboard was integral for varied global uses, including calls and automated chats on diverse platforms like mobile and social networks.',
   job6desc: 'FullStack Developer',
   job6desc1:
-    'Website development for an investment German Bank of berlin, with NextJS, React, Node, on front, and Ruby on backend.',
+    'At MVST, I developed a website for an investment bank in Berlin, using NextJS, React, and Node for the frontend, and Ruby along with Strapi for the backend. My main project was creating an evaluation tool for rating and contacting the company based on their data. Additionally, the project utilized GraphQL for handling translations and page content. While the concept was basic, I contributed a crucial functionality to the website.',
   job7desc: 'FullStack Developer',
   job7desc1:
-    'Creation of new features and modules for the embat app, which highlights the treasury management module for business holdings and scenario forecasting',
+    'At Embat Technologies, I focused on creating new features and modules for the Embat app, notably a treasury management module for business holdings and scenario forecasting. My work involved React development, creating a comprehensive Storybook, and utilizing Recharts for various types of responsive, optimized charts. I built modular tables for treasury data visualization and diverse charting, ensuring efficient performance through VirtualDOM. Additionally, I developed the backend using Google Cloud Functions, enhancing overall functionality and scalability.',
+  job8desc: 'FullStack Developer',
+  job8desc1:
+    'At Union Avatars, as a FullStack Developer, I worked on developing the frontend with React and the backend with Python for a 3D avatar model converter. I implemented a 3D viewer in the frontend for previewing and selecting avatar animations, which were also used to display NFTs on OpenSea. I contributed to the integration of analytics systems with Datadog RUM and Google Analytics. I participated in optimizing and debugging an avatar and costume selector developed in Vue, and assisted in its transition to React, implementing improvements such as Zustand, SSR, and developing a Storybook UI',
+  job9desc1:
+    'I developed key functionalities for the backoffice of a metrics platform, using Strapi and Azure Functions in the backend and React in the frontend. I implemented PDF report modules and dashboards with Highcharts, in addition to integrating the Microsoft Graph API for user monitoring.',
+  job9desc: 'FullStack Developer',
   footercvmsg:
     'Personal projects on my Github "polopopeye" or on my blog, kennethsuarez.es',
 

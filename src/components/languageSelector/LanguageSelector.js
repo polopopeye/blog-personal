@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon, TranslateIcon } from '@heroicons/react/solid';
 import MenuItem from './modules/MenuItem';
@@ -9,11 +9,17 @@ import { resources } from '../../translationEngine/langs';
 const LanguageSelector = () => {
   const { t } = useTranslation();
 
-  const [showSelector, setShowSelector] = useState(false);
+  const [showSelector, setShowSelector] = useState(true);
   const langsArr = Object.keys(resources);
 
   return (
-    <div className="w-56 text-center top-16 my-4">
+    <div
+      className={
+        showSelector
+          ? 'w-56 text-center top-16 my-4 h-32 transition-all duration-300'
+          : 'w-56 text-center top-16 my-4 h-0 transition-all duration-300'
+      }
+    >
       <Menu as="div" className="relative">
         <Menu.Button
           as="button"
@@ -44,11 +50,11 @@ const LanguageSelector = () => {
           leaveTo="h-0"
         >
           <Menu.Items className="z-10 absolute left-4 w-48 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 ">
-            <div className="px-1 py-1 ">
+            <div className={'px-1 py-1 h-32 '}>
               {langsArr.map((lang, index) => {
                 return (
                   <MenuItem
-                    setShowSelector={setShowSelector}
+                    setShowSelector={() => setShowSelector(false)}
                     lang={lang}
                     key={index}
                   />

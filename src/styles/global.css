@@ -68,3 +68,9 @@ img {
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

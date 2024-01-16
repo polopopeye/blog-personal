@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ExperienceCard = ({
   title,
   titleLink,
@@ -8,7 +6,7 @@ const ExperienceCard = ({
   referenceSpan,
 }) => {
   return (
-    <section className="mb-4">
+    <section className="mb-2">
       <header className="flex self-center">
         {titleLink ? (
           <a href={titleLink}>
@@ -22,7 +20,7 @@ const ExperienceCard = ({
           </h3>
         )}
 
-        <p className="leading-normal text-md text-gray-800">{dates}</p>
+        <p className="leading-normal text-md text-gray-800 mt-2">{dates}</p>
       </header>
       <p className="mt-2.1 text-md text-gray-700 leading-normal">
         {referenceSpan && (

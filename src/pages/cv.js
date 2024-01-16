@@ -35,9 +35,9 @@ const ClockIcon = () => {
         stroke="currentColor"
       >
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
         />
       </svg>
@@ -93,7 +93,7 @@ const Cv = () => {
                 </span>
                 <div className="p-2 border-2 border-gray-300 rounded-b-md">
                   {t('phoneNumberField')}: <b> +34604144510 </b> <br />
-                  {t('emailField')}: <b> Kenneth7e7a@gmail.com </b> <br />
+                  {t('emailField')}: <b> kenneth7e7a@gmail.com </b> <br />
                   {t('githubField')}: <b> @polopopeye </b> <br />
                   {t('LinkedInField')}: <b> /in/kennethsuarez/ </b> <br />
                 </div>
@@ -124,18 +124,15 @@ const Cv = () => {
               </div>
             </div>
           </div>
-
           <section className="break-inside-avoid">
             <p className="mt-2.1 text-md text-gray-800 leading-normal">
-              <div className="p-2 m-2">
-                {t('description1')}
-                <hr className="my-4" />
-                {t('description2')}
-              </div>
+              <div className="p-2 m-2">{t('description1')}</div>
               <h2 className="mt-4 mb-2 font-bold tracking-widest text-sm2 text-black print:font-bold">
                 {t('techs')}
               </h2>
-              <div className=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-2 text-center">
+
+              <h3 className="text-lg text-black">Frontend Technologies</h3>
+              <div className="grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-2 text-center">
                 <div className="grid rounded-xl border-solid border-4 border-yellow-100">
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">TypeScript</h6>
@@ -143,7 +140,6 @@ const Cv = () => {
                     <ClockIcon></ClockIcon> 3 {t('years')}
                   </span>
                 </div>
-
                 <div className="grid rounded-xl border-solid border-4 border-yellow-100">
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">React</h6>
@@ -159,14 +155,6 @@ const Cv = () => {
                     <ClockIcon></ClockIcon> 3 {t('years')}
                   </span>
                 </div>
-
-                <div className="grid rounded-xl border-solid border-4 border-yellow-100">
-                  <StarIcon></StarIcon>
-                  <h6 className="font-bold">Node JS </h6>
-                  <span className="text-sm">
-                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
-                  </span>
-                </div>
                 <div className="grid rounded-xl border-solid border-4 border-yellow-100">
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">Next JS </h6>
@@ -174,6 +162,47 @@ const Cv = () => {
                     <ClockIcon></ClockIcon> 3 {t('years')}
                   </span>
                 </div>
+
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold">Gatsby </h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> 2 {t('years')}
+                  </span>
+                </div>
+
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold">React Native</h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> 1 {t('year')}
+                  </span>
+                </div>
+
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <StarIcon></StarIcon>
+                  <h6 className="font-bold">Jest/Cypress</h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> 3 {t('years')}
+                  </span>
+                </div>
+
+                <div className="grid rounded-xl border-solid border-4 border-gray-300">
+                  <h6 className="font-bold">Jquery </h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
+                  </span>
+                </div>
+              </div>
+
+              <h3 className="text-lg text-black mt-4">Backend Technologies</h3>
+              <div className="grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-2 text-center">
+                <div className="grid rounded-xl border-solid border-4 border-yellow-100">
+                  <StarIcon></StarIcon>
+                  <h6 className="font-bold">Node JS </h6>
+                  <span className="text-sm">
+                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
+                  </span>
+                </div>
+
                 <div className="grid rounded-xl border-solid border-4 border-yellow-100">
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">Nest JS </h6>
@@ -197,20 +226,6 @@ const Cv = () => {
                 </div>
 
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
-                  <h6 className="font-bold">Gatsby </h6>
-                  <span className="text-sm">
-                    <ClockIcon></ClockIcon> 2 {t('years')}
-                  </span>
-                </div>
-
-                <div className="grid rounded-xl border-solid border-4 border-gray-300">
-                  <h6 className="font-bold">React Native</h6>
-                  <span className="text-sm">
-                    <ClockIcon></ClockIcon> 1 {t('year')}
-                  </span>
-                </div>
-
-                <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">Go lang</h6>
                   <span className="text-sm">
                     <ClockIcon></ClockIcon> 1 {t('year')}
@@ -223,11 +238,7 @@ const Cv = () => {
                     <ClockIcon></ClockIcon> 1 {t('year')}
                   </span>
                 </div>
-              </div>
 
-              <div className="mt-8 mb-0 pb-0">{t('techSub')}</div>
-              <br></br>
-              <div className=" grid grid-cols-3 md:grid-cols-6 print:grid-cols-6 gap-1 text-center">
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">MySQL & ORM</h6>
                   <span className="text-sm">
@@ -253,22 +264,11 @@ const Cv = () => {
                     <ClockIcon></ClockIcon> 3 {t('years')}
                   </span>
                 </div>
-                <div className="grid rounded-xl border-solid border-4 border-gray-300">
-                  <StarIcon></StarIcon>
-                  <h6 className="font-bold">Jest/Cypress</h6>
-                  <span className="text-sm">
-                    <ClockIcon></ClockIcon> 3 {t('years')}
-                  </span>
-                </div>
-
-                <div className="grid rounded-xl border-solid border-4 border-gray-300">
-                  <h6 className="font-bold">Jquery </h6>
-                  <span className="text-sm">
-                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
-                  </span>
-                </div>
               </div>
+
+              <div className="mt-8 mb-0 pb-0">{t('techSub')}</div>
             </p>
+
             <h1 className="text-black font-bolder my-2">
               {t('techSub2')}
               <a href="https://kennethsuarez.es/tech/">
@@ -284,10 +284,9 @@ const Cv = () => {
             <h2 className="mt-4 mb-4 font-bold tracking-widest text-sm2 text-black print:font-bold">
               {t('experience')}
             </h2>
-
             <ExperienceCard
               title={'LambdaLoopers'}
-              dates={t('october') + '2023 - ' + t('january') + ' 2023'}
+              dates={t('october') + '2023 - ' + t('january') + ' 2024'}
               description={
                 <>
                   {t('job9desc')} <br />
@@ -295,7 +294,6 @@ const Cv = () => {
                 </>
               }
             />
-
             <ExperienceCard
               title={'Union Avatars'}
               dates={t('may') + '2023 - ' + t('october') + ' 2023'}
@@ -316,7 +314,6 @@ const Cv = () => {
                 </>
               }
             />
-
             <ExperienceCard
               title={'MVST.'}
               dates={
@@ -331,7 +328,12 @@ const Cv = () => {
                 </>
               }
             />
-
+            <div
+              style={{
+                marginTop: '14em',
+              }}
+            ></div>
+            <br></br>
             <ExperienceCard
               title={'Amaris Consulting & innovation SL'}
               dates={
@@ -343,13 +345,10 @@ const Cv = () => {
                 <>
                   {t('job5desc')} <br />
                   {t('job5desc1')}
-                  <br></br>
-                  {t('job5desc2')}
                 </>
               }
               referenceSpan="Ref: Saita Giovanni, Project Manager, +34 695 947 076"
             />
-
             <ExperienceCard
               title={'1d3a SL'}
               dates={
@@ -365,7 +364,6 @@ const Cv = () => {
               }
               referenceSpan="Ref: Joan Carbó Laguna, CTO, +34 607 700 297 - juan.carbo@1d3a.com"
             />
-
             <ExperienceCard
               title={'Ibermática SA'}
               dates={
@@ -383,21 +381,8 @@ const Cv = () => {
                   {t('january')} 2017 - {t('january')} 2019
                 </>
               }
-              description={
-                <>
-                  {t('job2desc')}
-                  <br />
-                  <ul className="list-disc ml-8">
-                    <li> {t('job2desc1')}</li>
-                    <li> {t('job2desc2')}</li>
-                    <li>{t('job2desc3')}</li>
-                    <li>{t('job2desc4')}</li>
-                    <li>{t('job2desc5')}</li>
-                  </ul>
-                </>
-              }
+              description={<>{t('job2desc')}</>}
             />
-
             <ExperienceCard
               title={'Sirastudio SL'}
               dates={
@@ -410,7 +395,7 @@ const Cv = () => {
             />
           </div>
         </section>
-        <section className="mt-8 first:mt-0">
+        {/* <section className="mt-8 first:mt-0">
           <div className="break-inside-avoid">
             <hr className="mt-8 mb-1"></hr>
             <h2 className="mt-4 mb-4 font-bold tracking-widest text-sm2 text-black print:font-bold">
@@ -430,9 +415,9 @@ const Cv = () => {
               description={<> {t('education2')}</>}
             />
           </div>
-        </section>
+        </section> */}
 
-        <h1 className="p-4 text-center  text-gray-900 font-medium bg-white">
+        <h1 className="text-center  text-gray-900 bg-white">
           {t('footercvmsg')}
         </h1>
       </div>

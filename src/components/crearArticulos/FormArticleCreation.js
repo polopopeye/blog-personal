@@ -1,4 +1,3 @@
-import React from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
 const FormArticleCreation = ({
@@ -48,9 +47,9 @@ const FormArticleCreation = ({
       ></input>
 
       <select ref={langRef} className="text-black w-full">
+        <option value="jp">Japones</option>
         <option value="en">English</option>
         <option value="es">Español</option>
-        <option value="jp">Japones</option>
       </select>
 
       <Editor

@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       screens: {
         print: { raw: 'print' },
+        screen: { raw: 'screen' },
       },
       colors: {
         primary: 'var(--color-primary)',
