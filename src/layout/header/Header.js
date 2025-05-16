@@ -1,5 +1,5 @@
 import { Transition } from '@headlessui/react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import profileUrl from '../../images/profile.jpg';
 import HeaderMenu from './../Menu/Header/HeaderMenu';
@@ -155,11 +155,3 @@ const Header = ({ siteTitle }) => {
 };
 
 export default Header;
-
-// {/* Desktop */}
-// {(location.location.pathname === '/' ||
-// location.location.pathname === '') && (
-// <div className="md:flex md:relative hidden">
-//   <SearchInput />
-// </div>
-// )}

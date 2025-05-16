@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from '../layout/Layout';
 import Seo from '../components/seo';
 import TechGallery from '../components/Tech/Tech';
@@ -8,12 +7,10 @@ const Tech = () => {
   const { t } = useTranslation();
 
   return (
-    <>
-      <Layout>
-        <Seo title={t('tech')} />
-        <TechGallery />
-      </Layout>
-    </>
+    <Layout>
+      <Seo title={t('tech')} />
+      <TechGallery />
+    </Layout>
   );
 };
 

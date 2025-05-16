@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import './modules/styleEditor.css';
 
@@ -49,10 +49,10 @@ const Articles = () => {
   return (
     <>
       <h1 className="text-xl p-2">{t('createNewArticle')}</h1>
-      <script
+      {/* <script
         src="https://cdn.tiny.cloud/1/4ge8itj7zovsnq0e89lw5enf1fudbp3nyiin4xdch5zmnzjq/tinymce/5/tinymce.min.js"
         referrerpolicy="origin"
-      />
+      /> */}
       {isUserConected ? (
         <>
           <FormArticleCreation

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -37,6 +37,7 @@ const Layout = ({ children }) => {
 
     TagManager.initialize({ gtmId: 'G-GX77BSZGDV' });
   }, []);
+
   const [currentTheme, setcurrentTheme] = useState(
     store.getState().currentTheme
   );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import isConnected from '../../../components/utils/isConnected';
 import IconsRowSocial from '../modules/IconRowSocial';

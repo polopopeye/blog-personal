@@ -1,4 +1,4 @@
-import { Editor } from '@tinymce/tinymce-react';
+// import { Editor } from '@tinymce/tinymce-react';
 
 const FormArticleCreation = ({
   titleRef,
@@ -52,7 +52,7 @@ const FormArticleCreation = ({
         <option value="es">Español</option>
       </select>
 
-      <Editor
+      {/* <Editor
         onInit={(evt, editor) => (editorRef.current = editor)}
         initialValue={postInHtml}
         init={{
@@ -77,7 +77,7 @@ const FormArticleCreation = ({
           content_style:
             'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
         }}
-      />
+      /> */}
     </>
   );
 };
