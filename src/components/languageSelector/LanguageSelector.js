@@ -9,7 +9,7 @@ import { resources } from '../../translationEngine/langs';
 const LanguageSelector = () => {
   const { t } = useTranslation();
 
-  const [showSelector, setShowSelector] = useState(true);
+  const [showSelector, setShowSelector] = useState(false);
   const langsArr = Object.keys(resources);
 
   return (
@@ -41,11 +41,11 @@ const LanguageSelector = () => {
 
         <Transition
           show={showSelector}
-          enter="transition-all  duration-300"
+          enter="transition-all duration-300"
           enterFrom="h-0"
           enterTo="h-32"
           entered="h-32"
-          leave="transation-all  duration-300"
+          leave="transation-all duration-300"
           leaveFrom="h-32"
           leaveTo="h-0"
         >

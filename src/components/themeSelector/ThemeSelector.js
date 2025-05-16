@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Menu, Transition } from '@headlessui/react';
 import { useState } from 'react';
 import { ChevronDownIcon, PencilAltIcon } from '@heroicons/react/solid';
@@ -35,15 +33,15 @@ const ThemeSelector = () => {
 
         <Transition
           show={showSelector}
-          enter="transition-all  duration-300"
+          enter="transition-all duration-300"
           enterFrom="h-0"
           enterTo="h-32"
           entered="h-32"
-          leave="transation-all  duration-300"
+          leave="transation-all duration-300"
           leaveFrom="h-32"
           leaveTo="h-0"
         >
-          <Menu.Items className=" z-10 absolute left-4 w-48 mt-2 origin-top-right bg-quaternary divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-primary ring-opacity-5">
+          <Menu.Items className=" z-10 left-4 w-48 mt-2 origin-top-right bg-quaternary divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-primary ring-opacity-5">
             <div className="px-1 py-1 ">
               {themes.map((theme, i) => {
                 return (

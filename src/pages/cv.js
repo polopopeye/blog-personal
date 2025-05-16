@@ -52,7 +52,7 @@ const Cv = () => {
     <Layout>
       <Seo title="Curriculum Vitae" />
 
-      <div className="p-6 mx-auto page   print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
+      <div className="p-1 mx-auto page   print:max-w-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 md:p-16 bg-white">
         <header className="flex items-center mb-8 ">
           <div className="initials-container mr-5 text-base leading-none text-white bg-gray-900 font-medium px-3">
             <div className="initial text-center">K</div>
@@ -338,12 +338,12 @@ const Cv = () => {
                 </>
               }
             />
-            <div
+            {/* <div
               style={{
                 marginTop: '14em',
               }}
             ></div>
-            <br></br>
+            <br></br> */}
             <ExperienceCard
               title={'Amaris Consulting & innovation SL'}
               dates={
