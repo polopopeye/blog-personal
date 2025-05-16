@@ -156,6 +156,8 @@ const cv = {
   job9desc1:
     'I developed key functionalities for the backoffice of a metrics platform, using Strapi and Azure Functions in the backend and React in the frontend. I implemented PDF report modules and dashboards with Highcharts, in addition to integrating the Microsoft Graph API for user monitoring.',
   job9desc: 'FullStack Developer',
+  job10desc1: `At Betterfly, I was responsible for the development of the Flexible Benefits module, a key feature within the Betterfly app that provides companies with customizable employee benefits. My work began by improving and maintaining the legacy platform, focusing on optimizing existing functionalities and resolving technical debt. Later, I led the backend development for the new app, designing and implementing scalable APIs and integrating the module into the modern architecture. My contributions ensured a smooth transition from the legacy system to the new platform, enhancing performance, security, and user experience for both administrators and end users.`,
+  job10desc: 'FullStack Developer',
   footercvmsg:
     'Personal projects on my Github "polopopeye" or on my blog, kennethsuarez.es',
 

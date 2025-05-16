@@ -137,14 +137,14 @@ const Cv = () => {
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">TypeScript</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 3 {t('years')}
+                    <ClockIcon></ClockIcon> 4 {t('years')}
                   </span>
                 </div>
                 <div className="grid rounded-xl border-solid border-4 border-yellow-100">
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">React</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
+                    <ClockIcon></ClockIcon> &gt; 5 {t('years')}
                   </span>
                 </div>
 
@@ -152,28 +152,28 @@ const Cv = () => {
                   <StarIcon></StarIcon>
                   <h6 className="font-bold"> Tailwind CSS </h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 3 {t('years')}
+                    <ClockIcon></ClockIcon> 4 {t('years')}
                   </span>
                 </div>
                 <div className="grid rounded-xl border-solid border-4 border-yellow-100">
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">Next JS </h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 3 {t('years')}
+                    <ClockIcon></ClockIcon> 4 {t('years')}
                   </span>
                 </div>
 
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">Gatsby </h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 2 {t('years')}
+                    <ClockIcon></ClockIcon> 3 {t('years')}
                   </span>
                 </div>
 
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">React Native</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 1 {t('year')}
+                    <ClockIcon></ClockIcon> 2 {t('years')}
                   </span>
                 </div>
 
@@ -181,14 +181,14 @@ const Cv = () => {
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">Jest/Cypress</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 3 {t('years')}
+                    <ClockIcon></ClockIcon> 4 {t('years')}
                   </span>
                 </div>
 
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">Jquery </h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
+                    <ClockIcon></ClockIcon> &gt; 5 {t('years')}
                   </span>
                 </div>
               </div>
@@ -199,7 +199,7 @@ const Cv = () => {
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">Node JS </h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> &gt; 4 {t('years')}
+                    <ClockIcon></ClockIcon> &gt; 5 {t('years')}
                   </span>
                 </div>
 
@@ -207,61 +207,61 @@ const Cv = () => {
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">Nest JS </h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 3 {t('years')}
+                    <ClockIcon></ClockIcon> 4 {t('years')}
                   </span>
                 </div>
 
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">Firebase</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 3 {t('years')}
+                    <ClockIcon></ClockIcon> 4 {t('years')}
                   </span>
                 </div>
 
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">MongoDB</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 3 {t('years')}
+                    <ClockIcon></ClockIcon> 4 {t('years')}
                   </span>
                 </div>
 
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">Go lang</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 1 {t('year')}
+                    <ClockIcon></ClockIcon> 2 {t('years')}
                   </span>
                 </div>
 
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold"> TensorFlowJS</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 1 {t('year')}
+                    <ClockIcon></ClockIcon> 2 {t('years')}
                   </span>
                 </div>
 
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">MySQL & ORM</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon>&gt; 4 {t('years')}
+                    <ClockIcon></ClockIcon> &gt; 5 {t('years')}
                   </span>
                 </div>
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">AWS</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 2 {t('years')}
+                    <ClockIcon></ClockIcon> 3 {t('years')}
                   </span>
                 </div>
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <StarIcon></StarIcon>
                   <h6 className="font-bold">GCP</h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 3 {t('years')}
+                    <ClockIcon></ClockIcon> 4 {t('years')}
                   </span>
                 </div>
                 <div className="grid rounded-xl border-solid border-4 border-gray-300">
                   <h6 className="font-bold">Heroku </h6>
                   <span className="text-sm">
-                    <ClockIcon></ClockIcon> 3 {t('years')}
+                    <ClockIcon></ClockIcon> 4 {t('years')}
                   </span>
                 </div>
               </div>
@@ -285,8 +285,18 @@ const Cv = () => {
               {t('experience')}
             </h2>
             <ExperienceCard
+              title={'Betterfly'}
+              dates={t('april') + ' 2024 - ' + t('may') + ' 2025'}
+              description={
+                <>
+                  {t('job10desc')} <br />
+                  {t('job10desc1')}
+                </>
+              }
+            />
+            <ExperienceCard
               title={'LambdaLoopers'}
-              dates={t('october') + '2023 - ' + t('january') + ' 2024'}
+              dates={t('october') + ' 2023 - ' + t('january') + ' 2024'}
               description={
                 <>
                   {t('job9desc')} <br />
@@ -296,7 +306,7 @@ const Cv = () => {
             />
             <ExperienceCard
               title={'Union Avatars'}
-              dates={t('may') + '2023 - ' + t('october') + ' 2023'}
+              dates={t('may') + ' 2023 - ' + t('october') + ' 2023'}
               description={
                 <>
                   {t('job8desc')} <br />
@@ -306,7 +316,7 @@ const Cv = () => {
             />
             <ExperienceCard
               title={'Embat Technologies SL'}
-              dates={t('may') + '2022 - ' + t('february') + ' 2023'}
+              dates={t('may') + ' 2022 - ' + t('february') + ' 2023'}
               description={
                 <>
                   {t('job7desc')} <br />
