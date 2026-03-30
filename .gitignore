@@ -54,9 +54,8 @@ typings/
 # dotenv environment variable files
 .env*
 
-# gatsby files
+# cache files
 .cache/
-public
 
 # Mac files
 .DS_Store
@@ -78,8 +77,6 @@ build/
 *cache
 .*cache
 
-# Gatsby config (Security reasons...)
-gatsby-config.js
 
 *.cache
 .firebase/hosting.cHVibGlj.cache
@@ -89,3 +86,6 @@ package-lock.json
 package-lock.json
 *.cache
 .firebase
+
+
+.next
